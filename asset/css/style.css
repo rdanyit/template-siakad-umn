@@ -86,6 +86,41 @@
 }
 
 /* =========================
+   Color Style
+========================= */
+.b-1 {
+  background: var(--primary);
+}
+
+.b-2 {
+  background: var(--danger-text);
+}
+
+.b-3 {
+  background: var(--warning-text);
+}
+
+.b-4 {
+  background: var(--info-text);
+}
+
+.c-1 {
+  color: var(--primary);
+}
+
+.c-2 {
+  color: var(--danger-text);
+}
+
+.c-3 {
+  color: var(--warning-text);
+}
+
+.c-4 {
+  color: var(--info-text);
+}
+
+/* =========================
    Global Style
 ========================= */
 body {
