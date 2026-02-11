@@ -880,7 +880,132 @@
     ACTIVE STATE
 ========================= */
 .faq-item.active .faq-answer {
-  max-height: 300px; /* cukup untuk 1 jawaban */
+  max-height: 300px;
+}
+
+/* =========================
+    Footer
+========================= */
+.footer {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  border-top: 2px solid var(--border-default);
+  margin-top: 20px;
+}
+
+.profile-univ {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.data-prov {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul-data {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.slug-judul-data {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.medsos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mds {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.link-cepat {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.link-cepat:hover {
+  text-decoration: underline;
+}
+
+.info-kontak {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.copyright {
+  border-top: 2px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* =============================
+      STICKY CONTACT
+  ============================== */
+.sticky-phone {
+  position: fixed;
+  bottom: 5px;
+  right: 10%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  background: var(--primary);
+}
+
+.market {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--background);
+  margin-left: 10px;
+}
+
+.sticky-phone.hide {
+  transform: translateX(-50%) translateY(80px);
+  opacity: 0;
+}
+
+/* =============================
+      BUTTON
+  ============================== */
+.sticky-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* ===== ANIMATION ===== */
