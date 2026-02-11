@@ -648,6 +648,9 @@
   padding: 5px 10px;
 }
 
+/* ==================================================
+  Pengumuman dan Agenda
+================================================== */
 .update-informasi {
   width: 100%;
   max-width: 500px;
@@ -733,6 +736,151 @@
 
 .item-agenda:hover .judul-agenda {
   color: var(--primary);
+}
+
+/* ==================================================
+  Testimoni
+================================================== */
+.testimoni-wrapper {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.judul-testimoni {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.testimoni {
+  height: 300px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.detail-testimoni {
+  flex: 0 0 calc(50% - 10px);
+  height: 280px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-testimoni {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.nama-testimoni {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.isi-testimoni {
+  font-size: 16px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* ==================================================
+  FAQ
+================================================== */
+.faq {
+  max-width: 600px;
+  margin: auto;
+  background: var(--bg);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.faq-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* =========================
+    ITEM
+========================= */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+    QUESTION
+========================= */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.faq-question span {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* =========================
+    ANSWER
+========================= */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================
+    ACTIVE STATE
+========================= */
+.faq-item.active .faq-answer {
+  max-height: 300px; /* cukup untuk 1 jawaban */
 }
 
 /* ===== ANIMATION ===== */
