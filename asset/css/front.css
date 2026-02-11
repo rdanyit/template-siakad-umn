@@ -26,6 +26,10 @@
 /* ==================================================
   LOGO BAR & MENU BAR
 ================================================== */
+.mobile-menu-bar {
+  display: none;
+}
+
 .logo-bar,
 .menu-bar {
   display: flex;
@@ -60,6 +64,10 @@
 /* ==================================================
   LOGO BAR ITEMS
 ================================================== */
+.mobile-logo-bar {
+  display: none;
+}
+
 .icon-item-logo {
   font-size: 16px;
   color: var(--text);
@@ -962,8 +970,8 @@
 .sticky-phone {
   position: fixed;
   bottom: 5px;
-  right: 10%;
-  transform: translateX(-50%);
+  right: 0;
+  /* transform: translateX(-50%); */
   z-index: 9999;
 
   display: flex;
@@ -1009,8 +1017,8 @@
 }
 
 /* ===============================
-      MODAL
-  =============================== */
+    MODAL
+=============================== */
 .modal {
   position: fixed;
   inset: 0;

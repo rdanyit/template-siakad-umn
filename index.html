@@ -12,6 +12,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="asset/css/style.css" />
     <link rel="stylesheet" href="asset/css/front.css" />
+    <link rel="stylesheet" href="asset/css/front-responsive.css" />
   </head>
   <body>
     <div class="main-wrap">
@@ -19,6 +20,63 @@
       <div class="top-bar">
         <!-- Logo Bar -->
         <div class="logo-bar">
+          <!-- Mobile Menu Bar -->
+          <div class="mobile-menu-bar">
+            <a href="javascript:void(0)" class="tombol-menu"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
+
+            <div class="offcanvas-overlay"></div>
+
+            <div class="offcanvas-menu">
+              <div class="offcanvas-header">
+                <h3>Menu</h3>
+                <button class="close-offcanvas">&times;</button>
+              </div>
+
+              <ul class="offcanvas-nav">
+                <li><a href="#">Beranda</a></li>
+                <li class="oc-item">
+                  <a href="javascript:void(0)" class="oc-toggle">
+                    Akademik
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+
+                  <ul class="oc-submenu">
+                    <li><a href="#">Fakultas</a></li>
+                    <li><a href="#">Program Studi</a></li>
+                    <li><a href="#">Kurikulum</a></li>
+                  </ul>
+                </li>
+                <li class="oc-item">
+                  <a href="javascript:void(0)" class="oc-toggle">
+                    PMB
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+
+                  <ul class="oc-submenu">
+                    <li><a href="#">Jalur Pendaftaran</a></li>
+                    <li><a href="#">Biaya Pendidikan</a></li>
+                    <li><a href="#">Jadwal</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">E-Learning</a></li>
+                <li class="oc-item">
+                  <a href="javascript:void(0)" class="oc-toggle">
+                    Informasi
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+
+                  <ul class="oc-submenu">
+                    <li><a href="#">Pengumuman</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Logo -->
           <a href="/" class="link-logo">
             <img src="asset/logo/logo.png" alt="logo" class="logo-top" />
             <span class="nama-univ fw-700">Universitas Mohammad Natsir</span>
@@ -120,6 +178,55 @@
                 </span>
               </a>
             </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="mobile-logo-bar">
+            <a href="javascript:void(0)" id="openIcon" class="btn-icon">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
+
+            <ul class="dropdown-menu-mobile" id="dropdownMenuMobile">
+              <li class="has-collapse">
+                <a href="#" data-target="modeCollapse"
+                  ><i class="fa-solid fa-cloud-moon"></i> Mode Tema</a
+                >
+                <div class="collapse" id="modeCollapse">
+                  <a href="#" data-mode="light">
+                    <i class="fa-regular fa-sun"></i> Light Mode
+                  </a>
+                  <a href="#" data-mode="dark">
+                    <i class="fa-regular fa-moon"></i> Dark Mode
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" data-target="notifCollapse"
+                  ><i class="fa-solid fa-bell"></i> Notifikasi</a
+                >
+              </li>
+
+              <li class="has-collapse">
+                <a href="#" data-target="appCollapse"
+                  ><i class="fa-solid fa-layer-group"></i> Applikasi</a
+                >
+                <div class="collapse" id="appCollapse">
+                  <a href="#"><i class="fa-solid fa-people-roof"></i> PMB</a>
+                  <a href="#"
+                    ><i class="fa-solid fa-graduation-cap"></i> Akademik</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-chalkboard-user"></i> E-Learning</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-user-graduate"></i> Alumni</a
+                  >
+                </div>
+              </li>
+              <li class="divider"></li>
+              <li><a href="#" class="danger">Login</a></li>
+            </ul>
           </div>
         </div>
 
@@ -848,5 +955,9 @@
     <script src="asset/js/faq.js"></script>
     <script src="asset/js/sticky-phone.js"></script>
     <script src="asset/js/modal-cari.js"></script>
+    <script src="asset/js/dropdown-icon-mobile.js"></script>
+    <script src="asset/js/collapse-icon-menu.js"></script>
+    <script src="asset/js/offcanvas.js"></script>
+    <script src="asset/js/collapse-menu-mobile.js"></script>
   </body>
 </html>

@@ -137,3 +137,18 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / Edge lama */
+body {
+  -ms-overflow-style: none;
+}
