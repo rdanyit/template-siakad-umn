@@ -13,6 +13,10 @@
     <!-- Icon -->
     <link rel="stylesheet" href="../asset/icon/fontawesome/css/all.min.css" />
     <script src="../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <!-- Css -->
     <link rel="stylesheet" href="../asset/css/style.css" />
     <link rel="stylesheet" href="../asset/css/back.css" />
@@ -21,6 +25,11 @@
     <div class="main-wrapper">
       <!-- Topbar -->
       <div class="topbar">
+        <img
+          src="../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
         <div class="logo-bar">
           <div class="item-logo">
             <img src="../asset/logo/logo.png" alt="logo" class="img-logo" />
@@ -177,13 +186,144 @@
 
       <!-- Main -->
       <div class="main">
-        <h4 class="nama-halaman">Dashboard</h4>
+        <!-- Petunjuk -->
+        <div class="head-main">
+          <span class="nama-menu-aktif">Dashboard</span>
+          <div class="tombol-akses">
+            <button type="button" class="btn-info">
+              <i class="fa-solid fa-signs-post icon-btn"></i>
+              Sembunyikan Panduan
+            </button>
+            <div class="select-wrapper">
+              <div class="custom-select" id="customSelect">
+                <div class="select-trigger">
+                  <span class="selected-text">Periode Akademik</span>
+                  <span class="arrow"></span>
+                </div>
+                <div class="select-dropdown">
+                  <div class="select-option">2025/2026 Ganjil</div>
+                  <div class="select-option">2025/2026 Genap</div>
+                  <div class="select-option">2026/2027 Ganjil</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blok-petunjuk">
+          <img
+            src="../asset/media/background-1.jpg"
+            alt="background"
+            class="background-img"
+          />
+          <div class="fitur-petunjuk">
+            <div class="title-petunjuk">Ikuti Petunjuk Panduan Kerja</div>
+            <div class="card-small">
+              <div class="head-card-small">
+                <i class="fa-solid fa-signs-post icon-hcs"></i>
+                <span class="judul-hcs">Pembuatan Kurikulum</span>
+              </div>
+              <div class="body-card-small">
+                <div class="progress-header">
+                  <span class="text-progress">Progress</span>
+                  <span id="statusText" class="text-belum-mulai"
+                    >Belum Mulai</span
+                  >
+                </div>
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <div class="footer-card-small">
+                <a href="#" class="badge-mulai">Mulai</a>
+              </div>
+            </div>
+            <div class="card-small">
+              <div class="head-card-small">
+                <i class="fa-solid fa-signs-post icon-hcs"></i>
+                <span class="judul-hcs">Persiapan KRS</span>
+              </div>
+              <div class="body-card-small">
+                <div class="progress-header">
+                  <span class="text-progress">Progress</span>
+                  <span id="statusText" class="text-belum-mulai"
+                    >Belum Mulai</span
+                  >
+                </div>
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <div class="footer-card-small">
+                <a href="#" class="badge-mulai">Mulai</a>
+              </div>
+            </div>
+            <div class="card-small">
+              <div class="head-card-small">
+                <i class="fa-solid fa-signs-post icon-hcs"></i>
+                <span class="judul-hcs">Persiapan Yudisium</span>
+              </div>
+              <div class="body-card-small">
+                <div class="progress-header">
+                  <span class="text-progress">Progress</span>
+                  <span id="statusText" class="text-belum-mulai"
+                    >Belum Mulai</span
+                  >
+                </div>
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <div class="footer-card-small">
+                <a href="#" class="badge-mulai">Mulai</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistik -->
+        <div class="statistik">
+          <div class="card-medium lgb-1 flex-kolom">
+            <i class="fa-solid fa-user-group icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Mahasiswa Baru</span>
+              <span class="sub-stat">Periode 2025-1</span>
+              <span class="number-stat">682</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-2 flex-kolom">
+            <i class="fa-solid fa-graduation-cap icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Mahasiswa Aktif</span>
+              <span class="number-stat">2.347</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-3 flex-kolom">
+            <i class="fa-solid fa-user-group icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Rata-rata IPK Lulusan</span>
+              <span class="sub-stat">3 Tahun Terakhir</span>
+              <span class="number-stat">3,55</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-4 flex-kolom">
+            <i class="fa-solid fa-user-group icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Periode Saat Ini</span>
+              <span class="number-stat">2025 Ganjil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- chart statistik -->
+        <div class="chart-stat">
+          <div class="stat-periode"></div>
+          <div class="informasi-akademik">
+            <div class="pengumuman"></div>
+            <div class="kalender-akademik"></div>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
       <div class="footer"></div>
 
       <!-- JS -->
+      <script src="../asset/js/petujuk.js"></script>
+      <script src="../asset/js/custom-select.js"></script>
     </div>
   </body>
 </html>
