@@ -1,0 +1,297 @@
+/* ==================================================
+  MAIN LAYOUT
+================================================== */
+.main-wrap {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+  Aset Login
+================================================== */
+.box-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 740px;
+  height: 450px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-login {
+  width: 90%;
+  max-width: 700px;
+  height: 400px;
+  background: var(--hover);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(16, 24, 40, 0.05);
+}
+
+.slide-login {
+  width: 90%;
+  max-width: 300px;
+  height: 440px;
+  background: var(--primary);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 70%;
+  border-top-left-radius: 10%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-login::before {
+  content: "";
+  position: absolute;
+  left: 296px;
+  top: 0;
+  width: 50px;
+  height: 20px;
+  background: var(--primary);
+  transform-origin: right;
+  border-top-right-radius: 20px;
+  z-index: -1;
+}
+
+.slide-login::after {
+  content: "";
+  position: absolute;
+  left: 300px;
+  top: 0;
+  width: 25px;
+  height: 20px;
+  background: linear-gradient(90deg, #0d580d, var(--primary)) transparent;
+  transform-origin: right;
+  border-top-left-radius: 100%;
+  z-index: -1;
+}
+
+.logo-white {
+  margin-top: 50px;
+  width: 100px;
+  height: 100px;
+  filter: brightness(0) saturate(100%) invert(1);
+}
+
+.welcome,
+.sub-welcome {
+  color: var(--background);
+}
+
+.welcome {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sub-welcome {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ==================================================
+  Form Login
+================================================== */
+.form-login {
+  margin-left: 340px;
+  width: 100%;
+  max-width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.head-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.judul-head {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.deskripsi {
+  font-size: 12px;
+  text-align: center;
+}
+
+.link-google {
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--background);
+  font-size: 14px;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.link-google:hover {
+  background: var(--info-border);
+}
+
+.logo-google {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+  padding: 0 12px;
+}
+
+.blok-form {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: clamp(13px, 1.5vw, 14px);
+  margin-bottom: 6px;
+  color: #344054;
+  font-weight: 500;
+}
+
+.red-require {
+  color: red;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 42px;
+  height: clamp(42px, 5vw, 46px);
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  outline: none;
+  font-size: clamp(13px, 1.8vw, 14px);
+  transition: 0.2s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: var(--secondary);
+}
+
+.form-input::placeholder {
+  color: #98a2b3;
+}
+
+.input-password {
+  position: relative;
+  width: 100%;
+}
+
+.input-password .form-input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
+.lupa-sandi {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* ==================================================
+  Button
+================================================== */
+.btn-masuk,
+.btn-kembali {
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 18px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.btn-masuk {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.btn-kembali {
+  background: var(--text);
+  color: var(--background);
+}
