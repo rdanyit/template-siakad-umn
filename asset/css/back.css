@@ -1,0 +1,237 @@
+/* ==================================================
+  MAIN LAYOUT
+================================================== */
+.main-wrap {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+  TOPBAR
+================================================== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--background);
+  z-index: 10;
+}
+
+.logo-bar {
+  width: 100%;
+  max-width: 1440px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+hr {
+  border: 1px solid var(--border-default);
+}
+
+.item-logo {
+  display: flex;
+  align-items: center;
+}
+
+.img-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.desk-logo {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1 !important;
+}
+
+.nama-halaman {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nama-univ {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.icon-menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.menu-dropdown {
+  position: relative;
+}
+
+.list-icon-menu {
+  font-size: 16px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.bendera-icon {
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.nama-bahasa {
+  font-weight: bold;
+}
+
+.deskripsi-user {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.role-user,
+.nama-sistem {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: 0.2s ease;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #344054;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: var(--hover);
+  color: var(--primary);
+}
+
+.menu-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Menu Bar */
+.menu-bar {
+  width: 100%;
+  max-width: 1440px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menubar-item {
+  position: relative;
+}
+
+.aktif {
+  border-bottom: 1px solid var(--primary);
+}
+
+.aktif .list-icon-menu {
+  font-weight: bold;
+}
+
+.list-icon-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #344054;
+  border-radius: 8px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.list-icon-menu:hover {
+  background: var(--hover);
+  font-weight: bold;
+}
+
+.dropdown-menubar {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: 0.2s ease;
+  z-index: 999;
+}
+
+.dropdown-menubar a {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #344054;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.dropdown-menubar a:hover {
+  background: var(--hover);
+  color: var(--primary);
+}
+
+.has-dropdown:hover .dropdown-menubar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menubar {
+  transform: translateY(6px) scale(0.98);
+}
+
+.has-dropdown:hover .dropdown-menubar {
+  transform: translateY(0) scale(1);
+}
+
+/* ==================================================
+  MAIN KONTEN
+================================================== */
+.main {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 150px;
+}
