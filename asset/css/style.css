@@ -176,7 +176,8 @@ ul {
   margin: 0;
 }
 
-.btn-info {
+.btn-info,
+.btn-download {
   padding: 8px 18px;
   border: 0;
   border-radius: 10px;
