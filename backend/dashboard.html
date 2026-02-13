@@ -1487,8 +1487,62 @@
             </div>
           </div>
           <div class="informasi-akademik">
-            <div class="pengumuman"></div>
-            <div class="kalender-akademik"></div>
+            <div class="pengumuman">
+              <div class="head-pengumuman">
+                <span class="judul-headp">Pengumuman</span>
+                <input
+                  type="search"
+                  name="carip"
+                  id="carip"
+                  class="form-input"
+                  placeholder="Cari..."
+                />
+              </div>
+            </div>
+
+            <!-- kalender Akademik -->
+            <div class="kalender-wrap">
+              <div class="kalender-header">
+                <button id="prevMonth">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <div id="monthLabel"></div>
+                <button id="nextMonth">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="kalender-weekdays">
+                <div>Min</div>
+                <div>Sen</div>
+                <div>Sel</div>
+                <div>Rab</div>
+                <div>Kam</div>
+                <div>Jum</div>
+                <div>Sab</div>
+              </div>
+
+              <div class="kalender-grid" id="kalenderGrid"></div>
+
+              <div class="kalender-legend">
+                <div class="legend-title">Keterangan</div>
+
+                <div class="legend-item">
+                  <span class="dot"></span>
+                  <span>Agenda Akademik</span>
+                </div>
+
+                <div class="legend-item">
+                  <span class="dot uts"></span>
+                  <span>Ujian / Evaluasi</span>
+                </div>
+
+                <div class="legend-item">
+                  <span class="dot libur"></span>
+                  <span>Libur / Tanggal Penting</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1509,6 +1563,7 @@
       <script src="../asset/js/nilai-select.js"></script>
       <script src="../asset/js/tabel-kuesioner.js"></script>
       <script src="../asset/js/lulusan-tabel.js"></script>
+      <script src="../asset/js/kalender-akademik.js"></script>
     </div>
   </body>
 </html>
