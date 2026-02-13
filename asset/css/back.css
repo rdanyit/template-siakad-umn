@@ -707,6 +707,13 @@ hr {
   opacity: 0.4;
 }
 
+#chartAKTToggle,
+#chartProdiToggle {
+  border: 0;
+  background: var(--background);
+  color: var(--text);
+}
+
 /* ===== Tabel Wrapper ===== */
 .tabel-wrapper {
   border-radius: 14px;
