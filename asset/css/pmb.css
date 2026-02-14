@@ -1,0 +1,200 @@
+/* Item Petunjuk */
+.petunjuk-pmb {
+  background: var(--secondary) !important;
+}
+
+/* Item Periode */
+.item-periode {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background: var(--background);
+  margin: 20px 0;
+  border-top: 2px solid var(--primary);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.item-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.judul-group {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.selectPeriode-wrapper {
+  width: 320px;
+  position: relative;
+}
+
+.selectPeriode-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#selectPeriodeLabel {
+  font-size: 14px;
+}
+
+.selectPeriode-input:hover {
+  border-color: var(--primary);
+}
+
+.selectPeriode-input.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.selectPeriode-arrow {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.selectPeriode-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  display: none;
+  z-index: 999;
+  animation: fadeIn 0.15s ease;
+}
+
+.selectPeriode-dropdown.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#selectPeriodeSearch {
+  width: 90%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+#selectPeriodeSearch:focus {
+  border-color: var(--primary);
+}
+
+.selectPeriode-options {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.selectPeriode-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selectPeriode-options::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+/* Statistik */
+.chart-pmb {
+  width: 100%;
+  max-width: 450px;
+  height: 160px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: -10px;
+  z-index: 3;
+}
+
+.chart-pmb canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.judul-stat-pmb {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--background);
+  text-decoration: underline;
+}
+
+.icon-stat-pmb {
+  position: absolute;
+  top: 40%;
+  left: 22%;
+  z-index: 1;
+  font-size: 36px;
+  color: var(--background);
+}
+
+.chart-pmb-contain {
+  margin: 0 !important;
+}
+
+/* Stat Group */
+.stat-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: stretch;
+}
+
+.canvas-chart {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+}
+
+.canvas-chart canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.bar-humberg,
+#chartstatpmbToggle,
+#charttrafikToggle,
+#chartfunnelpmbToggle,
+#chartgenderToggle,
+#charttahunlulusToggle {
+  margin: 10px 0 !important;
+  border: 0 !important;
+  background: var(--background) !important;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

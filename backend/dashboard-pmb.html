@@ -8,7 +8,7 @@
       href="../asset/logo/logo.png"
       type="image/x-icon"
     />
-    <title>UMN | Dashboard</title>
+    <title>UMN | Penerimaan Mahasiswa Baru</title>
 
     <!-- Icon -->
     <link rel="stylesheet" href="../asset/icon/fontawesome/css/all.min.css" />
@@ -20,13 +20,14 @@
     <!-- Css -->
     <link rel="stylesheet" href="../asset/css/style.css" />
     <link rel="stylesheet" href="../asset/css/back.css" />
+    <link rel="stylesheet" href="../asset/css/pmb.css" />
   </head>
   <body>
     <div class="main-wrapper">
       <!-- Topbar -->
       <div class="topbar">
         <img
-          src="../asset/media/background-2.jpg"
+          src="../asset/media/bc-pmb.jpg"
           alt="background"
           class="topbar-bg"
         />
@@ -34,7 +35,7 @@
           <div class="item-logo">
             <img src="../asset/logo/logo.png" alt="logo" class="img-logo" />
             <div class="desk-logo">
-              <span class="nama-halaman">Dashboard & Pelaporan</span>
+              <span class="nama-halaman">Penerimaan Mahasiswa Baru</span>
               <span class="nama-univ"
                 >Universitas Mohammad Natsir Bukittinggi</span
               >
@@ -80,7 +81,7 @@
                 <i class="fa-solid fa-circle-user"></i>
                 <div class="deskripsi-user">
                   <span class="role-user">SAdmin</span>
-                  <span class="nama-sistem">Sistem Akademik</span>
+                  <span class="nama-sistem">Sistem PMB</span>
                 </div>
               </a>
 
@@ -95,62 +96,25 @@
         <hr />
         <div class="menu-bar">
           <div class="menubar-item aktif">
-            <a href="#" class="list-icon-menu">
+            <a href="../backend/dashboard-pmb.html" class="list-icon-menu">
               <span class="nama-menu">Dashboard</span>
             </a>
           </div>
           <div class="menubar-item has-dropdown">
             <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Portal</span>
+              <span class="nama-menu">Pendaftar</span>
             </a>
 
             <div class="dropdown-menubar">
-              <a href="../backend/dashboard-pmb.html"
-                >Penerimaan Mahasiswa Baru</a
-              >
-              <a href="../backend/dashboard-akademik.html">Akademik</a>
-              <a href="../backend/dashboard-elearning.html">E-Learning</a>
-              <a href="../backend/dashboard-cbt.html">Computer Based Test</a>
-              <a href="../backend/dashboard-keuangan.html">Keuangan</a>
-              <a href="../backend/dashboard-pddikti.html">PDDIKTI</a>
-              <a href="../backend/dashboard.html">Dashboard & Pelaporan</a>
-              <a href="../backend/dashboard-pegawai.html">Kepegawaian</a>
-              <a href="../backend/dashboard-karir.html">Karir</a>
-              <a href="../backend/dashboard-kampus-merdeka.html"
-                >Kampus Merdeka</a
-              >
+              <a href="#">Data Pendaftar</a>
+              <a href="#">Verifikasi Berkas</a>
+              <a href="#">Validasi Pembayaran</a>
             </div>
           </div>
-          <div class="menubar-item has-dropdown">
+          <div class="menubar-item">
             <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Manajemen Pengguna</span>
+              <span class="nama-menu">One Day Service</span>
             </a>
-
-            <div class="dropdown-menubar">
-              <a href="#">Hak Akses</a>
-            </div>
-          </div>
-          <div class="menubar-item has-dropdown">
-            <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Publikasi</span>
-            </a>
-
-            <div class="dropdown-menubar">
-              <a href="#">Pengumuman</a>
-            </div>
-          </div>
-          <div class="menubar-item has-dropdown">
-            <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Referensi</span>
-            </a>
-
-            <div class="dropdown-menubar">
-              <a href="#">Perguruan Tinggi</a>
-              <a href="#">Fakultas</a>
-              <a href="#">Program Studi</a>
-              <a href="#">Wilayah</a>
-              <a href="#">Infrastruktur</a>
-            </div>
           </div>
           <div class="menubar-item has-dropdown">
             <a href="#" class="list-icon-menu">
@@ -158,9 +122,51 @@
             </a>
 
             <div class="dropdown-menubar">
-              <a href="#">Halaman Depan</a>
-              <a href="#">Halaman User</a>
-              <a href="#">Logo dan Warna</a>
+              <a href="#">Periode Pendaftaran</a>
+              <a href="#">Gelombang Pendaftaran</a>
+              <a href="#">Jalur Seleksi</a>
+              <a href="#">Kuota Program Studi</a>
+              <a href="#">Biaya & Komponen Pembayaran</a>
+              <a href="#">Hak Akses</a>
+              <a href="#">Template Dokumen</a>
+              <a href="#">Pengaturan Nomor Pendaftaran</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Seleksi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Bobot Penilaian</a>
+              <a href="#">Syarat Seleksi</a>
+              <a href="#">Validasi Hasil Seleksi</a>
+              <a href="#">Berita Acara Seleksi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Kelulusan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Rekomendasi Prodi</a>
+              <a href="#">Data Registrasi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Laporan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Laporan Pendaftar per Periode</a>
+              <a href="#">Laporan Pendaftar per Prodi</a>
+              <a href="#">Laporan Pembayaran</a>
+              <a href="#">Laporan Hasil Seleksi</a>
+              <a href="#">Laporan Kelulusan</a>
+              <a href="#">Laporan Daftar Ulang</a>
+              <a href="#">Laporan Aktivitas User</a>
             </div>
           </div>
         </div>
@@ -177,24 +183,12 @@
               <i class="fa-solid fa-signs-post icon-btn"></i>
               Sembunyikan Panduan
             </button>
-            <div class="select-wrapper">
-              <div class="custom-select" id="customSelect">
-                <div class="select-trigger">
-                  <span class="selected-text">Periode Akademik</span>
-                  <span class="arrow"></span>
-                </div>
-                <div class="select-dropdown">
-                  <div class="select-option">2025/2026 Ganjil</div>
-                  <div class="select-option">2025/2026 Genap</div>
-                  <div class="select-option">2026/2027 Ganjil</div>
-                </div>
-              </div>
-            </div>
+            <div class="select-wrapper"></div>
           </div>
         </div>
-        <div class="blok-petunjuk">
+        <div class="blok-petunjuk petunjuk-pmb">
           <img
-            src="../asset/media/background-1.jpg"
+            src="../asset/media/background-2.jpg"
             alt="background"
             class="background-img"
           />
@@ -203,7 +197,7 @@
             <div class="card-small">
               <div class="head-card-small">
                 <i class="fa-solid fa-signs-post icon-hcs"></i>
-                <span class="judul-hcs">Pembuatan Kurikulum</span>
+                <span class="judul-hcs">Penerimaan Mahasiswa Baru</span>
               </div>
               <div class="body-card-small">
                 <div class="progress-header">
@@ -218,40 +212,195 @@
                 <a href="#" class="badge-mulai">Mulai</a>
               </div>
             </div>
-            <div class="card-small">
-              <div class="head-card-small">
-                <i class="fa-solid fa-signs-post icon-hcs"></i>
-                <span class="judul-hcs">Persiapan KRS</span>
-              </div>
-              <div class="body-card-small">
-                <div class="progress-header">
-                  <span class="text-progress">Progress</span>
-                  <span id="statusText" class="text-belum-mulai"
-                    >Belum Mulai</span
-                  >
+          </div>
+        </div>
+
+        <!-- Periode -->
+        <div class="item-periode">
+          <div class="group-periode">
+            <div class="item-group">
+              <span class="judul-group">Periode</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Periode </span>
+                  <span class="selectPeriode-arrow">▾</span>
                 </div>
-                <div class="progress-bar" id="progressBar"></div>
-              </div>
-              <div class="footer-card-small">
-                <a href="#" class="badge-mulai">Mulai</a>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">2026 Ganjil</div>
+                      <div class="option">2025 Genap</div>
+                      <div class="option">2025 Ganjil</div>
+                      <div class="option">2024 Genap</div>
+                      <div class="option">2024 Ganjil</div>
+                      <div class="option">2023 Genap</div>
+                      <div class="option">2023 Ganjil</div>
+                      <div class="option">2022 Genap</div>
+                      <div class="option">2022 Ganjil</div>
+                      <div class="option">2021 Genap</div>
+                      <div class="option">2021 Ganjil</div>
+                      <div class="option">2020 Genap</div>
+                      <div class="option">2020 Ganjil</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-small">
-              <div class="head-card-small">
-                <i class="fa-solid fa-signs-post icon-hcs"></i>
-                <span class="judul-hcs">Persiapan Yudisium</span>
-              </div>
-              <div class="body-card-small">
-                <div class="progress-header">
-                  <span class="text-progress">Progress</span>
-                  <span id="statusText" class="text-belum-mulai"
-                    >Belum Mulai</span
-                  >
+            <div class="item-group">
+              <span class="judul-group">Jalur Pendaftaran</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Jalur Pendaftaran </span>
+                  <span class="selectPeriode-arrow">▾</span>
                 </div>
-                <div class="progress-bar" id="progressBar"></div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Seleksi Mandiri PTS</div>
+                      <div class="option">SBMPTN</div>
+                      <div class="option">Prestasi</div>
+                      <div class="option">Pindahan</div>
+                      <div class="option">Pasca Sarjana</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="footer-card-small">
-                <a href="#" class="badge-mulai">Mulai</a>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Jenjang</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Jenjang </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">D3 - Diploma 3</div>
+                      <div class="option">S1 - Strata 1</div>
+                      <div class="option">Prof - Profesi</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group-periode">
+            <div class="item-group">
+              <span class="judul-group">Gelombang</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Felombang </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Gelombang 1</div>
+                      <div class="option">Gelombang 2</div>
+                      <div class="option">Gelombang 3</div>
+                      <div class="option">Gelombang 4</div>
+                      <div class="option">Gelombang 5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Sistem Kuliah</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Sistem Kuliah</span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Reguler</div>
+                      <div class="option">Non Reguler</div>
+                      <div class="option">Nagari</div>
+                      <div class="option">Lazis</div>
+                      <div class="option">Program Khusus</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Unit/ Program Studi</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Jenjang </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option-group-label">Ilmu Kesehatan</div>
+
+                      <div class="option">S1 - Gizi</div>
+                      <div class="option">S1 - Administrasi Rumah Sakit</div>
+                      <div class="option">S1 - Ilmu Keperawatan</div>
+                      <div class="option">D3 - Keperawatan</div>
+                      <div class="option">Prof - Profesi Ners</div>
+                      <div class="option">D3 - Kebidanan</div>
+                      <div class="option">S1 - Kebidanan</div>
+                      <div class="option">Prof - Pendidikan Profesi Bidan</div>
+                      <div class="option">S1 - Farmasi</div>
+                    </div>
+                    <div class="option-group">
+                      <div class="option-group-label">
+                        Ilmu Sosial dan Humaniora
+                      </div>
+
+                      <div class="option">S1 - Akuntasi</div>
+                      <div class="option">S1 - Administrasi Publik</div>
+                      <div class="option">S1 - Hukum</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -259,361 +408,256 @@
 
         <!-- Statistik -->
         <div class="statistik">
-          <div class="card-medium lgb-1 flex-kolom">
-            <i class="fa-solid fa-user-group icon-stat"></i>
-            <div class="desk-stat">
-              <span class="judul-stat">Mahasiswa Baru</span>
-              <span class="sub-stat">Periode 2025-1</span>
-              <span class="number-stat">682</span>
+          <div class="card-medium lgb-1">
+            <div class="judul-stat-pmb">Peminat</div>
+            <div class="chart-pmb">
+              <canvas id="chart-peminat"></canvas>
             </div>
+            <i class="fa-solid fa-user-group icon-stat-pmb"></i>
           </div>
-          <div class="card-medium lgb-2 flex-kolom">
-            <i class="fa-solid fa-graduation-cap icon-stat"></i>
-            <div class="desk-stat">
-              <span class="judul-stat">Mahasiswa Aktif</span>
-              <span class="number-stat">2.347</span>
+
+          <div class="card-medium lgb-2">
+            <div class="judul-stat-pmb">Pendaftar</div>
+            <div class="chart-pmb">
+              <canvas id="chart-pendaftar"></canvas>
             </div>
+            <i class="fa-solid fa-user-plus icon-stat-pmb"></i>
           </div>
-          <div class="card-medium lgb-3 flex-kolom">
-            <i class="fa-solid fa-file-invoice icon-stat"></i>
-            <div class="desk-stat">
-              <span class="judul-stat">Rata-rata IPK Lulusan</span>
-              <span class="sub-stat">3 Tahun Terakhir</span>
-              <span class="number-stat">3,55</span>
+
+          <div class="card-medium lgb-3">
+            <div class="judul-stat-pmb">Diterima</div>
+            <div class="chart-pmb">
+              <canvas id="chart-diterima"></canvas>
             </div>
+            <i class="fa-solid fa-user-check icon-stat-pmb"></i>
           </div>
-          <div class="card-medium lgb-4 flex-kolom">
-            <i class="fa-solid fa-calendar-days icon-stat"></i>
-            <div class="desk-stat">
-              <span class="judul-stat">Periode Saat Ini</span>
-              <span class="number-stat">2025 Ganjil</span>
+
+          <div class="card-medium lgb-4">
+            <div class="judul-stat-pmb">Daftar Ulang</div>
+            <div class="chart-pmb">
+              <canvas id="chart-du"></canvas>
             </div>
+            <i class="fa-solid fa-user-graduate icon-stat-pmb"></i>
           </div>
         </div>
 
         <!-- chart statistik -->
         <div class="chart-stat">
           <div class="stat-periode">
-            <div class="head-stat-period">
-              <div class="judul-kepala">
-                <i class="fa-solid fa-chart-line icon-judul"></i>
-                <span class="text-judul"
-                  >Statistik Mahasiswa Periode: 2026 Genap</span
-                >
-              </div>
-            </div>
             <div class="body-stat-period">
               <div class="tabs-container">
                 <div class="tabs">
-                  <button class="tab active" data-tab="tab1">
-                    AKM Angkatan
+                  <button class="tab active" data-tab="tab1">Statistik</button>
+                  <button class="tab" data-tab="tab2">Info Grafik</button>
+                  <button class="tab" data-tab="tab3">
+                    Funnel Pendaftaran
                   </button>
-                  <button class="tab" data-tab="tab2">AKM Prodi</button>
-                  <button class="tab" data-tab="tab3">Mahasiswa Baru</button>
-                  <button class="tab" data-tab="tab4">Nilai</button>
-                  <button class="tab" data-tab="tab5">Kuesioner</button>
-                  <button class="tab" data-tab="tab6">Lulusan</button>
+                  <button class="tab" data-tab="tab4">Funnel Bulanan</button>
+                  <button class="tab" data-tab="tab5">Mahasiswa</button>
+                  <button class="tab" data-tab="tab6">Wilayah</button>
+                  <button class="tab" data-tab="tab7">Sekolah</button>
+                  <button class="tab" data-tab="tab8">Seleksi</button>
+                  <button class="tab" data-tab="tab9">Kuesioner</button>
+                  <button class="tab" data-tab="tab10">Orang Tua</button>
                   <div class="indicator"></div>
                 </div>
 
                 <div class="tab-content active" id="tab1">
+                  <!-- Statistik PMB -->
                   <div class="chart-container">
                     <div class="chart-header">
-                      <h3>Mahasiswa Aktif per Angkatan</h3>
+                      <h3>Statistik Penerimaan Mahasiswa Baru</h3>
 
-                      <div class="chart-menu">
-                        <button id="chartAKTToggle">
-                          <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <div class="chart-dropdown" id="chartAKTDropdown">
-                          <div id="downloadAKTPNG">Download PNG</div>
-                          <div id="downloadAKTJPG">Download JPG</div>
+                      <div class="selectPeriode-wrapper">
+                        <div
+                          class="selectPeriode-input"
+                          id="selectPeriodeInput"
+                        >
+                          <span id="selectPeriodeLabel">
+                            Pilih Jenis Perhitungan Grafik
+                          </span>
+                          <span class="selectPeriode-arrow">▾</span>
+                        </div>
+
+                        <div
+                          class="selectPeriode-dropdown"
+                          id="selectPeriodeDropdown"
+                        >
+                          <input
+                            type="text"
+                            id="selectPeriodeSearch"
+                            placeholder="Cari..."
+                          />
+
+                          <div
+                            class="selectPeriode-options"
+                            id="selectPeriodeOptions"
+                          >
+                            <div class="option-group">
+                              <div class="option">
+                                Jumlah Daftar Per Frekuensi
+                              </div>
+                              <div class="option">
+                                Jumlah Pendaftar Komulatif
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="selectPeriode-wrapper">
+                        <div
+                          class="selectPeriode-input"
+                          id="selectPeriodeInput"
+                        >
+                          <span id="selectPeriodeLabel"> Pilih Frekuensi </span>
+                          <span class="selectPeriode-arrow">▾</span>
+                        </div>
+
+                        <div
+                          class="selectPeriode-dropdown"
+                          id="selectPeriodeDropdown"
+                        >
+                          <input
+                            type="text"
+                            id="selectPeriodeSearch"
+                            placeholder="Cari..."
+                          />
+
+                          <div
+                            class="selectPeriode-options"
+                            id="selectPeriodeOptions"
+                          >
+                            <div class="option-group">
+                              <div class="option">Bulanan</div>
+                              <div class="option">2 Minggu</div>
+                              <div class="option">Mingguan</div>
+                              <div class="option">Harian</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <canvas id="akmakt-chart"></canvas>
-                    <div class="chart-legend-modern" id="chartAKTLegend"></div>
+                    <div class="chart-menu bar-humberg">
+                      <button id="chartstatpmbToggle">
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
+                      <div class="chart-dropdown" id="chartstatpmbDropdown">
+                        <div id="downloadstatpmbPNG">Download PNG</div>
+                        <div id="downloadstatpmbJPG">Download JPG</div>
+                      </div>
+                    </div>
+                    <canvas id="statpmb-chart"></canvas>
+                    <div
+                      class="chart-legend-modern"
+                      id="chartstatpmbLegend"
+                    ></div>
+                  </div>
 
-                    <div class="tabel-wrapper">
-                      <div class="head-tabel-wrap">
-                        <button class="btn-download">
-                          <i class="fa-solid fa-download"></i> Download Excel
-                        </button>
-                        <div class="toolbar">
-                          <input
-                            type="text"
-                            id="aktsearch"
-                            placeholder="Cari mahasiswa..."
-                          />
-                          <select id="filterAngkatan">
-                            <option value="">Semua Angkatan</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                          </select>
+                  <!-- Trafik dan Funnel -->
+                  <div class="stat-group">
+                    <!-- Trafik -->
+                    <div class="chart-container">
+                      <div class="chart-header">
+                        <h3>Sumber Trafik Pendaftar</h3>
+                        <div class="chart-menu bar-humberg">
+                          <button id="charttrafikToggle">
+                            <i class="fa-solid fa-bars"></i>
+                          </button>
+                          <div class="chart-dropdown" id="charttrafikDropdown">
+                            <div id="downloadtrafikPNG">Download PNG</div>
+                            <div id="downloadtrafikJPG">Download JPG</div>
+                          </div>
                         </div>
                       </div>
-                      <div class="body-tabel-wrap">
-                        <table id="tabelAkt">
-                          <thead>
-                            <tr>
-                              <th>Angkatan</th>
-                              <th>Aktif</th>
-                              <th>Cuti</th>
-                              <th>Sedang Double Degree</th>
-                              <th>Kampus Merdeka</th>
-                              <th>Tidak Aktif</th>
-                              <th>Menunggu Ukom</th>
-                              <th>Tidak Memiliki AKM</th>
-                              <th>AKM Tidak Sesuai</th>
-                              <th>Total</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="text-center">2005</td>
-                              <td class="text-center">95</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">1</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">1</td>
-                              <td class="text-center">124</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2006</td>
-                              <td class="text-center">102</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">1</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">132</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2007</td>
-                              <td class="text-center">110</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">14</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">150</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2008</td>
-                              <td class="text-center">118</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">158</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2009</td>
-                              <td class="text-center">125</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">165</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2010</td>
-                              <td class="text-center">132</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">14</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">181</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2011</td>
-                              <td class="text-center">140</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">16</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">197</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2012</td>
-                              <td class="text-center">148</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">18</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">214</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2013</td>
-                              <td class="text-center">155</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">21</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">216</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2014</td>
-                              <td class="text-center">162</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">22</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">235</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2015</td>
-                              <td class="text-center">170</td>
-                              <td class="text-center">13</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">24</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">240</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2016</td>
-                              <td class="text-center">178</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">26</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">246</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2017</td>
-                              <td class="text-center">185</td>
-                              <td class="text-center">14</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">28</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">261</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2018</td>
-                              <td class="text-center">190</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">13</td>
-                              <td class="text-center">31</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">273</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2019</td>
-                              <td class="text-center">198</td>
-                              <td class="text-center">15</td>
-                              <td class="text-center">14</td>
-                              <td class="text-center">34</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">293</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2020</td>
-                              <td class="text-center">205</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">15</td>
-                              <td class="text-center">36</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">301</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2021</td>
-                              <td class="text-center">212</td>
-                              <td class="text-center">12</td>
-                              <td class="text-center">16</td>
-                              <td class="text-center">38</td>
-                              <td class="text-center">9</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">304</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2022</td>
-                              <td class="text-center">220</td>
-                              <td class="text-center">16</td>
-                              <td class="text-center">17</td>
-                              <td class="text-center">40</td>
-                              <td class="text-center">11</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">10</td>
-                              <td class="text-center">326</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2023</td>
-                              <td class="text-center">230</td>
-                              <td class="text-center">14</td>
-                              <td class="text-center">18</td>
-                              <td class="text-center">44</td>
-                              <td class="text-center">8</td>
-                              <td class="text-center">2</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">6</td>
-                              <td class="text-center">327</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2024</td>
-                              <td class="text-center">240</td>
-                              <td class="text-center">13</td>
-                              <td class="text-center">20</td>
-                              <td class="text-center">48</td>
-                              <td class="text-center">7</td>
-                              <td class="text-center">3</td>
-                              <td class="text-center">4</td>
-                              <td class="text-center">5</td>
-                              <td class="text-center">340</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="canvas-chart">
+                        <canvas id="trafik-chart"></canvas>
                       </div>
+
+                      <div
+                        class="chart-legend-modern"
+                        id="charttrafikLegend"
+                      ></div>
+                    </div>
+
+                    <!-- Funnel -->
+                    <div class="chart-container">
+                      <div class="chart-header">
+                        <h3>Funnel Penerimaan Mahasiswa Baru</h3>
+                        <div class="chart-menu bar-humberg">
+                          <button id="chartfunnelpmbToggle">
+                            <i class="fa-solid fa-bars"></i>
+                          </button>
+                          <div
+                            class="chart-dropdown"
+                            id="chartfunnelpmbDropdown"
+                          >
+                            <div id="downloadfunnelpmbPNG">Download PNG</div>
+                            <div id="downloadfunnelpmbJPG">Download JPG</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="canvas-chart">
+                        <canvas id="funnelpmb-chart"></canvas>
+                      </div>
+
+                      <div
+                        class="chart-legend-modern"
+                        id="chartfunnelpmbLegend"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Gender dan Tahun Lulus -->
+                  <div class="stat-group">
+                    <!-- Gender -->
+                    <div class="chart-container">
+                      <div class="chart-header">
+                        <h3>Jenis Kelamin</h3>
+                        <div class="chart-menu bar-humberg">
+                          <button id="chartgenderToggle">
+                            <i class="fa-solid fa-bars"></i>
+                          </button>
+                          <div class="chart-dropdown" id="chartgenderDropdown">
+                            <div id="downloadgenderPNG">Download PNG</div>
+                            <div id="downloadgenderJPG">Download JPG</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="canvas-chart">
+                        <canvas id="gender-chart"></canvas>
+                      </div>
+
+                      <div
+                        class="chart-legend-modern"
+                        id="chartgenderLegend"
+                      ></div>
+                    </div>
+
+                    <!-- Tahun Lulus -->
+                    <div class="chart-container">
+                      <div class="chart-header">
+                        <h3>Tahun Lulus</h3>
+                        <div class="chart-menu bar-humberg">
+                          <button id="charttahunlulusToggle">
+                            <i class="fa-solid fa-bars"></i>
+                          </button>
+                          <div
+                            class="chart-dropdown"
+                            id="charttahunlulusDropdown"
+                          >
+                            <div id="downloadtahunlulusPNG">Download PNG</div>
+                            <div id="downloadtahunlulusJPG">Download JPG</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="canvas-chart">
+                        <canvas id="tahunlulus-chart"></canvas>
+                      </div>
+
+                      <div
+                        class="chart-legend-modern"
+                        id="charttahunlulusLegend"
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1686,6 +1730,7 @@
       <script src="../asset/js/kalender-akademik.js"></script>
       <script src="../asset/js/carip.js"></script>
       <script src="../asset/js/back.js"></script>
+      <script src="../asset/js/pmb.js"></script>
     </div>
   </body>
 </html>
