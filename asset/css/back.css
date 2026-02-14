@@ -787,7 +787,7 @@ hr {
   overflow: auto;
   border-radius: 10px;
   border: 1px solid #e5e7eb;
-  max-height: 420px;
+  max-height: 450px;
   background: white;
   border-bottom: 2px solid var(--primary);
 }

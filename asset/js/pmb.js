@@ -802,3 +802,389 @@ charttahunlulus.data.datasets.forEach((dataset, index) => {
 
   legendContainertahunlulus.appendChild(pilltahunlulus);
 });
+
+// Pendidikan
+const pendidikan = document.getElementById("pendidikan-chart");
+const chartpendidikan = new Chart(pendidikan, {
+  type: "pie",
+  data: {
+    labels: ["SMA", "SMK", "MAN", "Pesantren", "SMKS"],
+    datasets: [
+      {
+        label: "",
+        data: [50, 10, 30, 20, 50],
+        backgroundColor: [
+          "rgba(216, 30, 70, 0.7)",
+          "rgba(216, 30, 169, 0.7)",
+          "rgba(173, 30, 216, 0.7)",
+          "rgba(132, 30, 216, 0.7)",
+          "rgba(80, 30, 216, 0.7)",
+        ],
+        borderColor: [
+          "rgba(216, 30, 70, 0.7)",
+          "rgba(216, 30, 169, 0.7)",
+          "rgba(173, 30, 216, 0.7)",
+          "rgba(132, 30, 216, 0.7)",
+          "rgba(80, 30, 216, 0.7)",
+        ],
+        borderWidth: 2,
+        hoverOffset: 10,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: 0,
+    },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          color: "dark",
+          font: {
+            size: 12,
+            weight: "bold",
+          },
+        },
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: "#333",
+        titleColor: "#fff",
+        bodyColor: "#fff",
+        borderColor: "#fff",
+        borderWidth: 1,
+        cornerRadius: 10,
+      },
+    },
+  },
+});
+const togglependidikan = document.getElementById("chartpendidikanToggle");
+const dropdownpendidikan = document.getElementById("chartpendidikanDropdown");
+togglependidikan.addEventListener("click", () => {
+  dropdownpendidikan.style.display =
+    dropdownpendidikan.style.display === "block" ? "none" : "block";
+});
+document
+  .getElementById("downloadpendidikanPNG")
+  .addEventListener("click", () => {
+    const linkpendidikan = document.createElement("a");
+    linkpendidikan.href = chartpendidikan.toBase64Image();
+    linkpendidikan.download = "akm-chart.png";
+    linkpendidikan.click();
+  });
+document
+  .getElementById("downloadpendidikanJPG")
+  .addEventListener("click", () => {
+    const linkpendidikan = document.createElement("a");
+    linkpendidikan.href = chartpendidikan.toBase64Image("image/jpeg", 1);
+    linkpendidikan.download = "akm-chart.jpg";
+    linkpendidikan.click();
+  });
+const legendContainerpendidikan = document.getElementById(
+  "chartpendidikanLegend",
+);
+chartpendidikan.data.datasets.forEach((dataset, index) => {
+  const pillpendidikan = document.createElement("div");
+  pillpendidikan.className = "legend-pill";
+  pillpendidikan.innerHTML = `
+    <span class="legend-color" style="background:${dataset.borderColor || "#4e73df"}"></span>
+    ${dataset.label}
+  `;
+
+  pillpendidikan.onclick = () => {
+    const meta = chartpendidikan.getDatasetMeta(index);
+
+    meta.hidden =
+      meta.hidden === null
+        ? !chartpendidikan.data.datasets[index].hidden
+        : null;
+
+    pillpendidikan.classList.toggle("legend-inactive");
+
+    chartpendidikan.update();
+  };
+
+  legendContainerpendidikan.appendChild(pillpendidikan);
+});
+
+// Jurusan Pendidikan
+const jurusanpdd = document.getElementById("jurusanpdd-chart");
+const chartjurusanpdd = new Chart(jurusanpdd, {
+  type: "pie",
+  data: {
+    labels: [
+      "IPA",
+      "IPS",
+      "Farmasi",
+      "Keperawatan",
+      "Kurikulum Merdeka",
+      "IPAS",
+      "IPK",
+      "Lainnya",
+    ],
+    datasets: [
+      {
+        label: "",
+        data: [50, 10, 30, 20, 50, 30, 50, 70],
+        backgroundColor: [
+          "rgba(216, 30, 70, 0.7)",
+          "rgba(216, 30, 169, 0.7)",
+          "rgba(173, 30, 216, 0.7)",
+          "rgba(132, 30, 216, 0.7)",
+          "rgba(80, 30, 216, 0.7)",
+          "rgba(30, 216, 139, 0.7)",
+          "rgba(73, 216, 30, 0.7)",
+          "rgba(216, 204, 30, 0.7)",
+        ],
+        borderColor: [
+          "rgba(216, 30, 70, 0.7)",
+          "rgba(216, 30, 169, 0.7)",
+          "rgba(173, 30, 216, 0.7)",
+          "rgba(132, 30, 216, 0.7)",
+          "rgba(80, 30, 216, 0.7)",
+          "rgba(30, 216, 139, 0.7)",
+          "rgba(73, 216, 30, 0.7)",
+          "rgba(216, 204, 30, 0.7)",
+        ],
+        borderWidth: 2,
+        hoverOffset: 10,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: 0,
+    },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          color: "dark",
+          font: {
+            size: 12,
+            weight: "bold",
+          },
+        },
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: "#333",
+        titleColor: "#fff",
+        bodyColor: "#fff",
+        borderColor: "#fff",
+        borderWidth: 1,
+        cornerRadius: 10,
+      },
+    },
+  },
+});
+const togglejurusanpdd = document.getElementById("chartjurusanpddToggle");
+const dropdownjurusanpdd = document.getElementById("chartjurusanpddDropdown");
+togglejurusanpdd.addEventListener("click", () => {
+  dropdownjurusanpdd.style.display =
+    dropdownjurusanpdd.style.display === "block" ? "none" : "block";
+});
+document
+  .getElementById("downloadjurusanpddPNG")
+  .addEventListener("click", () => {
+    const linkjurusanpdd = document.createElement("a");
+    linkjurusanpdd.href = chartjurusanpdd.toBase64Image();
+    linkjurusanpdd.download = "akm-chart.png";
+    linkjurusanpdd.click();
+  });
+document
+  .getElementById("downloadjurusanpddJPG")
+  .addEventListener("click", () => {
+    const linkjurusanpdd = document.createElement("a");
+    linkjurusanpdd.href = chartjurusanpdd.toBase64Image("image/jpeg", 1);
+    linkjurusanpdd.download = "akm-chart.jpg";
+    linkjurusanpdd.click();
+  });
+const legendContainerjurusanpdd = document.getElementById(
+  "chartjurusanpddLegend",
+);
+chartjurusanpdd.data.datasets.forEach((dataset, index) => {
+  const pilljurusanpdd = document.createElement("div");
+  pilljurusanpdd.className = "legend-pill";
+  pilljurusanpdd.innerHTML = `
+    <span class="legend-color" style="background:${dataset.borderColor || "#4e73df"}"></span>
+    ${dataset.label}
+  `;
+
+  pilljurusanpdd.onclick = () => {
+    const meta = chartjurusanpdd.getDatasetMeta(index);
+
+    meta.hidden =
+      meta.hidden === null
+        ? !chartjurusanpdd.data.datasets[index].hidden
+        : null;
+
+    pilljurusanpdd.classList.toggle("legend-inactive");
+
+    chartjurusanpdd.update();
+  };
+
+  legendContainerjurusanpdd.appendChild(pilljurusanpdd);
+});
+
+// Statistik PMB
+const pmbgrafik = document.getElementById("pmbgrafik-chart");
+const chartpmbgrafik = new Chart(pmbgrafik, {
+  type: "bar",
+  data: {
+    labels: [
+      "S1 - Gizi",
+      "S1 - Administrasi Rumah Sakit",
+      "S1 - Ilmu Keperawatan",
+      "D3 - Keperawatan",
+      "Prof - Profesi Ners",
+      "S1 - Kebidanan",
+      "D3 - Kebidanan",
+      "Prof - Pendidikan Profesi Bidan",
+      "S1 - Farmasi",
+      "S1 - Akuntansi",
+      "S1 - Administrasi Publik",
+      "S1 - Hukum",
+    ],
+    datasets: [
+      {
+        label: "Pilihan 1",
+        data: [20, 80, 30, 12, 15, 19, 20, 33, 8, 5, 10, 15],
+        borderWidth: 2,
+        tension: 0.3,
+      },
+      {
+        label: "Pilihan 2",
+        data: [10, 5, 4, 7, 2, 10, 15, 28, 30, 40, 22, 28],
+        borderWidth: 2,
+        tension: 0.3,
+      },
+      {
+        label: "Pilihan 3",
+        data: [2, 10, 15, 28, 30, 40, 22, 28, 20, 33, 8, 5],
+        borderWidth: 2,
+        tension: 0.3,
+      },
+      {
+        label: "Pilihan 4",
+        data: [30, 40, 22, 28, 20, 33, 9, 7, 2, 10, 15, 28],
+        borderWidth: 2,
+        tension: 0.3,
+      },
+      {
+        label: "Pilihan 5",
+        data: [22, 28, 20, 33, 10, 12, 10, 15, 28, 30, 10],
+        borderWidth: 2,
+        tension: 0.3,
+      },
+    ],
+  },
+  options: {
+    indexAxis: "y",
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: false,
+          text: "Jumlah Pendaftar",
+        },
+      },
+      x: {
+        title: {
+          display: true,
+          text: "Jumlah Pendaftar",
+        },
+      },
+    },
+  },
+});
+
+const togglepmbgrafik = document.getElementById("chartpmbgrafikToggle");
+const dropdownpmbgrafik = document.getElementById("chartpmbgrafikDropdown");
+
+togglepmbgrafik.addEventListener("click", () => {
+  dropdownpmbgrafik.style.display =
+    dropdownpmbgrafik.style.display === "block" ? "none" : "block";
+});
+
+document
+  .getElementById("downloadpmbgrafikPNG")
+  .addEventListener("click", () => {
+    const linkpmbgrafik = document.createElement("a");
+    linkpmbgrafik.href = chartpmbgrafik.toBase64Image();
+    linkpmbgrafik.download = "akm-chart.png";
+    linkpmbgrafik.click();
+  });
+
+document
+  .getElementById("downloadpmbgrafikJPG")
+  .addEventListener("click", () => {
+    const linkpmbgrafik = document.createElement("a");
+    linkpmbgrafik.href = chartpmbgrafik.toBase64Image("image/jpeg", 1);
+    linkpmbgrafik.download = "akm-chart.jpg";
+    linkpmbgrafik.click();
+  });
+
+const legendContainerpmbgrafik = document.getElementById(
+  "chartpmbgrafikLegend",
+);
+
+chartpmbgrafik.data.datasets.forEach((dataset, index) => {
+  const pillpmbgrafik = document.createElement("div");
+  pillpmbgrafik.className = "legend-pill";
+  pillpmbgrafik.innerHTML = `
+    <span class="legend-color" style="background:${dataset.borderColor || "#4e73df"}"></span>
+    ${dataset.label}
+  `;
+
+  pillpmbgrafik.onclick = () => {
+    const meta = chartpmbgrafik.getDatasetMeta(index);
+
+    meta.hidden =
+      meta.hidden === null ? !chartpmbgrafik.data.datasets[index].hidden : null;
+
+    pillpmbgrafik.classList.toggle("legend-inactive");
+
+    chartpmbgrafik.update();
+  };
+
+  legendContainerpmbgrafik.appendChild(pillpmbgrafik);
+});
+
+// Pilihan Tampilan
+document.addEventListener("DOMContentLoaded", function () {
+  const pilihanGrafik = document.querySelector(".pilihan-grafik");
+  const pilihanTabel = document.querySelector(".pilihan-tabel");
+
+  // Default tampil grafik
+  pilihanGrafik.style.display = "block";
+  pilihanTabel.style.display = "none";
+
+  // Ambil semua option
+  const allOptions = document.querySelectorAll(".option");
+
+  allOptions.forEach((option) => {
+    option.addEventListener("click", function () {
+      const value = this.textContent.trim().toLowerCase();
+
+      if (value === "grafik") {
+        pilihanGrafik.style.display = "block";
+        pilihanTabel.style.display = "none";
+      } else if (value === "tabel") {
+        pilihanGrafik.style.display = "none";
+        pilihanTabel.style.display = "block";
+      }
+    });
+  });
+});
