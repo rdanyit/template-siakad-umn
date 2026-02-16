@@ -106,22 +106,13 @@
               <span class="nama-menu">Dashboard</span>
             </a>
           </div>
-          <div class="menubar-item has-dropdown aktif">
-            <a href="#" class="list-icon-menu">
+          <div class="menubar-item">
+            <a
+              href="../../backend/pmb/daftar-peserta-pmb.html"
+              class="list-icon-menu"
+            >
               <span class="nama-menu">Pendaftar</span>
             </a>
-
-            <div class="dropdown-menubar">
-              <a href="../../backend/pmb/daftar-peserta-pmb.html"
-                >Data Pendaftar</a
-              >
-              <a href="../../backend/pmb/verifikasi-berkas-pmb.html"
-                >Verifikasi Berkas</a
-              >
-              <a href="../../backend/pmb/validasi-pembayaran.html"
-                >Validasi Pembayaran</a
-              >
-            </div>
           </div>
           <div class="menubar-item">
             <a
@@ -131,20 +122,24 @@
               <span class="nama-menu">One Day Service</span>
             </a>
           </div>
-          <div class="menubar-item has-dropdown">
+          <div class="menubar-item has-dropdown aktif">
             <a href="#" class="list-icon-menu">
               <span class="nama-menu">Pengaturan</span>
             </a>
 
             <div class="dropdown-menubar">
-              <a href="#">Periode Pendaftaran</a>
-              <a href="#">Gelombang Pendaftaran</a>
-              <a href="#">Jalur Seleksi</a>
-              <a href="#">Kuota Program Studi</a>
-              <a href="#">Biaya & Komponen Pembayaran</a>
+              <a href="../../backend/pmb/periode-pendaftaran.html"
+                >Periode Pendaftaran</a
+              >
+              <a href="../../backend/pmb/set-program-studi.html"
+                >Program Studi</a
+              >
+              <a href="#">Seleksi Pendaftaran</a>
+              <a href="#">Syarat Seleksi</a>
+              <a href="#">Jadwal Seleksi</a>
+              <a href="#">Uang Kuliah Tunggal</a>
+              <a href="#">TPengaturan PMB</a>
               <a href="#">Hak Akses</a>
-              <a href="#">Template Dokumen</a>
-              <a href="#">Pengaturan Nomor Pendaftaran</a>
             </div>
           </div>
           <div class="menubar-item has-dropdown">
@@ -153,10 +148,13 @@
             </a>
 
             <div class="dropdown-menubar">
-              <a href="#">Bobot Penilaian</a>
+              <a href="#">Nilai Seleksi</a>
               <a href="#">Syarat Seleksi</a>
-              <a href="#">Validasi Hasil Seleksi</a>
-              <a href="#">Berita Acara Seleksi</a>
+              <a href="#">Pengisian Nilai</a>
+              <a href="#">Kelengkapan Syarat</a>
+              <a href="#">UKT Pendaftar</a>
+              <a href="#">KIP Kuliah</a>
+              <a href="#">Seleksi RPL</a>
             </div>
           </div>
           <div class="menubar-item has-dropdown">
@@ -166,7 +164,20 @@
 
             <div class="dropdown-menubar">
               <a href="#">Rekomendasi Prodi</a>
-              <a href="#">Data Registrasi</a>
+              <a href="#">Registrasi Ulang</a>
+              <a href="#">Generate Mahasiswa</a>
+              <a href="#">Pembatan NIM</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Referensi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Pendaftaran</a>
+              <a href="#">Berita</a>
+              <a href="#">Seleksi</a>
             </div>
           </div>
           <div class="menubar-item has-dropdown">
@@ -192,7 +203,7 @@
       <div class="main">
         <!-- Petunjuk -->
         <div class="head-main">
-          <span class="nama-menu-aktif">Daftar Peserta</span>
+          <span class="nama-menu-aktif">Periode Pendaftaran</span>
         </div>
 
         <!-- Periode -->
@@ -205,7 +216,6 @@
                   <span id="selectPeriodeLabel"> Pilih Periode </span>
                   <span class="selectPeriode-arrow">▾</span>
                 </div>
-
                 <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
                   <input
                     type="text"
@@ -240,7 +250,6 @@
                   <span id="selectPeriodeLabel"> Pilih Jalur Pendaftaran </span>
                   <span class="selectPeriode-arrow">▾</span>
                 </div>
-
                 <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
                   <input
                     type="text"
@@ -260,6 +269,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="group-periode">
             <div class="item-group">
               <span class="judul-group">Gelombang</span>
               <div class="selectPeriode-wrapper">
@@ -286,33 +297,6 @@
               </div>
             </div>
             <div class="item-group">
-              <span class="judul-group">Pilihan</span>
-              <div class="selectPeriode-wrapper">
-                <div class="selectPeriode-input" id="selectPeriodeInput">
-                  <span id="selectPeriodeLabel"> Pilih Pilihan </span>
-                  <span class="selectPeriode-arrow">▾</span>
-                </div>
-
-                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
-                  <input
-                    type="text"
-                    id="selectPeriodeSearch"
-                    placeholder="Cari..."
-                  />
-
-                  <div class="selectPeriode-options" id="selectPeriodeOptions">
-                    <div class="option-group">
-                      <div class="option">Pilihan 1</div>
-                      <div class="option">Pilihan 2</div>
-                      <div class="option">Pilihan 3</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="group-periode">
-            <div class="item-group">
               <span class="judul-group">Sistem Kuliah</span>
               <div class="selectPeriode-wrapper">
                 <div class="selectPeriode-input" id="selectPeriodeInput">
@@ -331,72 +315,6 @@
                     <div class="option-group">
                       <div class="option">Reguler</div>
                       <div class="option">Non Reguler</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item-group">
-              <span class="judul-group">Unit/ Program Studi</span>
-              <div class="selectPeriode-wrapper">
-                <div class="selectPeriode-input" id="selectPeriodeInput">
-                  <span id="selectPeriodeLabel"> Pilih Jenjang </span>
-                  <span class="selectPeriode-arrow">▾</span>
-                </div>
-
-                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
-                  <input
-                    type="text"
-                    id="selectPeriodeSearch"
-                    placeholder="Cari..."
-                  />
-
-                  <div class="selectPeriode-options" id="selectPeriodeOptions">
-                    <div class="option-group">
-                      <div class="option-group-label">Ilmu Kesehatan</div>
-
-                      <div class="option">S1 - Gizi</div>
-                      <div class="option">S1 - Administrasi Rumah Sakit</div>
-                      <div class="option">S1 - Ilmu Keperawatan</div>
-                      <div class="option">D3 - Keperawatan</div>
-                      <div class="option">Prof - Profesi Ners</div>
-                      <div class="option">D3 - Kebidanan</div>
-                      <div class="option">S1 - Kebidanan</div>
-                      <div class="option">Prof - Pendidikan Profesi Bidan</div>
-                      <div class="option">S1 - Farmasi</div>
-                    </div>
-                    <div class="option-group">
-                      <div class="option-group-label">
-                        Ilmu Sosial dan Humaniora
-                      </div>
-
-                      <div class="option">S1 - Akuntasi</div>
-                      <div class="option">S1 - Administrasi Publik</div>
-                      <div class="option">S1 - Hukum</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item-group">
-              <span class="judul-group">Status Pendaftar</span>
-              <div class="selectPeriode-wrapper">
-                <div class="selectPeriode-input" id="selectPeriodeInput">
-                  <span id="selectPeriodeLabel"> Pilih Status Pendaftar</span>
-                  <span class="selectPeriode-arrow">▾</span>
-                </div>
-
-                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
-                  <input
-                    type="text"
-                    id="selectPeriodeSearch"
-                    placeholder="Cari..."
-                  />
-
-                  <div class="selectPeriode-options" id="selectPeriodeOptions">
-                    <div class="option-group">
-                      <div class="option">Aktif</div>
-                      <div class="option">Non Aktif</div>
                     </div>
                   </div>
                 </div>
@@ -436,64 +354,87 @@
                   <option value="S1-Kebidanan">S1 Kebidanan</option>
                 </select>
               </div>
+              <div class="oc-wrapper">
+                <button type="button" class="btn-tambah" data-oc-toggle>
+                  <i class="fa-solid fa-plus"></i> Tambah Data
+                </button>
+
+                <div class="offcanvas">
+                  <div class="offcanvas-backdrop" data-oc-close></div>
+
+                  <div class="offcanvas-panel">
+                    <div class="offcanvas-header">
+                      <h3>Tambah Data</h3>
+                      <button class="oc-close" type="button" data-oc-close>
+                        &times;
+                      </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                      <!-- Isi bebas -->
+                      <p>Konten form / input di sini...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="body-tabel-wrap">
               <table id="tabelPeserta">
                 <thead>
                   <tr>
-                    <th>
-                      <label class="checkbox-wrapper">
-                        <input type="checkbox" id="selectAll" />
-                        <span class="checkmark"></span>
-                      </label>
-                    </th>
-                    <th>Foto Pendaftar</th>
-                    <th>Nama & Kode Pendaftar</th>
-                    <th>Berkas</th>
-                    <th>Program Studi</th>
-                    <th>Status Validasi</th>
+                    <th>Nama Periode Pendaftaran</th>
+                    <th>Jalur Pendaftaran</th>
+                    <th>Waktu Pelaksanaan</th>
+                    <th>Bayar</th>
+                    <th>Status</th>
+                    <th>Funnel Pendaftaran</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Pendaftar untuk Umum Reguler</td>
                     <td>
-                      <label class="checkbox-wrapper">
-                        <input type="checkbox" class="row-check" />
-                        <span class="checkmark"></span>
-                      </label>
+                      <div class="nama-table-peserta">
+                        2026 Ganjil - Gelombang 1
+                      </div>
+                      <div class="no-peserta">UMUM - Reguler</div>
                     </td>
                     <td>
-                      <img
-                        src="../../asset/media/profile.png"
-                        alt="Foto Clara Kartika"
-                        class="table-img-profile"
-                      />
+                      <div class="gelombang-pdf">1 Jan – 31 Mei 2026</div>
+                      <div class="jalur-pdf">Pendaftaran Dibuka</div>
                     </td>
-                    <td>
-                      <div class="nama-table-peserta">CLARA KARTIKA</div>
-                      <div class="no-peserta">2601010012</div>
-                    </td>
-                    <td>
-                      <div class="gelombang-pdf">2026 Ganjil – Gelombang 1</div>
-                      <div class="jalur-pdf">UMUM – Reguler</div>
-                    </td>
+                    <td>Belum Verifikasi</td>
+                    <td>Aktif</td>
                     <td>
                       <ol>
-                        <li>
-                          <a href="#" class="file-berkas"
-                            ><i class="fa-solid fa-file-pdf"></i> Berkas
-                            Pendaftaran</a
-                          >
-                        </li>
+                        <li>Peminat: 0</li>
+                        <li>Pendaftar: 0</li>
+                        <li>Lulus: 0</li>
+                        <li>Daftar Ulang: 0</li>
+                        <li>Mahasiswa: 0</li>
                       </ol>
                     </td>
-                    <td></td>
+                    <td>
+                      <button class="badge-info">
+                        <i class="fa-solid fa-eye"></i>
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+
+        <!-- <div class="group-2grid-left">
+          <div class="blok-left">
+            <div class="head-blok">
+              <div class="judul-blok-left">Form Tambah Periode</div>
+            </div>
+          </div>
+          <div class="blok-right"></div>
+        </div> -->
       </div>
 
       <!-- Footer -->
@@ -522,6 +463,7 @@
       <script src="../../asset/js/back.js"></script>
       <script src="../../asset/js/pmb.js"></script>
       <script src="../../asset/js/pmb-custom.js"></script>
+      <script src="../../asset/js/offcanvas-admin.js"></script>
     </div>
   </body>
 </html>
