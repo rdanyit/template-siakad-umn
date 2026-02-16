@@ -5,36 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../asset/logo/logo.png"
+      href="../../asset/logo/logo.png"
       type="image/x-icon"
     />
     <title>UMN | Dashboard</title>
 
     <!-- Icon -->
-    <link rel="stylesheet" href="../asset/icon/fontawesome/css/all.min.css" />
-    <script src="../asset/icon/fontawesome/js/all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
 
     <!-- JS -->
-    <script src="../asset/js/jquery.js"></script>
+    <script src="../../asset/js/jquery.js"></script>
 
     <!-- Css -->
-    <link rel="stylesheet" href="../asset/css/style.css" />
-    <link rel="stylesheet" href="../asset/css/back.css" />
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
   </head>
   <body>
     <div class="main-wrapper">
       <!-- Topbar -->
       <div class="topbar">
         <img
-          src="../asset/media/background-2.jpg"
+          src="../../asset/media/background-2.jpg"
           alt="background"
           class="topbar-bg"
         />
         <div class="logo-bar">
           <div class="item-logo">
-            <img src="../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
             <div class="desk-logo">
-              <span class="nama-halaman">Dashboard & Pelaporan</span>
+              <span class="nama-halaman">Portal Akademik</span>
               <span class="nama-univ"
                 >Universitas Mohammad Natsir Bukittinggi</span
               >
@@ -44,7 +47,7 @@
             <div class="menu-dropdown">
               <a href="#" class="list-icon-menu">
                 <img
-                  src="../asset/media/bendera.jpg"
+                  src="../../asset/media/bendera.jpg"
                   alt="bendera"
                   class="bendera-icon"
                 />
@@ -95,7 +98,10 @@
         <hr />
         <div class="menu-bar">
           <div class="menubar-item aktif">
-            <a href="#" class="list-icon-menu">
+            <a
+              href="../akademik/dashboard-akademik.html"
+              class="list-icon-menu"
+            >
               <span class="nama-menu">Dashboard</span>
             </a>
           </div>
@@ -105,29 +111,67 @@
             </a>
 
             <div class="dropdown-menubar">
-              <a href="../backend/dashboard-pmb.html"
-                >Penerimaan Mahasiswa Baru</a
-              >
-              <a href="../backend/dashboard-akademik.html">Akademik</a>
-              <a href="../backend/dashboard-elearning.html">E-Learning</a>
-              <a href="../backend/dashboard-cbt.html">Computer Based Test</a>
-              <a href="../backend/dashboard-keuangan.html">Keuangan</a>
-              <a href="../backend/dashboard-pddikti.html">PDDIKTI</a>
-              <a href="../backend/dashboard.html">Dashboard & Pelaporan</a>
-              <a href="../backend/dashboard-pegawai.html">Kepegawaian</a>
-              <a href="../backend/dashboard-karir.html">Karir</a>
-              <a href="../backend/dashboard-kampus-merdeka.html"
-                >Kampus Merdeka</a
+              <a href="../backend/akademik/mahasiswa.html">Mahasiswa</a>
+              <a href="../backend/akademik/pegawai.html">Pegawai</a>
+              <a href="../backend/akademik/pengumuman.html">Pengumuman</a>
+              <a href="../backend/akademik/konsultasi.html">Konsultasi</a>
+              <a href="../backend/akademik/kegiatan.html">Kegiatan Akademik</a>
+              <a href="../backend/akademik/dbroadcast.html">Broadcast</a>
+              <a href="../backend/elearning/dashboard-elearning.html"
+                >E-Learning</a
               >
             </div>
           </div>
           <div class="menubar-item has-dropdown">
             <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Manajemen Pengguna</span>
+              <span class="nama-menu">Perkuliahan</span>
             </a>
 
             <div class="dropdown-menubar">
-              <a href="#">Hak Akses</a>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Manajemen Kurikulum <i class="fa-solid fa-caret-right"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Kurikulum Aktif</a>
+                  <a href="#">Mata Kuliah</a>
+                  <a href="#">Distribusi MK</a>
+                </div>
+              </div>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Kelas <i class="fa-solid fa-caret-right"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Jadwal Kuliah</a>
+                  <a href="#">Peserta Kelas</a>
+                  <a href="#">Presensi</a>
+                </div>
+              </div>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Administrasi <i class="fa-solid fa-caret-right"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">KRS</a>
+                  <a href="#">Nilai</a>
+                  <a href="#">Transkrip</a>
+                </div>
+              </div>
+
+              <a href="#">Kuesioner</a>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Wisuda <i class="fa-solid fa-caret-right"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Peserta Wisuda</a>
+                  <a href="#">Periode Wisuda</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="menubar-item has-dropdown">
@@ -141,12 +185,15 @@
           </div>
           <div class="menubar-item has-dropdown">
             <a href="#" class="list-icon-menu">
-              <span class="nama-menu">Data Infrastruktur</span>
+              <span class="nama-menu">Referensi</span>
             </a>
 
             <div class="dropdown-menubar">
+              <a href="#">Perguruan Tinggi</a>
               <a href="#">Fakultas</a>
               <a href="#">Program Studi</a>
+              <a href="#">Wilayah</a>
+              <a href="#">Infrastruktur</a>
             </div>
           </div>
           <div class="menubar-item has-dropdown">
@@ -191,7 +238,7 @@
         </div>
         <div class="blok-petunjuk">
           <img
-            src="../asset/media/background-1.jpg"
+            src="../../asset/media/background-1.jpg"
             alt="background"
             class="background-img"
           />
@@ -1669,20 +1716,21 @@
 
       <!-- JS -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script src="../asset/js/petujuk.js"></script>
-      <script src="../asset/js/custom-select.js"></script>
-      <script src="../asset/js/tab.js"></script>
-      <script src="../asset/js/chart-akmakt.js"></script>
-      <script src="../asset/js/chart-akmprodi.js"></script>
-      <script src="../asset/js/akt-tabel.js"></script>
-      <script src="../asset/js/prodi-tabel.js"></script>
-      <script src="../asset/js/tabel-mahasiswa.js"></script>
-      <script src="../asset/js/nilai-select.js"></script>
-      <script src="../asset/js/tabel-kuesioner.js"></script>
-      <script src="../asset/js/lulusan-tabel.js"></script>
-      <script src="../asset/js/kalender-akademik.js"></script>
-      <script src="../asset/js/carip.js"></script>
-      <script src="../asset/js/back.js"></script>
+      <script src="../../asset/js/petujuk.js"></script>
+      <script src="../../asset/js/custom-select.js"></script>
+      <script src="../../asset/js/tab.js"></script>
+      <script src="../../asset/js/chart-akmakt.js"></script>
+      <script src="../../asset/js/chart-akmprodi.js"></script>
+      <script src="../../asset/js/akt-tabel.js"></script>
+      <script src="../../asset/js/prodi-tabel.js"></script>
+      <script src="../../asset/js/tabel-mahasiswa.js"></script>
+      <script src="../../asset/js/nilai-select.js"></script>
+      <script src="../../asset/js/tabel-kuesioner.js"></script>
+      <script src="../../asset/js/lulusan-tabel.js"></script>
+      <script src="../../asset/js/kalender-akademik.js"></script>
+      <script src="../../asset/js/carip.js"></script>
+      <script src="../../asset/js/submenu.js"></script>
+      <script src="../../asset/js/back.js"></script>
     </div>
   </body>
 </html>
