@@ -387,3 +387,43 @@ ol {
 .file-berkas {
   color: var(--text);
 }
+
+.tabs-contain {
+  width: 100%;
+  max-width: 1400px;
+  background: var(--background);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border-default);
+  border-right: 1px solid var(--border-default);
+  border-left: 1px solid var(--border-default);
+  border-top: 2px solid var(--primary);
+}
+
+.tabs-contain .tabs {
+  width: 1400px;
+}
+
+.judul-substabs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.head-subtabs {
+  display: flex;
+  margin: 10px 0px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.nominal-subtabs {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ifo-subtabs {
+  color: orange;
+}
