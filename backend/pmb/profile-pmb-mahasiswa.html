@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Profile User</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+    <link rel="stylesheet" href="../../asset/css/pmb.css" />
+    <link rel="stylesheet" href="../../asset/css/bidata-pmb.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/bc-pmb.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Penerimaan Mahasiswa Baru</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">Sistem PMB</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item aktif">
+            <a
+              href="../../backend/pmb/dashboard-pmb.html"
+              class="list-icon-menu"
+            >
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item">
+            <a
+              href="../../backend/pmb/daftar-peserta-pmb.html"
+              class="list-icon-menu"
+            >
+              <span class="nama-menu">Pendaftar</span>
+            </a>
+          </div>
+          <div class="menubar-item">
+            <a
+              href="../../backend/pmb/one-day-service.html"
+              class="list-icon-menu"
+            >
+              <span class="nama-menu">One Day Service</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Pengaturan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../../backend/pmb/periode-pendaftaran.html"
+                >Periode Pendaftaran</a
+              >
+              <a href="#">Program Studi</a>
+              <a href="#">Seleksi Pendaftaran</a>
+              <a href="#">Syarat Seleksi</a>
+              <a href="#">Jadwal Seleksi</a>
+              <a href="#">Uang Kuliah Tunggal</a>
+              <a href="#">TPengaturan PMB</a>
+              <a href="#">Hak Akses</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Seleksi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Nilai Seleksi</a>
+              <a href="#">Syarat Seleksi</a>
+              <a href="#">Pengisian Nilai</a>
+              <a href="#">Kelengkapan Syarat</a>
+              <a href="#">UKT Pendaftar</a>
+              <a href="#">KIP Kuliah</a>
+              <a href="#">Seleksi RPL</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Kelulusan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Rekomendasi Prodi</a>
+              <a href="#">Registrasi Ulang</a>
+              <a href="#">Generate Mahasiswa</a>
+              <a href="#">Pembatan NIM</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Referensi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Pendaftaran</a>
+              <a href="#">Berita</a>
+              <a href="#">Seleksi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Laporan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Laporan Pendaftar per Periode</a>
+              <a href="#">Laporan Pendaftar per Prodi</a>
+              <a href="#">Laporan Pembayaran</a>
+              <a href="#">Laporan Hasil Seleksi</a>
+              <a href="#">Laporan Kelulusan</a>
+              <a href="#">Laporan Daftar Ulang</a>
+              <a href="#">Laporan Aktivitas User</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <div class="daftar-pmb">
+          <div class="progress">
+            <div class="bar-progress active"></div>
+            <div class="bar-progress"></div>
+            <div class="bar-progress"></div>
+          </div>
+          <form id="multiStepForm">
+            <div class="step active">
+              <h2>Data Pribadi</h2>
+              <div class="tiga-kolom">
+                <div class="left-kolom">
+                  <img
+                    src="../../asset/media/profile.png"
+                    alt=""
+                    class="img-profile"
+                  />
+                </div>
+                <div class="middle-kolom">
+                  <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input
+                      type="text"
+                      name="nama_lengkap"
+                      id="nama_lengkap"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Nama Panggilan</label>
+                    <input
+                      type="text"
+                      name="nama_panggilan"
+                      id="nama_panggilan"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                  <div class="dua-kolom">
+                    <div class="form-group">
+                      <label>Tempat Lahir</label>
+                      <input
+                        type="text"
+                        name="tempat_lahir"
+                        id="tempat_lahir"
+                        class="form-input-pmb"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Tanggal Lahir</label>
+                      <input
+                        type="date"
+                        name="tgl_lahir"
+                        id="tgl_lahir"
+                        class="form-input-pmb"
+                      />
+                    </div>
+                  </div>
+                  <div class="dua-kolom">
+                    <div class="form-group">
+                      <label>Jenis Kelamin</label>
+                      <select name="gender" id="gender" class="form-select-pmb">
+                        <option value="" disabled>Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right-kolom">
+                  <div class="form-group">
+                    <label>NIK</label>
+                    <input
+                      type="text"
+                      name="nik"
+                      id="nik"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Nomor KK</label>
+                    <input
+                      type="text"
+                      name="no_kk"
+                      id="no_kk"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                  <div class="tiga-kolom">
+                    <div class="form-group">
+                      <label>Agama</label>
+                      <select name="gender" id="gender" class="form-select-pmb">
+                        <option value="" disabled>Pilih Agama</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen Protestan">
+                          Kristen Protestan
+                        </option>
+                        <option value="Kristen Katolik">Kristen Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Kewarganegaraan</label>
+                      <select name="negara" id="negara" class="form-select-pmb">
+                        <option value="" disabled>Pilih Kewarganegaraan</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="WNA">WNA</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Status Pernikahan</label>
+                      <select name="negara" id="negara" class="form-select-pmb">
+                        <option value="" disabled>
+                          Pilih Status Pernikahan
+                        </option>
+                        <option value="Belum Menikah">Belum Menikah</option>
+                        <option value="Sudah Menikah">Sudah Menikah</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Nomor HP</label>
+                    <input
+                      type="number"
+                      name="hp"
+                      id="hp"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Pas Foto</label>
+                    <input
+                      type="file"
+                      name="foto"
+                      id="foto"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <div></div>
+                <button type="button" class="btn-next">Lanjutkan</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <h2>Alamat Domisili</h2>
+
+              <div class="form-group">
+                <label>Alamat Lengkap</label>
+                <textarea
+                  name="alamat_lengkap"
+                  id="alamat_lengkap"
+                  class="text-area"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Provinsi</label>
+                <select name="prov" id="prov" class="form-select-pmb">
+                  <option value="" disabled>Pilih Provinsi</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Kota / Kabupaten</label>
+                <select name="kab_kota" id="kab_kota" class="form-select-pmb">
+                  <option value="" disabled>Pilih Kota/ Kabupaten</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Kecamatan</label>
+                <select name="kecamatan" id="kecamatan" class="form-select-pmb">
+                  <option value="" disabled>Pilih Kecamatan</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Nagari</label>
+                <select name="nagari" id="nagari" class="form-select-pmb">
+                  <option value="" disabled>Pilih Nagari</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Kode Pos</label>
+                <input
+                  type="number"
+                  name="pos"
+                  id="pos"
+                  class="form-input-pmb"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Status Tempat Tinggal</label>
+                <select
+                  name="status_tinggal"
+                  id="status_tinggal"
+                  class="form-select-pmb"
+                >
+                  <option value="" disabled>Pilih Status Tempat Tinggal</option>
+                  <option value="ortu">Orang Tua</option>
+                  <option value="kos">Kos</option>
+                </select>
+              </div>
+
+              <div class="buttons">
+                <button type="button" class="btn-prev">Kembali</button>
+                <button type="button" class="btn-next">Lanjutkan</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="../../asset/js/bio-pmb.js"></script>
+      <script src="../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>
