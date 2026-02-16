@@ -841,7 +841,7 @@ table thead tr:nth-child(2) th {
 table tbody td {
   padding: 5px 10px;
   border-bottom: 1px solid var(--border-default);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 table tbody tr:nth-child(even) td {

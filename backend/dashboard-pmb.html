@@ -1064,8 +1064,10 @@
                         <tbody>
                           <tr class="collapsible" data-level="0">
                             <td>
-                              <span class="arrow">▼</span> Universitas Mohammad
-                              Natsir Bukittinggi
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Universitas Mohammad Natsir Bukittinggi
                             </td>
                             <td>135</td>
                             <td>135</td>
@@ -1078,7 +1080,12 @@
                           </tr>
 
                           <tr class="collapsible" data-level="1">
-                            <td><span class="arrow">▼</span> Ilmu Kesehatan</td>
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Kesehatan
+                            </td>
                             <td>111</td>
                             <td>105</td>
                             <td>97</td>
@@ -1154,7 +1161,7 @@
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr data-level="22">
+                          <tr data-level="2">
                             <td>D3 - Kebidanan</td>
                             <td>111</td>
                             <td>105</td>
@@ -1187,10 +1194,12 @@
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr class="collapsible" data-level="3">
+                          <tr class="collapsible" data-level="1">
                             <td>
-                              <span class="arrow">▼</span> Ilmu Sosial dan
-                              Humaniora
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Sosial dan Humaniora
                             </td>
                             <td>111</td>
                             <td>105</td>
@@ -1201,7 +1210,7 @@
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr data-level="4">
+                          <tr data-level="2">
                             <td>S1 - Akuntansi</td>
                             <td>111</td>
                             <td>105</td>
@@ -1212,7 +1221,7 @@
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr data-level="4">
+                          <tr data-level="2">
                             <td>S1 - Administrasi Publik</td>
                             <td>111</td>
                             <td>105</td>
@@ -1223,7 +1232,7 @@
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr data-level="4">
+                          <tr data-level="2">
                             <td>S1 - Hukum</td>
                             <td>111</td>
                             <td>105</td>
@@ -1241,62 +1250,164 @@
                 </div>
 
                 <div class="tab-content" id="tab4">
-                  <div class="tab4">
-                    <span class="judul-head-tab4">Fitur Unit Kerja</span>
-                    <div class="selectNilai-wrapper">
-                      <div class="selectNilai-input" id="selectNilaiInput">
-                        <span id="selectNilaiLabel">
-                          Universitas Mohammad Natsir Bukittinggi
-                        </span>
-                        <span class="selectNilai-arrow">▾</span>
-                      </div>
-
-                      <div
-                        class="selectNilai-dropdown"
-                        id="selectNilaiDropdown"
-                      >
-                        <input
-                          type="text"
-                          id="selectNilaiSearch"
-                          placeholder="Cari..."
-                        />
-
-                        <div
-                          class="selectNilai-options"
-                          id="selectNilaiOptions"
-                        >
-                          <div class="option selected">
-                            Universitas Mohammad Natsir Bukittinggi
-                          </div>
-
-                          <div class="option-group">
-                            <div class="option-group-label">Ilmu Kesehatan</div>
-
-                            <div class="option">S1 - Gizi</div>
-                            <div class="option">
-                              S1 - Administrasi Rumah Sakit
-                            </div>
-                            <div class="option">S1 - Ilmu Keperawatan</div>
-                            <div class="option">D3 - Keperawatan</div>
-                            <div class="option">Prof - Profesi Ners</div>
-                            <div class="option">D3 - Kebidanan</div>
-                            <div class="option">S1 - Kebidanan</div>
-                            <div class="option">
-                              Prof - Pendidikan Profesi Bidan
-                            </div>
-                            <div class="option">S1 - Farmasi</div>
-                          </div>
-                          <div class="option-group">
-                            <div class="option-group-label">
-                              Ilmu Sosial dan Humaniora
-                            </div>
-
-                            <div class="option">S1 - Akuntasi</div>
-                            <div class="option">S1 - Administrasi Publik</div>
-                            <div class="option">S1 - Hukum</div>
-                          </div>
+                  <h3>Jumlah Peminat Penerimaan Mahasiswa Baru Per Bulan</h3>
+                  <div class="custom-wrapper">
+                    <div class="custom-row">
+                      <div class="custom-group">
+                        <label class="custom-label">Provinsi</label>
+                        <div class="custom-select-wrapper">
+                          <select class="custom-select">
+                            <option>-- Semua Provinsi --</option>
+                            <option>Sekolah</option>
+                          </select>
                         </div>
                       </div>
+
+                      <div class="custom-group">
+                        <label class="custom-label">Kota / Kabupaten</label>
+                        <div class="custom-select-wrapper">
+                          <select class="custom-select">
+                            <option>-- Semua Kota / Kabupaten --</option>
+                            <option>Jawa Barat</option>
+                            <option>Jawa Tengah</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="tabel-wrapper">
+                    <div class="head-tabel-wrap">
+                      <div class="toolbar">
+                        <input
+                          type="text"
+                          id="mahasiswabarusearch"
+                          placeholder="Cari mahasiswa baru..."
+                        />
+                      </div>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelMahasiswa">
+                        <thead>
+                          <tr>
+                            <th rowspan="2">Unit Kerja / Program Studi</th>
+                            <th colspan="2">2026</th>
+                            <th rowspan="2">Total</th>
+                          </tr>
+                          <tr>
+                            <th>Jan</th>
+                            <th>Feb</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="collapsible" data-level="0">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Universitas Mohammad Natsir Bukittinggi
+                            </td>
+                            <td>135</td>
+                            <td>135</td>
+                            <td>135</td>
+                          </tr>
+
+                          <tr class="collapsible" data-level="1">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Kesehatan
+                            </td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Gizi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Administrasi Rumah Sakit</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Ilmu Keperawatan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>D3 - Keperawatan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>Prof - Profesi Ners</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Kebidanan</td>
+                            <td>111</td>
+                            <td>105</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>D3 - Kebidanan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>Prof - Pendidikan Profesi Bidan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Farmasi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr class="collapsible" data-level="1">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Sosial dan Humaniora
+                            </td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Akuntansi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Administrasi Publik</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                          <tr data-level="2">
+                            <td>S1 - Hukum</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -1304,210 +1415,166 @@
                 <div class="tab-content" id="tab5">
                   <div class="tabel-wrapper">
                     <div class="head-tabel-wrap">
-                      <button class="btn-download">
-                        <i class="fa-solid fa-download"></i> Download Excel
-                      </button>
                       <div class="toolbar">
                         <input
                           type="text"
-                          id="kuesionersearch"
-                          placeholder="Cari kuesioner..."
+                          id="mahasiswabarusearch"
+                          placeholder="Cari mahasiswa baru..."
                         />
                       </div>
                     </div>
                     <div class="body-tabel-wrap">
-                      <table id="tabelKuesioner">
+                      <table id="tabelMahasiswa">
                         <thead>
                           <tr>
-                            <th>No</th>
-                            <th>NIDN/ NIP</th>
-                            <th>Nama</th>
-                            <th>MK</th>
-                            <th>Kelas</th>
-                            <th>Responden</th>
-                            <th>Penilaian</th>
+                            <th rowspan="2">Unit Kerja / Program Studi</th>
+                            <th colspan="5">
+                              Jumlah Mahasiswa Baru Periode Ganjil
+                            </th>
+                          </tr>
+                          <tr>
+                            <th>2022</th>
+                            <th>2023</th>
+                            <th>2024</th>
+                            <th>2025</th>
+                            <th>2026</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>198706012019031001</td>
-                            <td>Dr. Andi Saputra</td>
-                            <td>Statistika Kesehatan</td>
-                            <td>IKM-1A</td>
-                            <td>28</td>
-                            <td>4.32</td>
+                          <tr class="collapsible" data-level="0">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Universitas Mohammad Natsir Bukittinggi
+                            </td>
+                            <td>135</td>
+                            <td>135</td>
+                            <td>135</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>197912152015041002</td>
-                            <td>Ns. Rina Marlina, M.Kep</td>
-                            <td>Keperawatan Dasar</td>
-                            <td>IKM-1B</td>
-                            <td>31</td>
-                            <td>4.51</td>
+
+                          <tr class="collapsible" data-level="1">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Kesehatan
+                            </td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>198304102010122003</td>
-                            <td>Dr. Budi Hartono</td>
-                            <td>Gizi Masyarakat</td>
-                            <td>GZ-2A</td>
-                            <td>25</td>
-                            <td>4.11</td>
+                          <tr data-level="2">
+                            <td>S1 - Gizi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>198811232020031004</td>
-                            <td>Fitri Yulanda, M.Kes</td>
-                            <td>Promosi Kesehatan</td>
-                            <td>IKM-2A</td>
-                            <td>29</td>
-                            <td>4.47</td>
+                          <tr data-level="2">
+                            <td>S1 - Administrasi Rumah Sakit</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>197605182008011005</td>
-                            <td>Dr. Hendra Wijaya</td>
-                            <td>Administrasi RS</td>
-                            <td>ARS-3A</td>
-                            <td>22</td>
-                            <td>4.05</td>
+                          <tr data-level="2">
+                            <td>S1 - Ilmu Keperawatan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>198909142021031006</td>
-                            <td>Ns. Lestari Purnama</td>
-                            <td>Etika Keperawatan</td>
-                            <td>KP-2B</td>
-                            <td>34</td>
-                            <td>4.63</td>
+                          <tr data-level="2">
+                            <td>D3 - Keperawatan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>198112302009121007</td>
-                            <td>Dr. Dedi Kurniawan</td>
-                            <td>Biokimia</td>
-                            <td>GZ-1A</td>
-                            <td>27</td>
-                            <td>4.28</td>
+                          <tr data-level="2">
+                            <td>Prof - Profesi Ners</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>199001152022031008</td>
-                            <td>Rahma Oktaviani, M.KM</td>
-                            <td>Epidemiologi</td>
-                            <td>IKM-3A</td>
-                            <td>30</td>
-                            <td>4.55</td>
+                          <tr data-level="2">
+                            <td>S1 - Kebidanan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>197703052006041009</td>
-                            <td>Dr. Agus Prasetyo</td>
-                            <td>Manajemen Pelayanan</td>
-                            <td>ARS-2A</td>
-                            <td>19</td>
-                            <td>3.98</td>
+                          <tr data-level="2">
+                            <td>D3 - Kebidanan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>10</td>
-                            <td>198512172014122010</td>
-                            <td>Yuni Kartika, M.Gz</td>
-                            <td>Ilmu Pangan</td>
-                            <td>GZ-3B</td>
-                            <td>24</td>
-                            <td>4.22</td>
+                          <tr data-level="2">
+                            <td>Prof - Pendidikan Profesi Bidan</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>11</td>
-                            <td>198001092005011011</td>
-                            <td>Dr. Rudi Santoso</td>
-                            <td>Patofisiologi</td>
-                            <td>KP-3A</td>
-                            <td>21</td>
-                            <td>4.09</td>
+                          <tr data-level="2">
+                            <td>S1 - Farmasi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>12</td>
-                            <td>199203182023031012</td>
-                            <td>Salsa Meirina, M.Kes</td>
-                            <td>Kesehatan Lingkungan</td>
-                            <td>IKM-1C</td>
-                            <td>33</td>
-                            <td>4.60</td>
+                          <tr class="collapsible" data-level="1">
+                            <td>
+                              <span class="arrow open"
+                                ><i class="fa-solid fa-caret-down"></i
+                              ></span>
+                              Ilmu Sosial dan Humaniora
+                            </td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>13</td>
-                            <td>197811112011121013</td>
-                            <td>Dr. Irwan Maulana</td>
-                            <td>Metodologi Penelitian</td>
-                            <td>IKM-4A</td>
-                            <td>26</td>
-                            <td>4.36</td>
+                          <tr data-level="2">
+                            <td>S1 - Akuntansi</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>14</td>
-                            <td>198608082018031014</td>
-                            <td>Nur Aisyah, M.Kep</td>
-                            <td>Keperawatan Anak</td>
-                            <td>KP-4B</td>
-                            <td>18</td>
-                            <td>3.87</td>
+                          <tr data-level="2">
+                            <td>S1 - Administrasi Publik</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
-                          <tr>
-                            <td>15</td>
-                            <td>198905052019031015</td>
-                            <td>Dr. Wahyu Hidayat</td>
-                            <td>Farmakologi</td>
-                            <td>KP-2A</td>
-                            <td>35</td>
-                            <td>4.71</td>
-                          </tr>
-                          <tr>
-                            <td>16</td>
-                            <td>197402142004011016</td>
-                            <td>Dr. Taufik Rahman</td>
-                            <td>Kebijakan Kesehatan</td>
-                            <td>IKM-3B</td>
-                            <td>23</td>
-                            <td>4.14</td>
-                          </tr>
-                          <tr>
-                            <td>17</td>
-                            <td>199305192024031017</td>
-                            <td>Dina Permatasari, M.Gz</td>
-                            <td>Dietetik</td>
-                            <td>GZ-4A</td>
-                            <td>20</td>
-                            <td>4.03</td>
-                          </tr>
-                          <tr>
-                            <td>18</td>
-                            <td>198210102012121018</td>
-                            <td>Dr. Yoga Pranata</td>
-                            <td>Anatomi</td>
-                            <td>KP-1A</td>
-                            <td>32</td>
-                            <td>4.58</td>
-                          </tr>
-                          <tr>
-                            <td>19</td>
-                            <td>199112012022031019</td>
-                            <td>Rizky Ananda, M.KM</td>
-                            <td>Keselamatan Pasien</td>
-                            <td>ARS-3B</td>
-                            <td>17</td>
-                            <td>3.76</td>
-                          </tr>
-                          <tr>
-                            <td>20</td>
-                            <td>198707072016041020</td>
-                            <td>Dr. Siti Nurhaliza</td>
-                            <td>Kesehatan Ibu & Anak</td>
-                            <td>IKM-2B</td>
-                            <td>36</td>
-                            <td>4.80</td>
+                          <tr data-level="2">
+                            <td>S1 - Hukum</td>
+                            <td>111</td>
+                            <td>105</td>
+                            <td>97</td>
+                            <td>135</td>
+                            <td>135</td>
                           </tr>
                         </tbody>
                       </table>
@@ -1518,170 +1585,204 @@
                 <div class="tab-content" id="tab6">
                   <div class="tabel-wrapper">
                     <div class="head-tabel-wrap">
-                      <button class="btn-download">
-                        <i class="fa-solid fa-download"></i> Download Excel
-                      </button>
                       <div class="toolbar">
                         <input
                           type="text"
                           id="lulussearch"
                           placeholder="Cari lulusan..."
                         />
-                        <select id="filterLulusan">
-                          <option value="">Semua Prodi</option>
-                          <option value="D3-Kebidanan">D3 Kebidanan</option>
-                          <option value="D3-Keperawatan">D3 Keperawatan</option>
-                          <option value="Prof-Profesi Ners">
-                            Profesi Ners
-                          </option>
-                          <option value="S1-Administrasi Publik">
-                            S1 Administrasi Publik
-                          </option>
-                          <option value="S1-Administrasi Rumah Sakit">
-                            S1 Administrasi Rumah Sakit
-                          </option>
-                          <option value="S1-Akuntansi">S1 Akuntansi</option>
-                          <option value="S1-Farmasi">S1 Farmasi</option>
-                          <option value="S1-Gizi">S1 Gizi</option>
-                          <option value="S1-Hukum">S1 Hukum</option>
-                          <option value="S1-Ilmu Keperawatan">
-                            S1 Ilmu Keperawatan
-                          </option>
-                          <option value="S1-Kebidanan">S1 Kebidanan</option>
-                        </select>
                       </div>
                     </div>
                     <div class="body-tabel-wrap">
                       <table id="tabelLulusan">
                         <thead>
                           <tr>
-                            <th rowspan="2">Program Studi</th>
-                            <th rowspan="2">Jumlah Lulusan</th>
-                            <th colspan="3">IPK</th>
-                            <th rowspan="2">Rata-rata Masa Studi (Tahun)</th>
+                            <th>No</th>
+                            <th>Nama Kota / Kabupaten</th>
+                            <th>Nama Provinsi</th>
+                            <th>Peminat</th>
+                            <th>Pendaftar</th>
+                            <th>Lulus</th>
+                            <th>Daftar Ulang</th>
+                            <th>Mahasiswa</th>
                           </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="tab7">
+                  <div class="tabel-wrapper">
+                    <div class="head-tabel-wrap">
+                      <div class="toolbar">
+                        <input
+                          type="text"
+                          id="lulussearch"
+                          placeholder="Cari lulusan..."
+                        />
+                      </div>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelLulusan">
+                        <thead>
                           <tr>
-                            <th>Min</th>
-                            <th>Rata-rata</th>
-                            <th>Maks</th>
+                            <th>No</th>
+                            <th>Nama Sekolah</th>
+                            <th>Nama Kota / Kabupaten</th>
+                            <th>Peminat</th>
+                            <th>Pendaftar</th>
+                            <th>Lulus</th>
+                            <th>Daftar Ulang</th>
+                            <th>Mahasiswa</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="tab8">
+                  <div class="tabel-wrapper">
+                    <div class="head-tabel-wrap">
+                      <div class="toolbar">
+                        <input
+                          type="text"
+                          id="lulussearch"
+                          placeholder="Cari lulusan..."
+                        />
+                      </div>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelLulusan">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Nama Seleksi</th>
+                            <th>Jumlah Peserta</th>
+                            <th>Peserta Belum Memiliki Nilai</th>
+                            <th>Nilai Terendah</th>
+                            <th>Nilai Tertinggi</th>
+                            <th>Nilai Rerata</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="tab9">
+                  <div class="tabel-wrapper">
+                    <div class="head-tabel-wrap">
+                      <div class="toolbar">
+                        <input
+                          type="text"
+                          id="lulussearch"
+                          placeholder="Cari lulusan..."
+                        />
+                      </div>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelLulusan">
+                        <thead>
+                          <tr>
+                            <th style="width: 30%">Pertanyaan</th>
+                            <th>#</th>
+                            <th>Jawaban</th>
+                            <th>Jumlah</th>
+                            <th>Diagram</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>D3 - Kebidanan</td>
-                            <td>82</td>
-                            <td>2.75</td>
-                            <td>3.28</td>
-                            <td>3.91</td>
-                            <td>3.2</td>
-                          </tr>
-                          <tr>
-                            <td>D3 - Keperawatan</td>
-                            <td>96</td>
-                            <td>2.68</td>
-                            <td>3.21</td>
-                            <td>3.88</td>
-                            <td>3.4</td>
-                          </tr>
-                          <tr>
-                            <td>D3 - Farmasi</td>
-                            <td>74</td>
-                            <td>2.81</td>
-                            <td>3.35</td>
-                            <td>3.94</td>
-                            <td>3.1</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Administrasi Publik</td>
-                            <td>120</td>
-                            <td>2.54</td>
-                            <td>3.12</td>
-                            <td>3.76</td>
-                            <td>4.3</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Administrasi Rumah Sakit</td>
-                            <td>110</td>
-                            <td>2.61</td>
-                            <td>3.18</td>
-                            <td>3.83</td>
-                            <td>4.1</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Akuntansi</td>
-                            <td>135</td>
-                            <td>2.49</td>
-                            <td>3.05</td>
-                            <td>3.72</td>
-                            <td>4.4</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Hukum</td>
-                            <td>128</td>
-                            <td>2.46</td>
-                            <td>3.09</td>
-                            <td>3.68</td>
-                            <td>4.5</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Gizi</td>
-                            <td>88</td>
-                            <td>2.73</td>
-                            <td>3.26</td>
-                            <td>3.89</td>
-                            <td>4.0</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Farmasi</td>
-                            <td>102</td>
-                            <td>2.69</td>
-                            <td>3.31</td>
-                            <td>3.95</td>
-                            <td>4.2</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Ilmu Keperawatan</td>
-                            <td>140</td>
-                            <td>2.58</td>
-                            <td>3.22</td>
-                            <td>3.87</td>
-                            <td>4.3</td>
-                          </tr>
-                          <tr>
-                            <td>S1 - Kebidanan</td>
-                            <td>94</td>
-                            <td>2.77</td>
-                            <td>3.34</td>
-                            <td>3.96</td>
-                            <td>4.1</td>
-                          </tr>
-                          <tr>
-                            <td>Profesi Ners</td>
-                            <td>76</td>
-                            <td>3.02</td>
-                            <td>3.45</td>
-                            <td>3.98</td>
-                            <td>1.6</td>
-                          </tr>
-                          <tr>
-                            <td>Profesi Bidan</td>
-                            <td>69</td>
-                            <td>3.05</td>
-                            <td>3.49</td>
-                            <td>3.99</td>
-                            <td>1.5</td>
+                            <td>
+                              Apakah anda mendaftar di Universitas Mohammad
+                              Natsir Bukittinggi berdasarkan rekomendasi?
+                            </td>
+                            <td>1</td>
+                            <td>Tidak direkomendasikan</td>
+                            <td>258</td>
+                            <td>
+                              <div class="chart-container">
+                                <div class="chart-header">
+                                  <div class="chart-menu bar-humberg">
+                                    <button id="charttableToggle">
+                                      <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                    <div
+                                      class="chart-dropdown"
+                                      id="charttableDropdown"
+                                    >
+                                      <div id="downloadtablePNG">
+                                        Download PNG
+                                      </div>
+                                      <div id="downloadtableJPG">
+                                        Download JPG
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="canvas-chart">
+                                  <canvas id="table-chart"></canvas>
+                                </div>
+
+                                <div
+                                  class="chart-legend-modern"
+                                  id="charttableLegend"
+                                ></div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
-                        <tfoot>
-                          <tr class="row-total">
-                            <td class="text-center">TOTAL</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">0</td>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="tab10">
+                  <h3>Sebaran Profil Orang Tua</h3>
+                  <div class="tabel-wrapper">
+                    <div class="body-tabel-wrap">
+                      <table id="tabelLulusan">
+                        <thead>
+                          <tr>
+                            <th style="width: 30%">Pertanyaan</th>
+                            <th>#</th>
+                            <th>Jumlah</th>
+                            <th>(%)</th>
                           </tr>
-                        </tfoot>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Pendidikan Ayah</td>
+                            <td>1</td>
+                            <td>SMA/SMK Sederajat</td>
+                            <td>192</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelLulusan">
+                        <thead>
+                          <tr>
+                            <th style="width: 30%">Pertanyaan</th>
+                            <th>#</th>
+                            <th>Jumlah</th>
+                            <th>(%)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Pendidikan Ibu</td>
+                            <td>1</td>
+                            <td>SMA/SMK Sederajat</td>
+                            <td>192</td>
+                          </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>

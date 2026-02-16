@@ -1188,3 +1188,90 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Table Diagram
+const table = document.getElementById("table-chart");
+const charttable = new Chart(table, {
+  type: "pie",
+  data: {
+    labels: ["Tidak direkomendasikan"],
+    datasets: [
+      {
+        label: "Tidak direkomendasikan",
+        data: [258],
+        backgroundColor: ["rgba(30, 148, 216, 0.7)"],
+        borderColor: ["rgba(30, 148, 216, 0.7)"],
+        borderWidth: 2,
+        hoverOffset: 10,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: 0,
+    },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          color: "dark",
+          font: {
+            size: 12,
+            weight: "bold",
+          },
+        },
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: "#333",
+        titleColor: "#fff",
+        bodyColor: "#fff",
+        borderColor: "#fff",
+        borderWidth: 1,
+        cornerRadius: 10,
+      },
+    },
+  },
+});
+const toggletable = document.getElementById("charttableToggle");
+const dropdowntable = document.getElementById("charttableDropdown");
+toggletable.addEventListener("click", () => {
+  dropdowntable.style.display =
+    dropdowntable.style.display === "block" ? "none" : "block";
+});
+document.getElementById("downloadtablePNG").addEventListener("click", () => {
+  const linktable = document.createElement("a");
+  linktable.href = charttable.toBase64Image();
+  linktable.download = "akm-chart.png";
+  linktable.click();
+});
+document.getElementById("downloadtableJPG").addEventListener("click", () => {
+  const linktable = document.createElement("a");
+  linktable.href = charttable.toBase64Image("image/jpeg", 1);
+  linktable.download = "akm-chart.jpg";
+  linktable.click();
+});
+const legendContainertable = document.getElementById("charttableLegend");
+charttable.data.datasets.forEach((dataset, index) => {
+  const pilltable = document.createElement("div");
+  pilltable.className = "legend-pill";
+  pilltable.innerHTML = `
+    <span class="legend-color" style="background:${dataset.borderColor || "#4e73df"}"></span>
+    ${dataset.label}
+  `;
+
+  pilltable.onclick = () => {
+    const meta = charttable.getDatasetMeta(index);
+
+    meta.hidden =
+      meta.hidden === null ? !charttable.data.datasets[index].hidden : null;
+
+    pilltable.classList.toggle("legend-inactive");
+
+    charttable.update();
+  };
+
+  legendContainertable.appendChild(pilltable);
+});

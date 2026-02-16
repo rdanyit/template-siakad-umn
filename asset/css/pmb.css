@@ -193,7 +193,8 @@
 #charttahunlulusToggle,
 #chartpendidikanToggle,
 #chartjurusanpddToggle,
-#chartpmbgrafikToggle {
+#chartpmbgrafikToggle,
+#charttableToggle {
   margin: 10px 0 !important;
   border: 0 !important;
   background: var(--background) !important;
@@ -226,7 +227,6 @@
   margin-bottom: 6px;
 }
 
-/* Custom Select */
 .custom-select-wrapper {
   position: relative;
 }
@@ -242,7 +242,6 @@
   transition: all 0.3s ease;
 }
 
-/* Arrow custom */
 .custom-select-wrapper::after {
   content: "▾";
   position: absolute;
@@ -264,7 +263,6 @@
   box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
 }
 
-/* Style dropdown options (browser supported) */
 .custom-select option {
   padding: 10px;
 }
@@ -272,4 +270,23 @@
 .p-dot::before {
   content: "• ";
   color: black;
+}
+
+.collapsible {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+tr[data-level="1"] td:first-child {
+  padding-left: 25px;
+}
+
+tr[data-level="2"] td:first-child {
+  padding-left: 50px;
+}
+
+.arrow {
+  border: 0;
+  width: 15px;
+  transition: transform 0.2s ease;
 }

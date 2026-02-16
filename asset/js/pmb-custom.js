@@ -20,14 +20,33 @@ document.querySelectorAll(".collapsible").forEach((row) => {
   row.addEventListener("click", () => {
     const level = parseInt(row.dataset.level);
     const arrow = row.querySelector(".arrow");
+    const isOpen = arrow.classList.contains("open");
+
+    if (isOpen) {
+      arrow.innerHTML = '<i class="fa-solid fa-caret-right"></i>';
+      arrow.classList.remove("open");
+    } else {
+      arrow.innerHTML = '<i class="fa-solid fa-caret-down"></i>';
+      arrow.classList.add("open");
+    }
 
     let next = row.nextElementSibling;
-    let collapsed = arrow.textContent === "▼";
-
-    arrow.textContent = collapsed ? "▶" : "▼";
 
     while (next && parseInt(next.dataset.level) > level) {
-      next.style.display = collapsed ? "none" : "";
+      if (isOpen) {
+        next.style.display = "none";
+
+        const childArrow = next.querySelector(".arrow");
+        if (childArrow) {
+          childArrow.innerHTML = '<i class="fa-solid fa-caret-right"></i>';
+          childArrow.classList.remove("open");
+        }
+      } else {
+        if (parseInt(next.dataset.level) === level + 1) {
+          next.style.display = "";
+        }
+      }
+
       next = next.nextElementSibling;
     }
   });
