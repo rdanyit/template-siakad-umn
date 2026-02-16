@@ -1275,3 +1275,71 @@ charttable.data.datasets.forEach((dataset, index) => {
 
   legendContainertable.appendChild(pilltable);
 });
+
+// Check box Table
+document.addEventListener("DOMContentLoaded", function () {
+  const tabelPeserta = document.getElementById("tabelPeserta");
+  const selectAll = tabelPeserta.querySelector("thead #selectAll");
+
+  function getRowCheckboxes() {
+    return tabelPeserta.querySelectorAll("tbody .row-check");
+  }
+
+  // =========================
+  // HEADER CHECKBOX
+  // =========================
+  selectAll.addEventListener("change", function () {
+    const rowChecks = getRowCheckboxes();
+
+    rowChecks.forEach(function (checkbox) {
+      checkbox.checked = selectAll.checked;
+      highlightRow(checkbox);
+    });
+
+    selectAll.indeterminate = false;
+  });
+
+  // =========================
+  // ROW CHECKBOX
+  // =========================
+  tabelPeserta.addEventListener("change", function (e) {
+    if (e.target.classList.contains("row-check")) {
+      highlightRow(e.target);
+      updateHeaderState();
+    }
+  });
+
+  // =========================
+  // UPDATE HEADER STATE
+  // =========================
+  function updateHeaderState() {
+    const rowChecks = getRowCheckboxes();
+    const total = rowChecks.length;
+    const checked = tabelPeserta.querySelectorAll(
+      "tbody .row-check:checked",
+    ).length;
+
+    if (checked === total && total > 0) {
+      selectAll.checked = true;
+      selectAll.indeterminate = false;
+    } else if (checked > 0) {
+      selectAll.checked = false;
+      selectAll.indeterminate = true;
+    } else {
+      selectAll.checked = false;
+      selectAll.indeterminate = false;
+    }
+  }
+
+  // =========================
+  // HIGHLIGHT ROW (OPSIONAL)
+  // =========================
+  function highlightRow(checkbox) {
+    const row = checkbox.closest("tr");
+    if (checkbox.checked) {
+      row.classList.add("selected-row");
+    } else {
+      row.classList.remove("selected-row");
+    }
+  }
+});

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Daftar Peserta PMB</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+    <link rel="stylesheet" href="../../asset/css/pmb.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/bc-pmb.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Penerimaan Mahasiswa Baru</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">Sistem PMB</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item">
+            <a href="../../backend/dashboard-pmb.html" class="list-icon-menu">
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown aktif">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Pendaftar</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../../backend/pmb/daftar-peserta-pmb.html"
+                >Data Pendaftar</a
+              >
+              <a href="../../backend/pmb/verifikasi-berkas-pmb.html"
+                >Verifikasi Berkas</a
+              >
+              <a href="../../backend/pmb/validasi-pembayaran.html"
+                >Validasi Pembayaran</a
+              >
+            </div>
+          </div>
+          <div class="menubar-item">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">One Day Service</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Pengaturan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Periode Pendaftaran</a>
+              <a href="#">Gelombang Pendaftaran</a>
+              <a href="#">Jalur Seleksi</a>
+              <a href="#">Kuota Program Studi</a>
+              <a href="#">Biaya & Komponen Pembayaran</a>
+              <a href="#">Hak Akses</a>
+              <a href="#">Template Dokumen</a>
+              <a href="#">Pengaturan Nomor Pendaftaran</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Seleksi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Bobot Penilaian</a>
+              <a href="#">Syarat Seleksi</a>
+              <a href="#">Validasi Hasil Seleksi</a>
+              <a href="#">Berita Acara Seleksi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Kelulusan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Rekomendasi Prodi</a>
+              <a href="#">Data Registrasi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Laporan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Laporan Pendaftar per Periode</a>
+              <a href="#">Laporan Pendaftar per Prodi</a>
+              <a href="#">Laporan Pembayaran</a>
+              <a href="#">Laporan Hasil Seleksi</a>
+              <a href="#">Laporan Kelulusan</a>
+              <a href="#">Laporan Daftar Ulang</a>
+              <a href="#">Laporan Aktivitas User</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <!-- Petunjuk -->
+        <div class="head-main">
+          <span class="nama-menu-aktif">Daftar Peserta</span>
+        </div>
+
+        <!-- Periode -->
+        <div class="item-periode">
+          <div class="group-periode">
+            <div class="item-group">
+              <span class="judul-group">Periode</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Periode </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">2026 Ganjil</div>
+                      <div class="option">2025 Genap</div>
+                      <div class="option">2025 Ganjil</div>
+                      <div class="option">2024 Genap</div>
+                      <div class="option">2024 Ganjil</div>
+                      <div class="option">2023 Genap</div>
+                      <div class="option">2023 Ganjil</div>
+                      <div class="option">2022 Genap</div>
+                      <div class="option">2022 Ganjil</div>
+                      <div class="option">2021 Genap</div>
+                      <div class="option">2021 Ganjil</div>
+                      <div class="option">2020 Genap</div>
+                      <div class="option">2020 Ganjil</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Jalur Pendaftaran</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Jalur Pendaftaran </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Seleksi Mandiri PTS</div>
+                      <div class="option">SBMPTN</div>
+                      <div class="option">Prestasi</div>
+                      <div class="option">Pindahan</div>
+                      <div class="option">Pasca Sarjana</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Gelombang</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Gelombang </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Gelombang 1</div>
+                      <div class="option">Gelombang 2</div>
+                      <div class="option">Gelombang 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Pilihan</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Pilihan </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Pilihan 1</div>
+                      <div class="option">Pilihan 2</div>
+                      <div class="option">Pilihan 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group-periode">
+            <div class="item-group">
+              <span class="judul-group">Sistem Kuliah</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Sistem Kuliah </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Reguler</div>
+                      <div class="option">Non Reguler</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Unit/ Program Studi</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Jenjang </span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option-group-label">Ilmu Kesehatan</div>
+
+                      <div class="option">S1 - Gizi</div>
+                      <div class="option">S1 - Administrasi Rumah Sakit</div>
+                      <div class="option">S1 - Ilmu Keperawatan</div>
+                      <div class="option">D3 - Keperawatan</div>
+                      <div class="option">Prof - Profesi Ners</div>
+                      <div class="option">D3 - Kebidanan</div>
+                      <div class="option">S1 - Kebidanan</div>
+                      <div class="option">Prof - Pendidikan Profesi Bidan</div>
+                      <div class="option">S1 - Farmasi</div>
+                    </div>
+                    <div class="option-group">
+                      <div class="option-group-label">
+                        Ilmu Sosial dan Humaniora
+                      </div>
+
+                      <div class="option">S1 - Akuntasi</div>
+                      <div class="option">S1 - Administrasi Publik</div>
+                      <div class="option">S1 - Hukum</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-group">
+              <span class="judul-group">Status Pendaftar</span>
+              <div class="selectPeriode-wrapper">
+                <div class="selectPeriode-input" id="selectPeriodeInput">
+                  <span id="selectPeriodeLabel"> Pilih Status Pendaftar</span>
+                  <span class="selectPeriode-arrow">▾</span>
+                </div>
+
+                <div class="selectPeriode-dropdown" id="selectPeriodeDropdown">
+                  <input
+                    type="text"
+                    id="selectPeriodeSearch"
+                    placeholder="Cari..."
+                  />
+
+                  <div class="selectPeriode-options" id="selectPeriodeOptions">
+                    <div class="option-group">
+                      <div class="option">Aktif</div>
+                      <div class="option">Non Aktif</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabel Data Mahasiswa -->
+        <div class="blok-tabel">
+          <div class="tabel-wrapper">
+            <div class="head-tabel-wrap">
+              <div class="toolbar">
+                <input
+                  type="text"
+                  id="prodisearch"
+                  placeholder="Cari prodi..."
+                />
+                <select id="filterProdi">
+                  <option value="">Semua Prodi</option>
+                  <option value="D3-Kebidanan">D3 Kebidanan</option>
+                  <option value="D3-Keperawatan">D3 Keperawatan</option>
+                  <option value="Prof-Profesi Ners">Profesi Ners</option>
+                  <option value="S1-Administrasi Publik">
+                    S1 Administrasi Publik
+                  </option>
+                  <option value="S1-Administrasi Rumah Sakit">
+                    S1 Administrasi Rumah Sakit
+                  </option>
+                  <option value="S1-Akuntansi">S1 Akuntansi</option>
+                  <option value="S1-Farmasi">S1 Farmasi</option>
+                  <option value="S1-Gizi">S1 Gizi</option>
+                  <option value="S1-Hukum">S1 Hukum</option>
+                  <option value="S1-Ilmu Keperawatan">
+                    S1 Ilmu Keperawatan
+                  </option>
+                  <option value="S1-Kebidanan">S1 Kebidanan</option>
+                </select>
+              </div>
+            </div>
+            <div class="body-tabel-wrap">
+              <table id="tabelPeserta">
+                <thead>
+                  <tr>
+                    <th>
+                      <label class="checkbox-wrapper">
+                        <input type="checkbox" id="selectAll" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </th>
+                    <th>Foto Pendaftar</th>
+                    <th>Nama & Kode Pendaftar</th>
+                    <th>Berkas</th>
+                    <th>Program Studi</th>
+                    <th>Status Validasi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label class="checkbox-wrapper">
+                        <input type="checkbox" class="row-check" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td>
+                      <img
+                        src="../../asset/media/profile.png"
+                        alt="Foto Clara Kartika"
+                        class="table-img-profile"
+                      />
+                    </td>
+                    <td>
+                      <div class="nama-table-peserta">CLARA KARTIKA</div>
+                      <div class="no-peserta">2601010012</div>
+                    </td>
+                    <td>
+                      <div class="gelombang-pdf">2026 Ganjil – Gelombang 1</div>
+                      <div class="jalur-pdf">UMUM – Reguler</div>
+                    </td>
+                    <td>
+                      <ol>
+                        <li>
+                          <a href="#" class="file-berkas"
+                            ><i class="fa-solid fa-file-pdf"></i> Berkas
+                            Pendaftaran</a
+                          >
+                        </li>
+                      </ol>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="../../asset/js/petujuk.js"></script>
+      <script src="../../asset/js/custom-select.js"></script>
+      <script src="../../asset/js/tab.js"></script>
+      <script src="../../asset/js/chart-akmakt.js"></script>
+      <script src="../../asset/js/chart-akmprodi.js"></script>
+      <script src="../../asset/js/akt-tabel.js"></script>
+      <script src="../../asset/js/prodi-tabel.js"></script>
+      <script src="../../asset/js/tabel-mahasiswa.js"></script>
+      <script src="../../asset/js/nilai-select.js"></script>
+      <script src="../../asset/js/tabel-kuesioner.js"></script>
+      <script src="../../asset/js/lulusan-tabel.js"></script>
+      <script src="../../asset/js/kalender-akademik.js"></script>
+      <script src="../../asset/js/carip.js"></script>
+      <script src="../../asset/js/back.js"></script>
+      <script src="../../asset/js/pmb.js"></script>
+      <script src="../../asset/js/pmb-custom.js"></script>
+    </div>
+  </body>
+</html>

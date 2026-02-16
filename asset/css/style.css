@@ -186,3 +186,22 @@ li {
   color: var(--background);
   white-space: nowrap;
 }
+
+.badge-danger,
+.badge-warning {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+.badge-danger {
+  background: var(--danger-text);
+  color: var(--background);
+}
+
+.badge-warning {
+  background: var(--warning-text);
+  color: var(--background);
+}

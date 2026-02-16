@@ -290,3 +290,100 @@ tr[data-level="2"] td:first-child {
   width: 15px;
   transition: transform 0.2s ease;
 }
+
+/* Blok Table */
+.blok-tabel {
+  width: 100%;
+  max-width: 1420px;
+  border-top: 2px solid var(--primary);
+  border-bottom: 1px solid var(--border-default);
+  border-right: 1px solid var(--border-default);
+  border-left: 1px solid var(--border-default);
+  padding: 10px;
+  margin: 20px 0px;
+  background: var(--background);
+}
+
+.checkbox-wrapper {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper input:checked + .checkmark {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.checkbox-wrapper input:checked + .checkmark::after {
+  opacity: 1;
+}
+
+.table-img-profile {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.nama-table-peserta {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.no-peserta {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.gelombang-pdf {
+  font-weight: 600;
+}
+
+.jalur-pdf {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+ol {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.icon-table,
+.text-mail,
+.text-hp {
+  color: var(--text);
+}
+
+.file-berkas {
+  color: var(--text);
+}
