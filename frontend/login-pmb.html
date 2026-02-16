@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Login PMB</title>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="../asset/icon/fontawesome/css/all.min.css" />
+    <script src="../asset/icon/fontawesome/js/all.min.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="stylesheet" href="../asset/css/login.css" />
+    <link rel="stylesheet" href="../asset/css/login-responsive.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="box-login">
+        <div class="item-login">
+          <div class="slide-login">
+            <img src="../asset/logo/logo.png" alt="logo" class="logo-white" />
+            <span class="welcome fw-600">Selamat Datang</span>
+            <span class="sub-welcome fw-500 m-mobile"
+              >Portal Penerimaan Mahasiswa Baru</span
+            >
+            <span class="sub-welcome fw-700"
+              >Universitas Mohammad Natsir Bukittinggi</span
+            >
+          </div>
+          <div class="form-login">
+            <div class="head-form">
+              <span class="judul-head">Masuk dan Verifikasi</span>
+              <span class="deskripsi">
+                <b>Baru!</b> Nikmati kemudahan sistem autentikasi tunggal untuk
+                mengakses semua layanan dengan satu akun.
+              </span>
+            </div>
+            <hr />
+            <div class="blok-form">
+              <form action="#" method="post">
+                <div class="form-group">
+                  <label for="email"
+                    >Email/NIP/NIM/Akun Pengguna
+                    <span class="red-require">*</span></label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-input"
+                    placeholder="Masukan Email/NIM/NIP/username yang terdaftar"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password"
+                    >Password <span class="red-require">*</span></label
+                  >
+                  <div class="input-password">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-input"
+                      placeholder="Masukan Password"
+                      required
+                    />
+                    <span class="toggle-password" id="togglePassword">🙈</span>
+                  </div>
+                  <a href="/lupa-password.html" class="lupa-sandi"
+                    >Lupa kata sandi?</a
+                  >
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn-masuk">Masuk</button>
+                </div>
+              </form>
+              <a href="/frontend/daftar-pmb.html" class="btn-daftar">Daftar</a>
+              <a href="/" class="btn-kembali">Kembali ke Halaman Utama</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../asset/js/hide-psw.js"></script>
+  </body>
+</html>

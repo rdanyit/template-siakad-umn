@@ -133,10 +133,6 @@
   text-decoration: none;
 }
 
-.mode-menu a:hover {
-  background: #f5f5f5;
-}
-
 .mode-dropdown.active .mode-menu {
   opacity: 1;
   visibility: visible;
@@ -181,6 +177,10 @@
   gap: 6px;
   font-size: 24px;
   text-align: center;
+}
+
+.icon-portal:hover {
+  color: var(--primary);
 }
 
 .title-apps {

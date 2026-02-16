@@ -269,7 +269,8 @@ form {
   Button
 ================================================== */
 .btn-masuk,
-.btn-kembali {
+.btn-kembali,
+.btn-daftar {
   width: 100%;
   font-weight: bold;
   display: flex;
@@ -294,5 +295,10 @@ form {
 
 .btn-kembali {
   background: var(--text);
+  color: var(--background);
+}
+
+.btn-daftar {
+  background: var(--info-text);
   color: var(--background);
 }
