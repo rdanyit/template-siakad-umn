@@ -1412,9 +1412,9 @@ table tfoot td {
   background: var(--info-text);
   color: var(--background);
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 8px 18px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* ===== Wrapper penting untuk isolasi ===== */

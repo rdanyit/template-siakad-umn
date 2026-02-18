@@ -8,7 +8,7 @@
       href="../../../asset/logo/logo.png"
       type="image/x-icon"
     />
-    <title>UMN | Portal Monitoring Akademik</title>
+    <title>UMN | Manajemen Mata Kuliah</title>
 
     <!-- Icon -->
     <link
@@ -19,8 +19,6 @@
 
     <!-- JS -->
     <script src="../../../asset/js/jquery.js"></script>
-
-    <!-- Calendar -->
 
     <!-- Css -->
     <link rel="stylesheet" href="../../../asset/css/style.css" />
@@ -109,7 +107,7 @@
               <span class="nama-menu">Dashboard</span>
             </a>
           </div>
-          <div class="menubar-item has-dropdown aktif">
+          <div class="menubar-item has-dropdown">
             <a href="#" class="list-icon-menu">
               <span class="nama-menu">Portal</span>
             </a>
@@ -139,7 +137,7 @@
               <a href="../portal/kelas-elearning.html">E-Learning</a>
             </div>
           </div>
-          <div class="menubar-item has-dropdown">
+          <div class="menubar-item has-dropdown aktif">
             <a href="#" class="list-icon-menu">
               <span class="nama-menu">Perkuliahan</span>
             </a>
@@ -151,9 +149,21 @@
                   <i class="fa-solid fa-caret-right arrow-submenu"></i
                 ></a>
                 <div class="submenu-dropdown">
-                  <a href="#">Kurikulum Aktif</a>
-                  <a href="#">Mata Kuliah</a>
-                  <a href="#">Distribusi MK</a>
+                  <a href="../perkuliahan/mata-kuliah.html">Mata Kuliah</a>
+                  <a href="../perkuliahan/kurikulum-prodi.html"
+                    >Kurikulum Prodi</a
+                  >
+                  <div class="divider"></div>
+                  <a href="../perkuliahan/template-evaluasi.html"
+                    >Template Evaluasi</a
+                  >
+                  <a href="../perkuliahan/manajemen-capaian.html"
+                    >Manajemen Capaian</a
+                  >
+                  <a href="../perkuliahan/mk-pilihan"
+                    >Set Grup MK Wajib Pilihan</a
+                  >
+                  <a href="../perkuliahan/tahun-kurikulum">Tahun Kurikulum</a>
                 </div>
               </div>
 
@@ -163,9 +173,13 @@
                   <i class="fa-solid fa-caret-right arrow-submenu"></i
                 ></a>
                 <div class="submenu-dropdown">
-                  <a href="#">Jadwal Kuliah</a>
-                  <a href="#">Peserta Kelas</a>
-                  <a href="#">Presensi</a>
+                  <a href="#">Kelas Kuliah</a>
+                  <a href="#">Jadwal & Presensi</a>
+                  <a href="#">Pemutihan Nilai</a>
+                  <div class="divider"></div>
+                  <a href="#">Tahun Ajaran</a>
+                  <a href="#">Monitoring Ruang</a>
+                  <a href="#">Rekap Penggunaan Ruang</a>
                 </div>
               </div>
 
@@ -287,142 +301,144 @@
 
       <!-- Main -->
       <div class="main">
-        <h3>Monitoring Akademik</h3>
+        <h3>Manajemen Mata Kuliah</h3>
 
-        <div class="filter-container">
-          <div class="field">
-            <label for="periode">Periode</label>
-            <select id="periode">
-              <option>2025 Genap</option>
-              <option>2025 Ganjil</option>
-              <option>2024 Genap</option>
-              <option>2024 Ganjil</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="bulan">Bulan</label>
-            <select id="bulan">
-              <option>Januari</option>
-              <option>Februari</option>
-              <option>Maret</option>
-              <option>April</option>
-              <option>Mei</option>
-              <option>Juni</option>
-              <option>Juli</option>
-              <option>Agustus</option>
-              <option>September</option>
-              <option>Oktober</option>
-              <option>November</option>
-              <option>Desember</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Kalender -->
-        <div class="app-container">
-          <header class="app-header">
-            <h1><i class="fas fa-calendar-alt"></i> Event Calendar App</h1>
-            <div class="header-controls">
-              <button id="today-btn">Today</button>
-              <div class="view-options">
-                <button class="view-option active" data-view="day">Day</button>
-                <button class="view-option" data-view="week">Week</button>
-                <button class="view-option" data-view="month">Month</button>
-              </div>
-              <div class="date-navigation">
-                <button id="prev-btn">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <h2 id="current-date">May 2023</h2>
-                <button id="next-btn">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-              </div>
+        <!-- Periode -->
+        <div class="filter-panel">
+          <!-- Kolom Kiri -->
+          <div class="filter-column">
+            <div class="filter-row">
+              <label>Tahun Kurikulum</label>
+              <select class="filter-select">
+                <option>2025 Genap</option>
+                <option>2025 Ganjil</option>
+                <option>2024 Genap</option>
+              </select>
             </div>
-          </header>
+            <div class="filter-row">
+              <label>Prodi Pengampu</label>
+              <select class="filter-select">
+                <option>2025 Genap</option>
+                <option>2025 Ganjil</option>
+                <option>2024 Genap</option>
+              </select>
+            </div>
+          </div>
 
-          <main class="app-main">
-            <div class="calendar-view" id="calendar-view"></div>
-
-            <aside class="sidebar">
-              <div class="sidebar-header">
-                <h3>Upcoming Events</h3>
-                <button id="add-event-btn">
-                  <i class="fas fa-plus"></i> Add Event
-                </button>
-              </div>
-              <div class="events-list" id="events-list"></div>
-            </aside>
-          </main>
+          <!-- Kolom Kanan -->
+          <div class="filter-column">
+            <div class="filter-row">
+              <label>Jenis Mata Kuliah</label>
+              <select class="filter-select">
+                <option>-- Jenis Mata Kuliah --</option>
+                <option>Ujian</option>
+                <option>Kuliah</option>
+                <option>Seminar</option>
+              </select>
+            </div>
+            <div class="filter-row">
+              <label>Kelompok Mata Kuliah</label>
+              <select class="filter-select">
+                <option>-- Kelompok Mata Kuliah --</option>
+                <option>Ujian</option>
+                <option>Kuliah</option>
+                <option>Seminar</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <!-- Add Event Modal -->
-        <div class="modal" id="event-modal">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Add New Event</h2>
-            <form id="event-form">
-              <div class="form-group">
-                <label for="event-title">Title</label>
-                <input type="text" id="event-title" required />
-              </div>
-              <div class="form-group">
-                <label for="event-date">Date</label>
-                <input type="date" id="event-date" required />
-              </div>
-              <div class="form-group time-group">
-                <div>
-                  <label for="event-start-time">Start Time</label>
-                  <input type="time" id="event-start-time" required />
-                </div>
-                <div>
-                  <label for="event-end-time">End Time</label>
-                  <input type="time" id="event-end-time" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="event-description">Description</label>
-                <textarea id="event-description" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="event-color">Color</label>
-                <select id="event-color">
-                  <option value="#4e73df" selected>Blue</option>
-                  <option value="#1cc88a">Green</option>
-                  <option value="#f6c23e">Yellow</option>
-                  <option value="#e74a3b">Red</option>
-                  <option value="#858796">Gray</option>
-                  <option value="#5a5c69">Dark</option>
+        <div class="tabel-data">
+          <div class="tabel-wrapper">
+            <div class="head-tabel-wrap">
+              <div class="toolbar">
+                <select id="filterItem">
+                  <option value="">-- Semua --</option>
+                  <option value="NIM">NIM</option>
+                  <option value="Nama">Nama</option>
+                  <option value="Jenjang">Jenjang</option>
+                  <option value="Program-Studi">Program Studi</option>
+                  <option value="Masuk">Masuk</option>
+                  <option value="Smt">Smt</option>
+                  <option value="SKS">SKS</option>
+                  <option value="IPK">IPK</option>
+                  <option value="NIK">NIK</option>
                 </select>
+                <input
+                  type="text"
+                  id="keywordmhs"
+                  placeholder="Cari mahasiswa..."
+                />
               </div>
-              <button type="submit" class="save-btn">Save Event</button>
-            </form>
-          </div>
-        </div>
+              <div class="form-group">
+                <button type="button" class="btn-tambah" id="openModal">
+                  <i class="fa-solid fa-plus"></i> Tambah Data
+                </button>
+                <button type="button" class="btn-info">
+                  <i class="fa-solid fa-print"></i> Cetak
+                </button>
+              </div>
 
-        <!-- Event Details Modal -->
-        <div class="modal" id="event-details-modal">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="details-title">Event Title</h2>
-            <div class="event-details">
-              <p>
-                <i class="fas fa-calendar-day"></i>
-                <span id="details-date">Date</span>
-              </p>
-              <p>
-                <i class="fas fa-clock"></i> <span id="details-time">Time</span>
-              </p>
-              <p>
-                <i class="fas fa-align-left"></i>
-                <span id="details-description">Description</span>
-              </p>
+              <!-- Modal -->
+              <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-box">
+                  <div class="modal-header">
+                    <span>Tambah Data</span>
+                    <button class="modal-close" id="closeModal">&times;</button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label>Nama</label>
+                      <input
+                        type="text"
+                        class="form-input-modals"
+                        placeholder="Masukan nama..."
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Keterangan</label>
+                      <textarea
+                        class="form-input-modals"
+                        placeholder="Masukan keterangan..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button class="btn-batal" id="closeModal2">Batal</button>
+                    <button class="btn-simpan">Simpan</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="event-actions">
-              <button id="edit-event-btn">Edit</button>
-              <button id="delete-event-btn">Delete</button>
-              <button id="close-details-btn">Close</button>
+            <div class="body-tabel-wrap">
+              <table id="tabelMahsiswa">
+                <thead>
+                  <tr>
+                    <th>Kode</th>
+                    <th>Nama Kegiatan Akademik</th>
+                    <th>Background</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2210001</td>
+                    <td>Andi Saputra</td>
+                    <td>S1</td>
+                    <td class="aksi-col">
+                      <button type="button" class="badge-warning">
+                        <i class="fa-solid fa-marker"></i>
+                      </button>
+                      <button type="button" class="badge-danger">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
