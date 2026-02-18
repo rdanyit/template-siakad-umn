@@ -270,27 +270,13 @@ hr {
 /* Arrow Style */
 .has-submenu {
   display: flex;
-  justify-content: space-between;
-}
-
-.dropdown-menubar a.has-submenu {
-  display: flex !important;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-right: 10px;
 }
 
-.dropdown-menubar a.has-submenu i {
-  margin-left: auto;
-  font-size: 12px;
-  opacity: 0.7;
-  transition: 0.2s ease;
-}
-
-.dropdown-menubar a.has-submenu:hover i {
-  transform: translateX(4px);
-  opacity: 1;
+.arrow-submenu {
+  position: absolute;
+  top: 12px;
+  right: 10px;
 }
 
 /* ==================================================

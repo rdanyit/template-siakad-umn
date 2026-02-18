@@ -70,6 +70,7 @@ label {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 10px;
+  text-align: justify !important;
 }
 
 .form-input-pmb,
@@ -99,7 +100,7 @@ label {
 
 /* Input file modern */
 input[type="file"] {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   border-radius: 10px;
   border: 1px dashed #ccc;
@@ -140,4 +141,68 @@ button {
 
 .btn-prev {
   background: #eee;
+}
+
+.nb {
+  font-size: 10px;
+  color: var(--danger-text);
+}
+
+.text-area {
+  width: 95%;
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  padding: 10px;
+  height: 160px;
+}
+
+.text-area:focus {
+  box-shadow: 0 0 0 3px rgba(0, 255, 106, 0.15);
+}
+
+.text-area:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 255, 106, 0.15);
+}
+
+/* Preview Box */
+.pdf-preview {
+  margin-top: 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.pdf-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f0f0f0;
+  font-size: 14px;
+}
+
+.pdf-preview-header button {
+  border: none;
+  background: #ff4d4f;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pdf-preview-header button:hover {
+  background: #d9363e;
+}
+
+.pdf-preview iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  background: white;
+}
+
+.hidden {
+  display: none;
 }

@@ -205,6 +205,8 @@
             <div class="bar-progress active"></div>
             <div class="bar-progress"></div>
             <div class="bar-progress"></div>
+            <div class="bar-progress"></div>
+            <div class="bar-progress"></div>
           </div>
           <form id="multiStepForm">
             <div class="step active">
@@ -225,6 +227,7 @@
                       name="nama_lengkap"
                       id="nama_lengkap"
                       class="form-input-pmb"
+                      placeholder="Nama Lengkap"
                     />
                   </div>
                   <div class="form-group">
@@ -234,6 +237,7 @@
                       name="nama_panggilan"
                       id="nama_panggilan"
                       class="form-input-pmb"
+                      placeholder="Nama Panggilan"
                     />
                   </div>
                   <div class="dua-kolom">
@@ -244,6 +248,7 @@
                         name="tempat_lahir"
                         id="tempat_lahir"
                         class="form-input-pmb"
+                        placeholder="Tempat Lahir"
                       />
                     </div>
                     <div class="form-group">
@@ -276,15 +281,17 @@
                       name="nik"
                       id="nik"
                       class="form-input-pmb"
+                      placeholder="NIK"
                     />
                   </div>
                   <div class="form-group">
-                    <label>Nomor KK</label>
+                    <label>NISN</label>
                     <input
                       type="text"
-                      name="no_kk"
-                      id="no_kk"
+                      name="nisn"
+                      id="nisn"
                       class="form-input-pmb"
+                      placeholder="NISN"
                     />
                   </div>
                   <div class="tiga-kolom">
@@ -329,6 +336,7 @@
                       name="hp"
                       id="hp"
                       class="form-input-pmb"
+                      placeholder="Nomor HP"
                     />
                   </div>
                   <div class="form-group">
@@ -339,6 +347,9 @@
                       id="foto"
                       class="form-input-pmb"
                     />
+                    <small class="nb"
+                      >NB : <i><b>File Max 1 MB (.jpg/.png)</b></i></small
+                    >
                   </div>
                 </div>
               </div>
@@ -351,70 +362,547 @@
 
             <div class="step">
               <h2>Alamat Domisili</h2>
+              <div class="tiga-kolom">
+                <div class="left-kolom">
+                  <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea
+                      name="alamat_lengkap"
+                      id="alamat_lengkap"
+                      class="text-area"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="middle-kolom">
+                  <div class="form-group">
+                    <label>Provinsi</label>
+                    <select name="prov" id="prov" class="form-select-pmb">
+                      <option value="" disabled>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kota / Kabupaten</label>
+                    <select
+                      name="kab_kota"
+                      id="kab_kota"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kota/ Kabupaten</option>
+                    </select>
+                  </div>
 
-              <div class="form-group">
-                <label>Alamat Lengkap</label>
-                <textarea
-                  name="alamat_lengkap"
-                  id="alamat_lengkap"
-                  class="text-area"
-                ></textarea>
-              </div>
+                  <div class="form-group">
+                    <label>Kecamatan</label>
+                    <select
+                      name="kecamatan"
+                      id="kecamatan"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="right-kolom">
+                  <div class="form-group">
+                    <label>Nagari</label>
+                    <select name="nagari" id="nagari" class="form-select-pmb">
+                      <option value="" disabled>Pilih Nagari</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input
+                      type="number"
+                      name="pos"
+                      id="pos"
+                      class="form-input-pmb"
+                    />
+                  </div>
 
-              <div class="form-group">
-                <label>Provinsi</label>
-                <select name="prov" id="prov" class="form-select-pmb">
-                  <option value="" disabled>Pilih Provinsi</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Kota / Kabupaten</label>
-                <select name="kab_kota" id="kab_kota" class="form-select-pmb">
-                  <option value="" disabled>Pilih Kota/ Kabupaten</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Kecamatan</label>
-                <select name="kecamatan" id="kecamatan" class="form-select-pmb">
-                  <option value="" disabled>Pilih Kecamatan</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Nagari</label>
-                <select name="nagari" id="nagari" class="form-select-pmb">
-                  <option value="" disabled>Pilih Nagari</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Kode Pos</label>
-                <input
-                  type="number"
-                  name="pos"
-                  id="pos"
-                  class="form-input-pmb"
-                />
-              </div>
-
-              <div class="form-group">
-                <label>Status Tempat Tinggal</label>
-                <select
-                  name="status_tinggal"
-                  id="status_tinggal"
-                  class="form-select-pmb"
-                >
-                  <option value="" disabled>Pilih Status Tempat Tinggal</option>
-                  <option value="ortu">Orang Tua</option>
-                  <option value="kos">Kos</option>
-                </select>
+                  <div class="form-group">
+                    <label>Status Tempat Tinggal</label>
+                    <select
+                      name="status_tinggal"
+                      id="status_tinggal"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>
+                        Pilih Status Tempat Tinggal
+                      </option>
+                      <option value="ortu">Orang Tua</option>
+                      <option value="kos">Kos</option>
+                    </select>
+                  </div>
+                </div>
               </div>
 
               <div class="buttons">
                 <button type="button" class="btn-prev">Kembali</button>
                 <button type="button" class="btn-next">Lanjutkan</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <h2>Data Pendidikan Asal</h2>
+              <div class="tiga-kolom">
+                <div class="left-kolom">
+                  <div class="form-group">
+                    <label for="jenjang">Jenjang Sekolah</label>
+                    <select name="jenjang" id="jenjang" class="form-select-pmb">
+                      <option value="">Pilih Jenjang Sekolah</option>
+                      <option value="sma">SMA</option>
+                      <option value="smk">SMK</option>
+                      <option value="smks">SMKS</option>
+                      <option value="man">MAN</option>
+                      <option value="pesantren">Pesantern</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="nama">Nama Sekolah</label>
+                    <input
+                      type="text"
+                      name="nama"
+                      id="nama"
+                      class="form-input-pmb"
+                      placeholder="Nama Sekolah"
+                    />
+                  </div>
+                </div>
+                <div class="middle-kolom">
+                  <div class="form-group">
+                    <label for="npsn">NPSN</label>
+                    <input
+                      type="text"
+                      name="npsn"
+                      id="npsn"
+                      class="form-input-pmb"
+                      placeholder="NPSN"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="jurusan">Jurusan Sekolah</label>
+                    <select name="jurusan" id="jurusan" class="form-select-pmb">
+                      <option value="">Pilih Jurusan Sekolah</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="right-kolom">
+                  <div class="form-group">
+                    <label for="tahun_lulus">Tahun Lulus</label>
+                    <input
+                      type="number"
+                      name="tahun_lulus"
+                      id="tahun_lulus"
+                      class="form-input-pmb"
+                      placeholder="Tahun Lulus"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="file_ijazah"
+                      >Scan Berkas Pendaftaran (Ijazah/SKHUN dan Nilai
+                      Rapor)</label
+                    >
+                    <input
+                      type="file"
+                      name="file_ijazah"
+                      id="file_ijazah"
+                      class="form-input-pmb"
+                      placeholder="File Ijazah"
+                    />
+                    <small class="nb"
+                      ><i>NB: <b>File maks 1MB (.pdf)</b></i></small
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Preview Container -->
+              <div id="pdfPreviewContainer" class="pdf-preview hidden">
+                <div class="pdf-preview-header">
+                  <span>Preview PDF</span>
+                  <button type="button" id="removePdf">Hapus</button>
+                </div>
+                <iframe id="pdfPreview"></iframe>
+              </div>
+
+              <div class="buttons">
+                <button type="button" class="btn-prev">Kembali</button>
+                <button type="button" class="btn-next">Lanjutkan</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <h2>Data Pilihan Studi</h2>
+              <div class="tiga-kolom">
+                <div class="left-kolom">
+                  <div class="form-group">
+                    <label for="jalur">Jalur Pendaftaran</label>
+                    <select name="jalur" id="jalur" class="form-select-pmb">
+                      <option value="">Pilih Jalur Pendaftaran</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="gelombang">Gelombang Pendaftaran</label>
+                    <select
+                      name="gelombang"
+                      id="gelombang"
+                      class="form-select-pmb"
+                    >
+                      <option value="">Pilih Gelombang Pendaftaran</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="middle-kolom">
+                  <div class="form-group">
+                    <label for="pil_prod_1">Pilihan Program Studi 1</label>
+                    <select
+                      name="pil_prod_1"
+                      id="pil_prod_1"
+                      class="form-select-pmb"
+                    >
+                      <option value="">Pilihan Program Studi 1</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="pil_prod_2">Pilihan Program Studi 2</label>
+                    <select
+                      name="pil_prod_2"
+                      id="pil_prod_2"
+                      class="form-select-pmb"
+                    >
+                      <option value="">Pilihan Program Studi 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="right-kolom">
+                  <div class="form-group">
+                    <label for="pil_prod_3">Pilihan Program Studi 3</label>
+                    <select
+                      name="pil_prod_3"
+                      id="pil_prod_3"
+                      class="form-select-pmb"
+                    >
+                      <option value="">Pilihan Program Studi 3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="kelas">Jenis Kelas</label>
+                    <select name="kelas" id="kelas" class="form-select-pmb">
+                      <option value="">Pilih Jenis Kelas</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button type="button" class="btn-prev">Kembali</button>
+                <button type="button" class="btn-next">Lanjutkan</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <h2>Data Orang Tua / Wali</h2>
+              <div class="tiga-kolom">
+                <div class="left-kolom">
+                  <div class="form-group">
+                    <label for="nama_ayah">Nama Ayah</label>
+                    <input
+                      type="text"
+                      name="nama_ayah"
+                      id="nama_ayah"
+                      class="form-input-pmb"
+                      placeholder="Nama Ayah"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="pdd_ayah">Pendidikan Ayah</label>
+                      <select
+                        name="pdd_ayah"
+                        id="pdd_ayah"
+                        class="form-select-pmb"
+                      >
+                        <option value="">Pilih Jenjang Pendidikan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="penghasilan_ayah"
+                        >Penghasilan Ayah per Bulan</label
+                      >
+                      <select
+                        name="penghasilan_ayah"
+                        id="penghasilan_ayah"
+                        class="form-select-pmb"
+                      >
+                        <option value="">Pilih Range Penghasilan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="hp_ayah">Nomor HP Ayah</label>
+                    <input
+                      type="number"
+                      name="hp_ayah"
+                      id="hp_ayah"
+                      class="form-input-pmb"
+                      placeholder="Nomor HP Ayah"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea
+                      name="alamat_lengkap"
+                      id="alamat_lengkap"
+                      class="text-area"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Provinsi</label>
+                    <select name="prov" id="prov" class="form-select-pmb">
+                      <option value="" disabled>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kota / Kabupaten</label>
+                    <select
+                      name="kab_kota"
+                      id="kab_kota"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kota/ Kabupaten</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Kecamatan</label>
+                    <select
+                      name="kecamatan"
+                      id="kecamatan"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Nagari</label>
+                    <select name="nagari" id="nagari" class="form-select-pmb">
+                      <option value="" disabled>Pilih Nagari</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input
+                      type="number"
+                      name="pos"
+                      id="pos"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                </div>
+                <div class="middle-kolom">
+                  <div class="form-group">
+                    <label for="nama_ibu">Nama Ibu</label>
+                    <input
+                      type="text"
+                      name="nama_ibu"
+                      id="nama_ibu"
+                      class="form-input-pmb"
+                      placeholder="Nama Ibu"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="pdd_ibu">Pendidikan Ibu</label>
+                      <select
+                        name="pdd_ibu"
+                        id="pdd_ibu"
+                        class="form-select-pmb"
+                      >
+                        <option value="">Pilih Jenjang Pendidikan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="penghasilan_ibu"
+                        >Penghasilan Ibu per Bulan</label
+                      >
+                      <select
+                        name="penghasilan_ibu"
+                        id="penghasilan_ibu"
+                        class="form-select-pmb"
+                      >
+                        <option value="">Pilih Range Penghasilan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="hp_ibu">Nomor HP Ibu</label>
+                    <input
+                      type="number"
+                      name="hp_ibu"
+                      id="hp_ibu"
+                      class="form-input-pmb"
+                      placeholder="Nomor HP Ibu"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea
+                      name="alamat_lengkap"
+                      id="alamat_lengkap"
+                      class="text-area"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Provinsi</label>
+                    <select name="prov" id="prov" class="form-select-pmb">
+                      <option value="" disabled>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kota / Kabupaten</label>
+                    <select
+                      name="kab_kota"
+                      id="kab_kota"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kota/ Kabupaten</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Kecamatan</label>
+                    <select
+                      name="kecamatan"
+                      id="kecamatan"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Nagari</label>
+                    <select name="nagari" id="nagari" class="form-select-pmb">
+                      <option value="" disabled>Pilih Nagari</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input
+                      type="number"
+                      name="pos"
+                      id="pos"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                </div>
+                <div class="right-kolom">
+                  <div class="form-group">
+                    <label for="nama_wali">Nama Wali</label>
+                    <input
+                      type="text"
+                      name="nama_wali"
+                      id="nama_wali"
+                      class="form-input-pmb"
+                      placeholder="Nama Wali"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="hubungan_wali"
+                        >Hubungan dengan calon mahasiswa</label
+                      >
+                      <select
+                        name="hubungan_wali"
+                        id="hubungan_wali"
+                        class="form-select-pmb"
+                      >
+                        <option value="">
+                          Pilih Hubungan dengan calon mahasiswa
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label for="kerja_wali">Jenis Pekerjaan</label>
+                      <select
+                        name="kerja_wali"
+                        id="kerja_wali"
+                        class="form-select-pmb"
+                      >
+                        <option value="">Pilih Jenis Pekerjaan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="hp_wali">Nomor HP Wali</label>
+                    <input
+                      type="number"
+                      name="hp_wali"
+                      id="hp_wali"
+                      class="form-input-pmb"
+                      placeholder="Nomor HP Wali"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea
+                      name="alamat_lengkap"
+                      id="alamat_lengkap"
+                      class="text-area"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Provinsi</label>
+                    <select name="prov" id="prov" class="form-select-pmb">
+                      <option value="" disabled>Pilih Provinsi</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kota / Kabupaten</label>
+                    <select
+                      name="kab_kota"
+                      id="kab_kota"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kota/ Kabupaten</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Kecamatan</label>
+                    <select
+                      name="kecamatan"
+                      id="kecamatan"
+                      class="form-select-pmb"
+                    >
+                      <option value="" disabled>Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Nagari</label>
+                    <select name="nagari" id="nagari" class="form-select-pmb">
+                      <option value="" disabled>Pilih Nagari</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input
+                      type="number"
+                      name="pos"
+                      id="pos"
+                      class="form-input-pmb"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button type="button" class="btn-prev">Kembali</button>
+                <button type="button" class="btn-simpan">Simpan</button>
               </div>
             </div>
           </form>
@@ -431,6 +919,7 @@
 
       <!-- JS -->
       <script src="../../asset/js/bio-pmb.js"></script>
+      <script src="../../asset/js/preview-pdf.js"></script>
       <script src="../../asset/js/back.js"></script>
     </div>
   </body>

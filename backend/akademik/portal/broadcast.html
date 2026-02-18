@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Portal Broadcast</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../../asset/css/pmb.css" />
+    <link rel="stylesheet" href="../../../asset/css/akademik.css" />
+    <link rel="stylesheet" href="../../../asset/css/back.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img
+              src="../../../asset/logo/logo.png"
+              alt="logo"
+              class="img-logo"
+            />
+            <div class="desk-logo">
+              <span class="nama-halaman">Portal Akademik</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">Sistem Akademik</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item">
+            <a href="../dashboard-akademik.html" class="list-icon-menu">
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown aktif">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Portal</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../portal/mahasiswa.html">Mahasiswa</a>
+              <a href="../portal/pegawai.html">Pegawai</a>
+              <a href="../portal/pengumuman.html">Pengumuman</a>
+              <a href="../portal/konsultasi.html">Konsultasi</a>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Kegiatan <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="../portal/kegiatan-akademik.html"
+                    >Kegiatan Akademik</a
+                  >
+                  <a href="../portal/kalender-akademik.html"
+                    >Kalender Akademik</a
+                  >
+                  <a href="../portal/monitorig-akademik.html"
+                    >Monitoring Kalender Akademik</a
+                  >
+                </div>
+              </div>
+              <a href="../portal/broadcast.html">Broadcast</a>
+              <a href="../elearning/dashboard-elearning.html">E-Learning</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Perkuliahan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Manajemen Kurikulum
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Kurikulum Aktif</a>
+                  <a href="#">Mata Kuliah</a>
+                  <a href="#">Distribusi MK</a>
+                </div>
+              </div>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Kelas
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Jadwal Kuliah</a>
+                  <a href="#">Peserta Kelas</a>
+                  <a href="#">Presensi</a>
+                </div>
+              </div>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Administrasi
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">KRS</a>
+                  <a href="#">Nilai</a>
+                  <a href="#">Transkrip</a>
+                </div>
+              </div>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Proposal Tugas Akhir
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Daftar Proposal</a>
+                </div>
+              </div>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Tugas Akhir
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Daftar Tugas Akhir</a>
+                </div>
+              </div>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Yudisium
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Daftar Yudisium</a>
+                </div>
+              </div>
+
+              <a href="#">Kegiatan Pendukung</a>
+
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Kuesioner
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Daftar Pertanyaan</a>
+                  <a href="#">Daftar Jawaban</a>
+                  <a href="#">Kategori Edom</a>
+                </div>
+              </div>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Data Wisuda
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Periode Wisuda</a>
+                  <a href="#">Peserta</a>
+                </div>
+              </div>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Semester Pendek
+                  <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Konfigurasi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Kampus Merdeka</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Mahasiswa</a>
+              <a href="#">Kelas Kuliah</a>
+              <div class="submenu-item">
+                <a href="#" class="has-submenu"
+                  >Laporan <i class="fa-solid fa-caret-right arrow-submenu"></i
+                ></a>
+                <div class="submenu-dropdown">
+                  <a href="#">Nilai Per Siswa</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Referensi</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Perkuliahan</a>
+              <a href="#">Template Laporan</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Laporan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Manual</a>
+              <a href="#">Mahasiswa</a>
+              <a href="#">Perkuliahan</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <h3>Broadcast</h3>
+
+        <div class="tabel-data">
+          <div class="tabel-wrapper">
+            <div class="head-tabel-wrap">
+              <div class="toolbar">
+                <button type="button" class="btn-filter" id="btnShowFilter">
+                  <i class="fa-solid fa-maximize"></i>
+                </button>
+                <select id="filterItem">
+                  <option value="">-- Semua --</option>
+                  <option value="NIM">NIM</option>
+                  <option value="Nama">Nama</option>
+                  <option value="Jenjang">Jenjang</option>
+                  <option value="Program-Studi">Program Studi</option>
+                  <option value="Masuk">Masuk</option>
+                  <option value="Smt">Smt</option>
+                  <option value="SKS">SKS</option>
+                  <option value="IPK">IPK</option>
+                  <option value="NIK">NIK</option>
+                </select>
+                <input
+                  type="text"
+                  id="keywordmhs"
+                  placeholder="Cari mahasiswa..."
+                />
+              </div>
+              <button type="button" class="btn-tambah" id="openModal">
+                <i class="fa-solid fa-plus"></i> Tambah Data
+              </button>
+
+              <!-- Modal -->
+              <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-box">
+                  <div class="modal-header">
+                    <span>Tambah Data</span>
+                    <button class="modal-close" id="closeModal">&times;</button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label>Nama</label>
+                      <input
+                        type="text"
+                        class="form-input-modals"
+                        placeholder="Masukan nama..."
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Keterangan</label>
+                      <textarea
+                        class="form-input-modals"
+                        placeholder="Masukan keterangan..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button class="btn-batal" id="closeModal2">Batal</button>
+                    <button class="btn-simpan">Simpan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="body-tabel-wrap">
+              <table id="tabelMahsiswa">
+                <thead>
+                  <tr>
+                    <th>Kode</th>
+                    <th>Nama Kegiatan Akademik</th>
+                    <th>Background</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2210001</td>
+                    <td>Andi Saputra</td>
+                    <td>S1</td>
+                    <td class="aksi-col">
+                      <button type="button" class="badge-warning">
+                        <i class="fa-solid fa-marker"></i>
+                      </button>
+                      <button type="button" class="badge-danger">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="../../../asset/js/submenu.js"></script>
+      <script src="../../../asset/js/akademik.js"></script>
+      <script src="../../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>
