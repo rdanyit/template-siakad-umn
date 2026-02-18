@@ -8,7 +8,7 @@
       href="../../../asset/logo/logo.png"
       type="image/x-icon"
     />
-    <title>UMN | Referensi Tugas Akhir</title>
+    <title>UMN | Tambah Data Yudisium</title>
 
     <!-- Icon -->
     <link
@@ -377,50 +377,40 @@
 
       <!-- Main -->
       <div class="main">
-        <h3>Referensi Tugas Akhir</h3>
+        <h3>Tambah Data Peserta</h3>
 
         <!-- Periode -->
-        <div class="filter-panel">
-          <!-- Kolom Kiri -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Tahun Kurikulum</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Prodi Pengampu</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
+        <div class="filter-box">
+          <div class="row">
+            <label>Mahasiswa</label>
+
+            <div class="search-group">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Masukkan NIM atau Nama Mahasiswa, lalu klik tombol pencarian"
+              />
+
+              <button class="btn-search" id="searchBtn">
+                <i class="fa fa-search"></i>
+              </button>
+
+              <button class="btn-refresh" id="refreshBtn">
+                <i class="fa fa-rotate-right"></i>
+              </button>
             </div>
           </div>
 
-          <!-- Kolom Kanan -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Jenis Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Jenis Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Kelompok Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Kelompok Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
+          <div class="row">
+            <label>Periode Yudisium</label>
+
+            <select id="periodeSelect">
+              <option value="">-- Pilih Periode --</option>
+              <option>2024 Ganjil</option>
+              <option>2024 Genap</option>
+              <option>2025 Ganjil</option>
+              <option>2025 Genap</option>
+            </select>
           </div>
         </div>
 

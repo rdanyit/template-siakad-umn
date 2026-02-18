@@ -1091,3 +1091,27 @@ document.querySelectorAll(".card").forEach((card, i) => {
   const percent = Math.abs(stats[i].change).toFixed(2).replace(".", ",");
   changeEl.textContent = percent + "%";
 });
+
+// Tambah Data
+const searchBtn = document.getElementById("searchBtn");
+const refreshBtn = document.getElementById("refreshBtn");
+const searchInput = document.getElementById("searchInput");
+const periodeSelect = document.getElementById("periodeSelect");
+
+searchBtn.addEventListener("click", () => {
+  const keyword = searchInput.value.trim();
+  const periode = periodeSelect.value;
+
+  if (!keyword) {
+    alert("Masukkan NIM atau Nama Mahasiswa terlebih dahulu");
+    return;
+  }
+
+  console.log("Cari:", keyword, "| Periode:", periode);
+  alert(`Pencarian:\nKeyword: ${keyword}\nPeriode: ${periode || "-"}`);
+});
+
+refreshBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  periodeSelect.value = "";
+});
