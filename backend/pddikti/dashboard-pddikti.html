@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Dashboard</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+    <link rel="stylesheet" href="../../asset/css/pddikti.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Portal PDDIKTI</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">Sistem Akademik</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item aktif">
+            <a
+              href="../akademik/dashboard-akademik.html"
+              class="list-icon-menu"
+            >
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Mahasiswa</span>
+            </a>
+          </div>
+          <div class="menubar-item">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Perguruan Tinggi</span>
+            </a>
+          </div>
+          <div class="menubar-item">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Program Studi</span>
+            </a>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <section class="portal_hero">
+          <h1>Pencarian Data Akademik</h1>
+          <p>Cari data mahasiswa, dosen, program studi, dan perguruan tinggi</p>
+
+          <div class="portal_searchbox">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Masukkan Nama / NIM / PT"
+            />
+            <button id="searchBtn">Cari</button>
+          </div>
+        </section>
+
+        <section class="portal_features">
+          <div class="portal_card">
+            <h3>Data Mahasiswa</h3>
+            <p>Akses informasi status akademik dan riwayat studi mahasiswa</p>
+          </div>
+
+          <div class="portal_card">
+            <h3>Data Perguruan Tinggi</h3>
+            <p>Lihat profil resmi dan akreditasi institusi pendidikan tinggi</p>
+          </div>
+
+          <div class="portal_card">
+            <h3>Program Studi</h3>
+            <p>
+              Informasi lengkap mengenai program studi dan jenjang pendidikan
+            </p>
+          </div>
+
+          <div class="portal_card">
+            <h3>Validasi Ijazah</h3>
+            <p>Verifikasi keabsahan ijazah dan data kelulusan</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="../../asset/js/pddikti.js"></script>
+      <script src="../../asset/js/submenu.js"></script>
+      <script src="../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>

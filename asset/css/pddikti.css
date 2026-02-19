@@ -1,0 +1,79 @@
+.portal_hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.portal_hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.portal_hero p {
+  color: var(--portal-text-muted);
+  margin-bottom: 30px;
+}
+
+.portal_searchbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.portal_searchbox input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-default);
+  background: var(--background);
+  color: white;
+}
+
+.portal_searchbox button {
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  background: var(--portal-primary);
+  color: white;
+  cursor: pointer;
+}
+
+/* Features */
+.portal_features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.portal_card {
+  background: var(--background);
+  border: 1px solid var(--border-default);
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.portal_card:hover {
+  border-color: var(--portal-primary);
+  transform: translateY(-4px);
+}
+
+.portal_card h3 {
+  margin-top: 0;
+}
+
+.portal_card p {
+  color: var(--portal-text-muted);
+  font-size: 14px;
+}
+
+/* Footer */
+
+.portal_footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--border-default);
+  color: var(--portal-text-muted);
+}
