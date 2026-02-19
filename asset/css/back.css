@@ -775,7 +775,8 @@ hr {
 }
 
 #chartAKTToggle,
-#chartProdiToggle {
+#chartProdiToggle,
+#chartmhsToggle {
   border: 0;
   background: var(--background);
   color: var(--text);

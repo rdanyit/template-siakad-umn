@@ -255,3 +255,19 @@ li {
   background: var(--secondary);
   color: var(--text);
 }
+
+.fw-15 {
+  max-width: 216px;
+}
+
+.fw-25 {
+  max-width: 360px;
+}
+
+.fw-50 {
+  max-width: 720px;
+}
+
+.fw-70 {
+  max-width: 1080px;
+}

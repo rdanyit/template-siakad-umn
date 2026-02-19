@@ -1,0 +1,282 @@
+.form-select {
+  appearance: none; /* Hilangkan style default browser */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+  max-width: 280px;
+
+  padding: 10px 40px 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+
+  background-color: #fff;
+  color: #344054;
+
+  cursor: pointer;
+  outline: none;
+
+  transition: all 0.2s ease;
+
+  /* Icon panah custom */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%23667085' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* Hover */
+.form-select:hover {
+  border-color: #98a2b3;
+}
+
+/* Focus */
+.form-select:focus {
+  border-color: #1570ef;
+  box-shadow: 0 0 0 3px rgba(21, 112, 239, 0.15);
+}
+
+/* Disabled */
+.form-select:disabled {
+  background-color: #f2f4f7;
+  cursor: not-allowed;
+  color: #98a2b3;
+}
+
+.stat-periode {
+  height: 600px !important;
+}
+
+.head-main {
+  margin-bottom: 20px !important;
+}
+
+.title-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.desk-menu,
+.data-baru {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.data-baru {
+  margin-left: 10px;
+}
+
+.body-main {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 20px;
+}
+
+/* flex */
+.flex-tiga-kolom {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-flex {
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  min-height: 300px;
+  max-height: 450px;
+  border-radius: 10px;
+  border: 1px solid var(--border-default);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.head-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.judul-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-judul {
+  font-weight: bold;
+}
+
+.text-judul,
+.tahun-akademik {
+  font-size: 12px;
+}
+
+.body-card {
+  width: 100%;
+}
+
+.item-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mhs-chart {
+  width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.desk-chart {
+  border-left: 1px solid var(--border-default);
+  padding: 10px;
+}
+
+.row-chart {
+  padding: 10px 0px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.judul-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.angka-row {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Tooltip */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  opacity: 1;
+}
+
+.badge-detail {
+  color: var(--info-text);
+  font-weight: bold;
+}
+
+.badge-detail:hover {
+  color: var(--danger-text);
+  font-weight: bold;
+}
+
+.gauge-container {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  position: relative;
+}
+
+#gaugeChart {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.gauge-label {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.value {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 14px;
+  color: gray;
+}
+
+.divider {
+  height: 2px;
+  background: #eee;
+  margin: 10px 40px;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: gray;
+}
+
+.pddikti-contain {
+  position: relative;
+  height: 250px;
+}
+
+.pddikti-label {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  z-index: 2;
+  text-align: center;
+}
+
+.persentase {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.judul-persentase {
+  font-size: 14px;
+}
+
+#pddikti-chart {
+  width: 90%;
+  height: 90%;
+}
+
+.item-row-chart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.cttn {
+  width: 100%;
+  color: var(--danger-text);
+  font-size: 10px;
+}
