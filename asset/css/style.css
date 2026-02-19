@@ -178,7 +178,8 @@ li {
 }
 
 .btn-info,
-.btn-download {
+.btn-download,
+.btn-detail {
   padding: 8px 18px;
   border: 0;
   border-radius: 10px;
@@ -205,8 +206,28 @@ li {
   white-space: nowrap;
 }
 
+.btn-absen {
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--background);
+  white-space: nowrap;
+}
+
+.btn-kembali {
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--info-border);
+  color: var(--text);
+  white-space: nowrap;
+}
+
 .badge-danger,
-.badge-warning {
+.badge-warning,
+.badge-info,
+.badge-download {
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 12px;
@@ -223,4 +244,14 @@ li {
 .badge-warning {
   background: var(--warning-text);
   color: var(--background);
+}
+
+.badge-info {
+  background: var(--info-text);
+  color: var(--background);
+}
+
+.badge-download {
+  background: var(--secondary);
+  color: var(--text);
 }

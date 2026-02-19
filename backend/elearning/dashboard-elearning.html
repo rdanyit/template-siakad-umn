@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Dashboard</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+    <link rel="stylesheet" href="../../asset/css/kalender.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Portal E-Learning</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">Sistem Akademik</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item aktif">
+            <a
+              href="../elearning/dashboard-elearning.html"
+              class="list-icon-menu"
+            >
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Perkuliahan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../elearning/daftar-perkuliahan.html"
+                >Daftar Perkuliahan</a
+              >
+              <a href="../elearning/perkuliahan-pengganti.html"
+                >Perkuliahan Pengganti</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <!-- Petunjuk -->
+        <div class="head-main">
+          <span class="nama-menu-aktif">Dashboard</span>
+        </div>
+
+        <!-- Statistik -->
+        <div class="statistik">
+          <div class="card-medium lgb-1 flex-kolom">
+            <i class="fa-solid fa-user-group icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Jumlah Mata Kuliah</span>
+              <span class="number-stat">682</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-2 flex-kolom">
+            <i class="fa-solid fa-graduation-cap icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Total Kehadiran</span>
+              <span class="number-stat">2.347</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-3 flex-kolom">
+            <i class="fa-solid fa-file-invoice icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">IPK</span>
+              <span class="number-stat">3,55</span>
+            </div>
+          </div>
+          <div class="card-medium lgb-4 flex-kolom">
+            <i class="fa-solid fa-calendar-days icon-stat"></i>
+            <div class="desk-stat">
+              <span class="judul-stat">Periode Saat Ini</span>
+              <span class="number-stat">2025 Ganjil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- chart statistik -->
+        <div class="chart-stat">
+          <div class="stat-periode">
+            <!-- kalender Akademik -->
+            <div class="kalender-wrap">
+              <div class="kalender-header">
+                <button
+                  id="prevMonth"
+                  type="button"
+                  aria-label="Previous Month"
+                >
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <div id="monthLabel"></div>
+                <button id="nextMonth" type="button" aria-label="Next Month">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="kalender-weekdays">
+                <div>Min</div>
+                <div>Sen</div>
+                <div>Sel</div>
+                <div>Rab</div>
+                <div>Kam</div>
+                <div>Jum</div>
+                <div>Sab</div>
+              </div>
+
+              <div class="kalender-grid" id="kalenderGrid"></div>
+
+              <div class="kalender-legend">
+                <div class="legend-title">Keterangan</div>
+
+                <div class="legend-item">
+                  <span class="dot"></span>
+                  <span>Agenda Akademik</span>
+                </div>
+
+                <div class="legend-item">
+                  <span class="dot uts"></span>
+                  <span>Ujian / Evaluasi</span>
+                </div>
+
+                <div class="legend-item">
+                  <span class="dot libur"></span>
+                  <span>Libur / Tanggal Penting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="informasi-akademik">
+            <div class="pengumuman">
+              <div class="head-pengumuman">
+                <span class="judul-headp">Pengumuman</span>
+                <input
+                  type="search"
+                  name="carip"
+                  id="carip"
+                  class="form-input"
+                  placeholder="Cari..."
+                />
+              </div>
+              <div class="body-pengumuman">
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 1</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 2</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 3</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 4</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 5</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 6</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 7</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 8</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 9</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 10</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 11</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 12</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 13</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="item-pengumuman">
+                  <a href="#" class="linkpengumuman">
+                    <span class="judul-info">Pengumuman 14</span>
+                    <span class="waktu-info">
+                      <span class="tanggal-info">13 Februari 2026</span>
+                      <span class="jam-info">08:00</span>
+                    </span>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="../../asset/js/petujuk.js"></script>
+      <script src="../../asset/js/custom-select.js"></script>
+      <script src="../../asset/js/tab.js"></script>
+      <script src="../../asset/js/chart-akmakt.js"></script>
+      <script src="../../asset/js/chart-akmprodi.js"></script>
+      <script src="../../asset/js/akt-tabel.js"></script>
+      <script src="../../asset/js/prodi-tabel.js"></script>
+      <script src="../../asset/js/tabel-mahasiswa.js"></script>
+      <script src="../../asset/js/nilai-select.js"></script>
+      <script src="../../asset/js/tabel-kuesioner.js"></script>
+      <script src="../../asset/js/lulusan-tabel.js"></script>
+      <script src="../../asset/js/kalender-akademik.js"></script>
+      <script src="../../asset/js/carip.js"></script>
+      <script src="../../asset/js/submenu.js"></script>
+      <script src="../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>
