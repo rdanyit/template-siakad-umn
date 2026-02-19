@@ -364,55 +364,42 @@
                     </div>
                     <div class="row-chart">
                       <span class="judul-row">Pendidikan Terakhir Dosen </span>
-                      <canvas id="pddosen-chart"></canvas>
-                    </div>
-                    <div class="row-chart">
-                      <span class="judul-row"
-                        >Mutasi Mahasiswa
-                        <span class="tooltip-wrapper">
-                          <i class="fa-solid fa-circle-info icon-row"></i>
-                          <span class="tooltip-text">Informasi tambahan</span>
-                        </span>
-                      </span>
-                      <span class="angka-row"
-                        >Tidak ada data mahasiswa mutasi pada periode 2025
-                        Genap</span
-                      >
+                      <div class="chardos">
+                        <canvas id="pddosen-chart"></canvas>
+                      </div>
+                      <div class="cttn">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="desk-cat"
+                          >241 Dosen tidak memiliki data Riwayat Pendidikan
+                          Terakhir/ Riwayat Homebase/ Riwayat Hubungan Kerja
+                          yang telah disetujui</span
+                        >
+                      </div>
                     </div>
                   </div>
                   <div class="desk-chart">
                     <div class="row-chart">
                       <span class="judul-row"
-                        >Mahasiswa Aktif (Student Body)
+                        >SDM Tendik
                         <span class="tooltip-wrapper">
                           <i class="fa-solid fa-circle-info icon-row"></i>
                           <span class="tooltip-text">Informasi tambahan</span>
                         </span>
                       </span>
-                      <span class="angka-row">0</span>
+                      <span class="angka-row">1</span>
                     </div>
                     <div class="row-chart">
                       <span class="judul-row"
-                        >Rerata IPS Mahasiswa
+                        >Hubungan Kerja Tendik
                         <span class="tooltip-wrapper">
                           <i class="fa-solid fa-circle-info icon-row"></i>
                           <span class="tooltip-text">Informasi tambahan</span>
                         </span>
                       </span>
-                      <span class="angka-row">0,00</span>
-                    </div>
-                    <div class="row-chart">
-                      <span class="judul-row"
-                        >Mutasi Mahasiswa
-                        <span class="tooltip-wrapper">
-                          <i class="fa-solid fa-circle-info icon-row"></i>
-                          <span class="tooltip-text">Informasi tambahan</span>
-                        </span>
-                      </span>
-                      <span class="angka-row"
-                        >Tidak ada data mahasiswa mutasi pada periode 2025
-                        Genap</span
-                      >
+                      <div class="menu-item">
+                        <span class="menu-text">1. Belum terdata</span>
+                        <span class="menu-value">1</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -455,18 +442,105 @@
               </div>
 
               <div class="body-card">
-                <div class="pddikti-contain">
-                  <canvas id="pddikti-chart"></canvas>
-                  <div class="pddikti-label">
-                    <div class="persentase">100%</div>
-                    <div class="judul-persentase">Pelaporan</div>
+                <div class="status-header">
+                  <div class="status-left">
+                    <div class="icon-circle">🏅</div>
+                    <span>Baik Sekali</span>
+                  </div>
+
+                  <div class="progress-segments">
+                    <div class="seg active"></div>
+                    <div class="seg active"></div>
+                    <div class="seg active"></div>
+                    <div class="seg"></div>
+                    <div class="seg"></div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h3>Akreditasi Program Studi</h3>
+
+                  <div class="row unggul">
+                    <div class="row-top">
+                      <span>Unggul</span>
+                      <span>0 Prodi</span>
+                    </div>
+                    <div class="bar"><div class="fill"></div></div>
+                  </div>
+
+                  <div class="row baik-sekali">
+                    <div class="row-top">
+                      <span>Baik Sekali</span>
+                      <span>5 Prodi</span>
+                    </div>
+                    <div class="bar"><div class="fill"></div></div>
+                  </div>
+
+                  <div class="row baik">
+                    <div class="row-top">
+                      <span>Baik</span>
+                      <span>2 Prodi</span>
+                    </div>
+                    <div class="bar"><div class="fill"></div></div>
+                  </div>
+
+                  <div class="row kedaluwarsa">
+                    <div class="row-top">
+                      <span>Kedaluwarsa</span>
+                      <span>5 Prodi</span>
+                    </div>
+                    <div class="bar"><div class="fill"></div></div>
+                  </div>
+
+                  <div class="total">
+                    <span>Jumlah</span>
+                    <span>12 Prodi</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="flex-dua-kolom">
-            <div class="card-flex fw-50"></div>
+            <div class="card-flex fw-50">
+              <div class="head-card">
+                <div class="judul-card">
+                  <span class="text-judul">Keuangan Akademik</span>
+                  <span class="tahun-akademik">2025 Genap</span>
+                </div>
+                <a href="#" class="badge-detail">Lihat Detail</a>
+              </div>
+
+              <div class="body-card">
+                <canvas id="keuangan-chart"></canvas>
+                <div class="stats-wrapper">
+                  <div class="stat-card">
+                    <div class="card-header">
+                      <span>Pendapatan</span>
+                      <span class="info-icon">ⓘ</span>
+                    </div>
+
+                    <div class="card-value">Rp0</div>
+
+                    <div class="card-change negative">
+                      ● 100% dari periode sebelumnya
+                    </div>
+                  </div>
+
+                  <div class="stat-card">
+                    <div class="card-header">
+                      <span>Piutang</span>
+                      <span class="info-icon">ⓘ</span>
+                    </div>
+
+                    <div class="card-value">Rp18.164.169.082</div>
+
+                    <div class="card-change neutral">
+                      0% dari periode sebelumnya
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="card-flex fw-50"></div>
           </div>
         </div>

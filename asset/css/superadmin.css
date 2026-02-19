@@ -76,7 +76,8 @@
 }
 
 /* flex */
-.flex-tiga-kolom {
+.flex-tiga-kolom,
+.flex-dua-kolom {
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -125,7 +126,7 @@
 
 .item-body {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -279,4 +280,196 @@
   width: 100%;
   color: var(--danger-text);
   font-size: 10px;
+}
+
+#pddosen-chart {
+  height: 200px !important;
+}
+
+.chardos {
+  width: 280px;
+  height: 200px;
+}
+
+.item-chart {
+  padding: 10px;
+  border-right: 1px solid var(--border-default);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-bottom: 3px solid #2f80ff; /* garis biru */
+  width: 220px; /* opsional */
+}
+
+.menu-text {
+  color: #222;
+}
+
+.menu-value {
+  color: #444;
+}
+
+/* HEADER */
+.status-header {
+  background: linear-gradient(135deg, #1677ff, #0d6efd);
+  color: white;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Segmented Progress */
+.progress-segments {
+  display: flex;
+  gap: 4px;
+}
+
+.seg {
+  width: 18px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.seg.active {
+  background: #ffd43b;
+}
+
+/* BODY */
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  margin: 4px 0 16px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Rows */
+.row {
+  margin-bottom: 14px;
+}
+
+.row-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* Bars */
+.bar {
+  height: 5px;
+  background: #edf0f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+
+/* Color Variants */
+.unggul .fill {
+  background: #1677ff;
+}
+.baik-sekali .fill {
+  background: #2f80ff;
+}
+.baik .fill {
+  background: #f2994a;
+}
+.kedaluwarsa .fill {
+  background: #eb5757;
+}
+
+/* Total */
+.total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.stats-wrapper {
+  display: flex;
+  gap: 18px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 18px;
+  width: 260px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef0f4;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+}
+
+.card-value {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.card-change {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Variants */
+.negative {
+  color: #eb5757;
+}
+
+.neutral {
+  color: #666;
 }
