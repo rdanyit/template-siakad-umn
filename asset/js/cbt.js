@@ -339,3 +339,121 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Halaman Ujian
+(() => {
+  const cbt_questionBank = [
+    {
+      q_text: "Apa ibukota Indonesia?",
+      q_options: ["Bandung", "Jakarta", "Surabaya", "Medan"],
+    },
+    {
+      q_text: "Berapa hasil dari 5 × 5 ?",
+      q_options: ["10", "20", "25", "30"],
+    },
+    {
+      q_text: "Mana yang termasuk bahasa markup?",
+      q_options: ["Python", "HTML", "Java", "C++"],
+    },
+    {
+      q_text: "Perangkat input adalah?",
+      q_options: ["Monitor", "Keyboard", "Speaker", "Printer"],
+    },
+    {
+      q_text: "CSS digunakan untuk?",
+      q_options: ["Logika program", "Desain tampilan", "Database", "Server"],
+    },
+  ];
+
+  let cbt_activeIndex = 0;
+  let cbt_userAnswers = new Array(cbt_questionBank.length).fill(null);
+
+  const cbt_elQuestionText = document.getElementById("questionText");
+  const cbt_elQuestionNumber = document.getElementById("questionNumber");
+  const cbt_elOptionsWrap = document.getElementById("options");
+  const cbt_elGrid = document.getElementById("questionGrid");
+
+  function cbt_renderGrid() {
+    cbt_elGrid.innerHTML = "";
+
+    cbt_questionBank.forEach((_, idx) => {
+      const cbt_btn = document.createElement("button");
+      cbt_btn.textContent = idx + 1;
+
+      if (cbt_userAnswers[idx] !== null) {
+        cbt_btn.classList.add("answered");
+      }
+
+      cbt_btn.onclick = () => {
+        cbt_activeIndex = idx;
+        cbt_renderQuestion();
+      };
+
+      cbt_elGrid.appendChild(cbt_btn);
+    });
+  }
+
+  function cbt_renderQuestion() {
+    const cbt_currentQ = cbt_questionBank[cbt_activeIndex];
+
+    cbt_elQuestionNumber.textContent = `Soal ${cbt_activeIndex + 1}`;
+    cbt_elQuestionText.textContent = cbt_currentQ.q_text;
+
+    cbt_elOptionsWrap.innerHTML = "";
+
+    cbt_currentQ.q_options.forEach((opt, optIndex) => {
+      const cbt_optionDiv = document.createElement("div");
+      cbt_optionDiv.className = "option";
+      cbt_optionDiv.textContent = opt;
+
+      if (cbt_userAnswers[cbt_activeIndex] === optIndex) {
+        cbt_optionDiv.classList.add("selected");
+      }
+
+      cbt_optionDiv.onclick = () => {
+        cbt_userAnswers[cbt_activeIndex] = optIndex;
+        cbt_renderGrid();
+        cbt_renderQuestion();
+      };
+
+      cbt_elOptionsWrap.appendChild(cbt_optionDiv);
+    });
+  }
+
+  document.getElementById("prevBtn").onclick = () => {
+    if (cbt_activeIndex > 0) {
+      cbt_activeIndex--;
+      cbt_renderQuestion();
+    }
+  };
+
+  document.getElementById("nextBtn").onclick = () => {
+    if (cbt_activeIndex < cbt_questionBank.length - 1) {
+      cbt_activeIndex++;
+      cbt_renderQuestion();
+    }
+  };
+
+  document.getElementById("submitBtn").onclick = () => {
+    console.log("Jawaban Peserta:", cbt_userAnswers);
+    alert("Ujian berhasil dikumpulkan!");
+  };
+
+  function cbt_startExamTimer(totalSeconds) {
+    let cbt_remainingTime = totalSeconds;
+    const cbt_timerDisplay = document.getElementById("timer");
+
+    setInterval(() => {
+      const mins = Math.floor(cbt_remainingTime / 60);
+      const secs = cbt_remainingTime % 60;
+
+      cbt_timerDisplay.textContent = `${mins}:${secs.toString().padStart(2, "0")}`;
+
+      if (cbt_remainingTime > 0) cbt_remainingTime--;
+    }, 1000);
+  }
+
+  cbt_renderGrid();
+  cbt_renderQuestion();
+  cbt_startExamTimer(30 * 60);
+})();

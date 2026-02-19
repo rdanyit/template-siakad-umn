@@ -376,3 +376,148 @@
 .status-col b {
   color: #111;
 }
+
+/* Halaman Ujian */
+.cbt_app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.cbt_topbar {
+  height: 60px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.cbt_logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--background);
+}
+
+.cbt_timer {
+  background: #ef4444;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--background);
+}
+
+/* Layout */
+.cbt_layout {
+  flex: 1;
+  display: flex;
+}
+
+/* Sidebar */
+.cbt_sidebar {
+  width: 260px;
+  background: var(--secondary);
+  padding: 20px;
+}
+
+.cbt_sidebar_title {
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.cbt_question_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cbt_question_grid button {
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cbt_question_grid button:hover {
+  background: #334155;
+}
+
+.cbt_question_grid button.answered {
+  background: #22c55e;
+}
+
+.cbt_submit_btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Content */
+.cbt_content {
+  flex: 1;
+  padding: 40px;
+}
+
+.cbt_question_number {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.cbt_question_text {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.cbt_options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover {
+  border-color: #3b82f6;
+}
+
+.option.selected {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Navigation */
+.cbt_nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cbt_nav button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.cbt_nav button:hover {
+  background: #334155;
+}
