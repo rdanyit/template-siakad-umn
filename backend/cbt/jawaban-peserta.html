@@ -8,7 +8,7 @@
       href="../../asset/logo/logo.png"
       type="image/x-icon"
     />
-    <title>UMN | Dashboard</title>
+    <title>UMN | Jawaban Peserta Ujian</title>
 
     <!-- Icon -->
     <link
@@ -98,7 +98,7 @@
         </div>
         <hr />
         <div class="menu-bar">
-          <div class="menubar-item aktif">
+          <div class="menubar-item">
             <a href="../cbt/dashboard-cbt.html" class="list-icon-menu">
               <span class="nama-menu">Dashboard</span>
             </a>
@@ -142,7 +142,7 @@
               <a href="../cbt/syarat-ketentuan.html">Syarat dan Ketentuan</a>
             </div>
           </div>
-          <div class="menubar-item has-dropdown">
+          <div class="menubar-item has-dropdown aktif">
             <a href="#" class="list-icon-menu">
               <span class="nama-menu">Laporan</span>
             </a>
@@ -166,112 +166,78 @@
       <div class="main">
         <!-- Petunjuk -->
         <div class="head-main">
-          <span class="nama-menu-aktif">Dashboard</span>
+          <span class="nama-menu-aktif">Jawaban Peserta Ujian</span>
         </div>
 
-        <!-- Periode -->
-        <div class="filter-panel">
-          <!-- Kolom Kiri -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Tahun Kurikulum</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Prodi Pengampu</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
-            </div>
+        <div class="cf-container">
+          <div class="cf-row">
+            <label class="cf-label">Periode <span>*</span></label>
+            <select id="cf-periode" class="cf-input">
+              <option value="">-- Pilih Periode --</option>
+              <option>2025 / 2026</option>
+              <option>2026 / 2027</option>
+            </select>
           </div>
 
-          <!-- Kolom Kanan -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Jenis Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Jenis Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Kelompok Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Kelompok Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
+          <div class="cf-row">
+            <label class="cf-label">Ujian <span>*</span></label>
+            <select id="cf-ujian" class="cf-input">
+              <option value="">-- Pilih Ujian --</option>
+              <option>UTS</option>
+              <option>UAS</option>
+            </select>
           </div>
-        </div>
 
-        <!-- chart statistik -->
-        <div class="chart-stat">
-          <div class="stat-periode">
-            <div class="head-stat-period">
-              <div class="judul-kepala">
-                <i class="fa-solid fa-chart-line icon-judul"></i>
-                <span class="text-judul"
-                  >Statistik Mahasiswa Periode: 2026 Genap</span
-                >
-              </div>
-            </div>
-            <div class="body-stat-period">
-              <div class="chart-container">
-                <div class="chart-header">
-                  <h3>Jumlah Ujian Perkuliahan</h3>
-
-                  <div class="chart-menu">
-                    <button id="chartcbtToggle">
-                      <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <div class="chart-dropdown" id="chartcbtDropdown">
-                      <div id="downloadcbtPNG">Download PNG</div>
-                      <div id="downloadcbtJPG">Download JPG</div>
-                    </div>
-                  </div>
-                </div>
-                <canvas id="cbt-chart"></canvas>
-                <div class="chart-legend-modern" id="chartcbtLegend"></div>
-              </div>
-            </div>
+          <div class="cf-row">
+            <label class="cf-label">Sesi</label>
+            <select id="cf-sesi" class="cf-input">
+              <option value="">-- Pilih Sesi --</option>
+              <option>Pagi</option>
+              <option>Siang</option>
+            </select>
           </div>
-          <div class="informasi-akademik">
-            <div class="pengumuman">
-              <div class="head-pengumuman">
-                <span class="judul-headp"
-                  ><i class="fa-solid fa-calendar-days"></i> Jadwal Ujian
-                  Terdekat</span
-                >
-                <input
-                  type="search"
-                  name="carip"
-                  id="carip"
-                  class="form-input"
-                  placeholder="Cari..."
-                />
-              </div>
-              <div class="body-pengumuman">
-                <li class="item-pengumuman">
-                  <a href="#" class="linkpengumuman">
-                    <span class="judul-info">Ujian 1</span>
-                    <span class="waktu-info">
-                      <span class="tanggal-info">13 Februari 2026</span>
-                      <span class="jam-info">08:00</span>
-                    </span>
-                  </a>
-                </li>
-              </div>
-            </div>
+
+          <div class="cf-row">
+            <label class="cf-label">Ruang</label>
+            <select id="cf-ruang" class="cf-input">
+              <option value="">-- Pilih Ruang --</option>
+              <option>Ruang 101</option>
+              <option>Ruang 202</option>
+            </select>
+          </div>
+
+          <div class="cf-row">
+            <label class="cf-label">Peserta</label>
+            <input
+              type="text"
+              id="cf-peserta"
+              class="cf-input"
+              placeholder="Cari Peserta"
+            />
+          </div>
+
+          <div class="cf-row">
+            <label class="cf-label">Format</label>
+            <select id="cf-format" class="cf-input">
+              <option>HTML</option>
+              <option>PDF</option>
+            </select>
+          </div>
+
+          <div class="cf-row cf-checkbox-row">
+            <label>
+              <input type="checkbox" id="cf-kop" checked />
+              Gunakan KOP
+            </label>
+          </div>
+
+          <div class="cf-actions">
+            <button id="cf-btn-tampil" class="cf-btn cf-btn-primary">
+              👁 Tampilkan
+            </button>
+            <button id="cf-btn-tab" class="cf-btn cf-btn-secondary">
+              🔗 Lihat di Tab Baru
+            </button>
           </div>
         </div>
       </div>
