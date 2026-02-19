@@ -1115,3 +1115,77 @@ refreshBtn.addEventListener("click", () => {
   searchInput.value = "";
   periodeSelect.value = "";
 });
+
+// Kampus Merdeka
+function collectFilterPayload() {
+  return {
+    academicCycleVal: document.getElementById("fltAcademicCycle").value,
+    campusSourceVal: document.getElementById("fltCampusSource").value || "-",
+    deptSourceVal: document.getElementById("fltDeptSource").value || "-",
+    studentKeywordVal:
+      document.getElementById("fltStudentKeyword").value || "-",
+    exportTypeVal: document.getElementById("fltExportType").value,
+    letterheadFlagVal: document.getElementById("fltUseLetterhead").checked
+      ? "Ya"
+      : "Tidak",
+  };
+}
+
+function uiRenderPreview() {
+  const payloadObj = collectFilterPayload();
+  const previewNode = document.getElementById("uiPreviewBox");
+
+  previewNode.style.display = "block";
+  previewNode.innerHTML = `
+        <b>Filter Aktif:</b><br>
+        Periode: ${payloadObj.academicCycleVal} <br>
+        PT Asal: ${payloadObj.campusSourceVal} <br>
+        Prodi Asal: ${payloadObj.deptSourceVal} <br>
+        Mahasiswa: ${payloadObj.studentKeywordVal} <br>
+        Format: ${payloadObj.exportTypeVal} <br>
+        Gunakan KOP: ${payloadObj.letterheadFlagVal}
+    `;
+}
+
+function uiOpenExternal() {
+  const payloadObj = collectFilterPayload();
+  const newTabRef = window.open("", "_blank");
+
+  newTabRef.document.write(`
+        <h3>Preview Data</h3>
+        <p><b>Periode:</b> ${payloadObj.academicCycleVal}</p>
+        <p><b>PT Asal:</b> ${payloadObj.campusSourceVal}</p>
+        <p><b>Prodi:</b> ${payloadObj.deptSourceVal}</p>
+        <p><b>Mahasiswa:</b> ${payloadObj.studentKeywordVal}</p>
+        <p><b>Format:</b> ${payloadObj.exportTypeVal}</p>
+        <p><b>Gunakan KOP:</b> ${payloadObj.letterheadFlagVal}</p>
+    `);
+}
+
+// Template Surat
+function renderDocument() {
+  const payloadLetter = {
+    seqVal: document.getElementById("ctlDocSeq").value || "000",
+    romanMonthVal: document.getElementById("ctlMonthRomawi").value || "I",
+    yearVal: document.getElementById("ctlDocYear").value || "2026",
+
+    studentNameVal:
+      document.getElementById("ctlStudentName").value || "Nama Mahasiswa",
+    studentIdVal:
+      document.getElementById("ctlStudentId").value || "NIM Mahasiswa",
+    studyProgramVal:
+      document.getElementById("ctlStudyProgram").value || "Program Studi",
+  };
+
+  const composedNumber = `No: ${payloadLetter.seqVal}/REG/AKD/${payloadLetter.romanMonthVal}/${payloadLetter.yearVal}`;
+
+  document.getElementById("viewDocNumber").innerText = composedNumber;
+  document.getElementById("viewStudentName").innerText =
+    ": " + payloadLetter.studentNameVal;
+  document.getElementById("viewStudentId").innerText =
+    ": " + payloadLetter.studentIdVal;
+  document.getElementById("viewStudyProgram").innerText =
+    ": " + payloadLetter.studyProgramVal;
+}
+
+renderDocument();

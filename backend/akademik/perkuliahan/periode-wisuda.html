@@ -8,7 +8,7 @@
       href="../../../asset/logo/logo.png"
       type="image/x-icon"
     />
-    <title>UMN | Egligible Yudisium</title>
+    <title>UMN | Periode Wisuda</title>
 
     <!-- Icon -->
     <link
@@ -308,9 +308,13 @@
                   <i class="fa-solid fa-caret-right arrow-submenu"></i
                 ></a>
                 <div class="submenu-dropdown">
-                  <a href="#">Daftar Pertanyaan</a>
-                  <a href="#">Daftar Jawaban</a>
-                  <a href="#">Kategori Edom</a>
+                  <a href="../perkuliahan/daftar-pertanyaan.html"
+                    >Daftar Pertanyaan</a
+                  >
+                  <a href="../perkuliahan/daftar-jawaban.html"
+                    >Daftar Jawaban</a
+                  >
+                  <a href="../perkuliahan/kategori-edom.html">Kategori Edom</a>
                 </div>
               </div>
               <div class="submenu-item">
@@ -319,8 +323,10 @@
                   <i class="fa-solid fa-caret-right arrow-submenu"></i
                 ></a>
                 <div class="submenu-dropdown">
-                  <a href="#">Periode Wisuda</a>
-                  <a href="#">Peserta</a>
+                  <a href="../perkuliahan/periode-wisuda.html"
+                    >Periode Wisuda</a
+                  >
+                  <a href="../perkuliahan/peserta-wisuda.html">Peserta</a>
                 </div>
               </div>
               <div class="submenu-item">
@@ -379,144 +385,290 @@
 
       <!-- Main -->
       <div class="main">
-        <h3>Egligible Yudisium</h3>
-
-        <!-- Periode -->
-        <div class="filter-panel">
-          <!-- Kolom Kiri -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Tahun Kurikulum</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Prodi Pengampu</label>
-              <select class="filter-select">
-                <option>2025 Genap</option>
-                <option>2025 Ganjil</option>
-                <option>2024 Genap</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Kolom Kanan -->
-          <div class="filter-column">
-            <div class="filter-row">
-              <label>Jenis Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Jenis Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
-            <div class="filter-row">
-              <label>Kelompok Mata Kuliah</label>
-              <select class="filter-select">
-                <option>-- Kelompok Mata Kuliah --</option>
-                <option>Ujian</option>
-                <option>Kuliah</option>
-                <option>Seminar</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="tabel-data">
-          <div class="tabel-wrapper">
-            <div class="head-tabel-wrap">
-              <div class="toolbar">
-                <select id="filterItem">
-                  <option value="">-- Semua --</option>
-                  <option value="NIM">NIM</option>
-                  <option value="Nama">Nama</option>
-                  <option value="Jenjang">Jenjang</option>
-                  <option value="Program-Studi">Program Studi</option>
-                  <option value="Masuk">Masuk</option>
-                  <option value="Smt">Smt</option>
-                  <option value="SKS">SKS</option>
-                  <option value="IPK">IPK</option>
-                  <option value="NIK">NIK</option>
-                </select>
-                <input
-                  type="text"
-                  id="keywordmhs"
-                  placeholder="Cari mahasiswa..."
-                />
+        <h3>Periode Wisuda</h3>
+        <div class="grid-2kolom-mahasiswa">
+          <div class="filter-data" id="filterdata">
+            <div class="head-filter-data">
+              <div class="left-head">
+                <i class="fa-solid fa-filter icon-apps"></i>
+                <div class="judul-filter">Filter</div>
               </div>
-              <div class="form-group">
-                <button type="button" class="btn-tambah" id="openModal">
-                  <i class="fa-solid fa-plus"></i> Tambah Data
-                </button>
-                <button type="button" class="btn-info">
-                  <i class="fa-solid fa-print"></i> Cetak
+              <div class="right-head">
+                <button type="button" class="btn-filter" id="btnFilter">
+                  <i class="fa-solid fa-minimize icon-minimize"></i>
                 </button>
               </div>
-
-              <!-- Modal -->
-              <div class="modal-overlay" id="modalOverlay">
-                <div class="modal-box">
-                  <div class="modal-header">
-                    <span>Tambah Data</span>
-                    <button class="modal-close" id="closeModal">&times;</button>
-                  </div>
-
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <label>Nama</label>
-                      <input
-                        type="text"
-                        class="form-input-modals"
-                        placeholder="Masukan nama..."
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <label>Keterangan</label>
-                      <textarea
-                        class="form-input-modals"
-                        placeholder="Masukan keterangan..."
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div class="modal-footer">
-                    <button class="btn-batal" id="closeModal2">Batal</button>
-                    <button class="btn-simpan">Simpan</button>
+            </div>
+            <div class="body-filter-data">
+              <div class="accordion">
+                <!-- Periode Akademik -->
+                <div class="acc-item">
+                  <button class="acc-header">
+                    <span>Periode Akademik</span>
+                    <span class="acc-icon"
+                      ><i class="fa-solid fa-plus"></i
+                    ></span>
+                  </button>
+                  <div class="acc-body">
+                    <li class="list-acc">
+                      <a href="#" class="item-acc">2026 Ganjil</a>
+                    </li>
+                    <li class="list-acc">
+                      <a href="#" class="item-acc">2025 Genap</a>
+                    </li>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="body-tabel-wrap">
-              <table id="tabelMahsiswa">
-                <thead>
-                  <tr>
-                    <th>Kode</th>
-                    <th>Nama Kegiatan Akademik</th>
-                    <th>Background</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>2210001</td>
-                    <td>Andi Saputra</td>
-                    <td>S1</td>
-                    <td class="aksi-col">
-                      <button type="button" class="badge-warning">
-                        <i class="fa-solid fa-marker"></i>
-                      </button>
-                      <button type="button" class="badge-danger">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+          </div>
+          <div class="tabel-data">
+            <div class="tabel-wrapper">
+              <div class="head-tabel-wrap">
+                <div class="toolbar">
+                  <button type="button" class="btn-filter" id="btnShowFilter">
+                    <i class="fa-solid fa-maximize"></i>
+                  </button>
+                  <select id="filterItem">
+                    <option value="">-- Semua --</option>
+                    <option value="NIM">NIM</option>
+                    <option value="Nama">Nama</option>
+                    <option value="Jenjang">Jenjang</option>
+                    <option value="Program-Studi">Program Studi</option>
+                    <option value="Masuk">Masuk</option>
+                    <option value="Smt">Smt</option>
+                    <option value="SKS">SKS</option>
+                    <option value="IPK">IPK</option>
+                    <option value="NIK">NIK</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="keywordmhs"
+                    placeholder="Cari mahasiswa..."
+                  />
+                </div>
+                <button type="button" class="btn-info">
+                  <i class="fa-solid fa-print"></i> Cetak
+                </button>
+              </div>
+              <div class="body-tabel-wrap">
+                <table id="tabelMahsiswa">
+                  <thead>
+                    <tr>
+                      <th>NIM</th>
+                      <th>Nama</th>
+                      <th>Jenjang</th>
+                      <th>Program Studi</th>
+                      <th>Masuk</th>
+                      <th>Status</th>
+                      <th>Smt</th>
+                      <th>SKS</th>
+                      <th>IPK</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2210001</td>
+                      <td>Andi Saputra</td>
+                      <td>S1</td>
+                      <td>Informatika</td>
+                      <td>2022</td>
+                      <td>Aktif</td>
+                      <td>6</td>
+                      <td>118</td>
+                      <td>3.72</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210002</td>
+                      <td>Siti Rahma</td>
+                      <td>S1</td>
+                      <td>Kebidanan</td>
+                      <td>2021</td>
+                      <td>Aktif</td>
+                      <td>8</td>
+                      <td>144</td>
+                      <td>3.81</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210003</td>
+                      <td>Budi Hartono</td>
+                      <td>D3</td>
+                      <td>Keperawatan</td>
+                      <td>2023</td>
+                      <td>Aktif</td>
+                      <td>4</td>
+                      <td>72</td>
+                      <td>3.45</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210004</td>
+                      <td>Rina Oktaviani</td>
+                      <td>S1</td>
+                      <td>Farmasi</td>
+                      <td>2020</td>
+                      <td>Cuti</td>
+                      <td>10</td>
+                      <td>138</td>
+                      <td>3.67</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210005</td>
+                      <td>Dedi Kurniawan</td>
+                      <td>S1</td>
+                      <td>Administrasi Publik</td>
+                      <td>2022</td>
+                      <td>Aktif</td>
+                      <td>6</td>
+                      <td>110</td>
+                      <td>3.29</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210006</td>
+                      <td>Maya Lestari</td>
+                      <td>S1</td>
+                      <td>Akuntansi</td>
+                      <td>2021</td>
+                      <td>Aktif</td>
+                      <td>8</td>
+                      <td>146</td>
+                      <td>3.88</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210007</td>
+                      <td>Fajar Nugroho</td>
+                      <td>S1</td>
+                      <td>Hukum</td>
+                      <td>2023</td>
+                      <td>Aktif</td>
+                      <td>4</td>
+                      <td>68</td>
+                      <td>3.12</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210008</td>
+                      <td>Nabila Putri</td>
+                      <td>D3</td>
+                      <td>Kebidanan</td>
+                      <td>2022</td>
+                      <td>Aktif</td>
+                      <td>6</td>
+                      <td>96</td>
+                      <td>3.54</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210009</td>
+                      <td>Rizky Pratama</td>
+                      <td>S1</td>
+                      <td>Ilmu Keperawatan</td>
+                      <td>2020</td>
+                      <td>Lulus</td>
+                      <td>12</td>
+                      <td>152</td>
+                      <td>3.76</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2210010</td>
+                      <td>Yuni Kartika</td>
+                      <td>S1</td>
+                      <td>Gizi</td>
+                      <td>2024</td>
+                      <td>Aktif</td>
+                      <td>2</td>
+                      <td>22</td>
+                      <td>3.91</td>
+                      <td class="aksi-col">
+                        <button type="button" class="badge-warning">
+                          <i class="fa-solid fa-marker"></i>
+                        </button>
+                        <button type="button" class="badge-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

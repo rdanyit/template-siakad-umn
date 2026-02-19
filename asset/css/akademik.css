@@ -1108,3 +1108,179 @@ select {
   font-size: 14px;
   background: white;
 }
+
+/* Kampus Merdeka */
+.box-filter {
+  background: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #2ecc71;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.lbl {
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.inp,
+.sel {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.inp:focus,
+.sel:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.chk-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-main {
+  border: none;
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  background: #2f55d4;
+}
+
+.btn-alt {
+  background: #1e3fa3;
+}
+
+.btn-main:hover {
+  opacity: 0.9;
+}
+
+.panel-output {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f0f3ff;
+  border-radius: 4px;
+  font-size: 14px;
+  display: none;
+}
+
+/* Template */
+.page-wrap {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 40px 55px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+.doc-header {
+  text-align: center;
+  border-bottom: 2px solid #222;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.doc-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.doc-number {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.label {
+  width: 180px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.value {
+  font-weight: 600;
+}
+
+.table-block {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.table-block td {
+  padding: 4px 0;
+  vertical-align: top;
+}
+
+.footer-note {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.control-panel {
+  max-width: 900px;
+  margin: 20px auto 0;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.control-panel input {
+  padding: 7px 9px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 13px;
+}
+
+.btn-refresh {
+  grid-column: span 3;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2f55d4;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-refresh:hover {
+  opacity: 0.9;
+}
