@@ -509,7 +509,6 @@
                 </div>
                 <a href="#" class="badge-detail">Lihat Detail</a>
               </div>
-
               <div class="body-card">
                 <canvas id="keuangan-chart"></canvas>
                 <div class="stats-wrapper">
@@ -541,7 +540,140 @@
                 </div>
               </div>
             </div>
-            <div class="card-flex fw-50"></div>
+            <div class="card-flex fw-50">
+              <div class="head-card">
+                <div class="judul-card">
+                  <span class="text-judul">Penerimaan Mahasiswa Baru</span>
+                  <span class="tahun-akademik">Tahun Akademik 2025/2026</span>
+                </div>
+                <a href="#" class="badge-detail">Lihat Detail</a>
+              </div>
+
+              <div class="body-card">
+                <div class="dashboard">
+                  <div class="card">
+                    <div class="title">Peminat</div>
+                    <div class="value" id="peminat">1330</div>
+                    <div class="change negative">▼ 17%</div>
+                    <div class="sub">dari periode lalu</div>
+                  </div>
+
+                  <div class="card">
+                    <div class="title">Pendaftar</div>
+                    <div class="value" id="pendaftar">1194</div>
+                    <div class="change negative">▼ 24%</div>
+                    <div class="sub">dari periode lalu</div>
+                  </div>
+
+                  <div class="card">
+                    <div class="title">Lulus Seleksi</div>
+                    <div class="value" id="lulus">1004</div>
+                    <div class="change negative">▼ 17%</div>
+                    <div class="sub">dari periode lalu</div>
+                  </div>
+
+                  <div class="card">
+                    <div class="title">Daftar Ulang</div>
+                    <div class="value" id="daftarulang">682</div>
+                    <div class="change negative">▼ 07%</div>
+                    <div class="sub">dari periode lalu</div>
+                  </div>
+                </div>
+
+                <div class="chart-container">
+                  <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                    <path id="chart-path" />
+                  </svg>
+
+                  <div class="conversion">
+                    <span>Tingkat Konversi</span>
+                    <span>89.77%</span>
+                    <span>75.49%</span>
+                    <span class="highlight">51.28%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-flex">
+            <div class="grid-card">
+              <div class="card-ipk">
+                <h3>Rerata IPK Lulusan</h3>
+                <div class="subtitle">Tahun Selesai 2025/2026</div>
+                <div class="row">
+                  <div class="icon">🎓</div>
+                  <div>
+                    <span class="value" id="ipk">3.01</span>
+                    <span class="delta">⬇ 13.71%</span>
+                    <div class="muted">dari tahun akademik lalu</div>
+                  </div>
+                </div>
+                <div class="program">
+                  <span>D3 - Keperawatan</span><span>3.01</span>
+                </div>
+              </div>
+
+              <div class="card-lulusan">
+                <h3>Rerata Masa Studi Lulusan</h3>
+                <div class="subtitle">Tahun Selesai 2025/2026</div>
+                <div class="row">
+                  <div class="icon">⏳</div>
+                  <div>
+                    <span class="value" id="masaStudi">3.5</span> Tahun
+                    <span class="delta">⬇ 34.62%</span>
+                    <div class="muted">dari tahun akademik lalu</div>
+                  </div>
+                </div>
+                <div class="program">
+                  <span>D3 - Keperawatan</span><span>3.5 Thn</span>
+                </div>
+              </div>
+
+              <div class="card-waktu">
+                <h3>Waktu Tunggu Lulusan</h3>
+                <div class="subtitle">Tahun Selesai 2025/2026</div>
+                <canvas id="waitChart"></canvas>
+                <div class="legend">
+                  <span
+                    ><span class="dot" style="background: #6366f1"></span>&lt; 6
+                    Bulan</span
+                  >
+                  <span
+                    ><span class="dot" style="background: #22c55e"></span>6–18
+                    Bulan</span
+                  >
+                  <span
+                    ><span class="dot" style="background: #f59e0b"></span>&gt;
+                    18 Bulan</span
+                  >
+                </div>
+              </div>
+
+              <div class="card-bidang">
+                <h3>Kesesuaian Bidang Kerja</h3>
+                <div class="subtitle">Tahun Selesai 2025/2026</div>
+                <canvas id="matchChart"></canvas>
+                <div class="legend">
+                  <span
+                    ><span class="dot" style="background: #3b82f6"></span
+                    >Tinggi</span
+                  >
+                  <span
+                    ><span class="dot" style="background: #f59e0b"></span
+                    >Sedang</span
+                  >
+                  <span
+                    ><span class="dot" style="background: #10b981"></span
+                    >Rendah</span
+                  >
+                </div>
+                <div class="note">
+                  ⚠ Kesesuaian Bidang Kerja kurang valid karena responden hanya
+                  0% yaitu 0/55 lulusan
+                </div>
+              </div>
+            </div>
+            <a href="#" class="badge-detail">Lihat Detail</a>
           </div>
         </div>
       </div>

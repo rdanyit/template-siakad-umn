@@ -257,17 +257,17 @@ li {
 }
 
 .fw-15 {
-  max-width: 216px;
+  width: 220px;
 }
 
 .fw-25 {
-  max-width: 360px;
+  width: 380px;
 }
 
 .fw-50 {
-  max-width: 720px;
+  width: 740px;
 }
 
 .fw-70 {
-  max-width: 1080px;
+  width: 1100px;
 }

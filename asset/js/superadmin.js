@@ -366,3 +366,60 @@ const chartkeuangan = new Chart(keuangan, {
     },
   },
 });
+
+// Dashboard UI
+const dataui = [22, 20, 18, 15, 10, 10];
+
+function buildPath(values) {
+  const max = Math.max(...values);
+  const min = Math.min(...values);
+
+  const points = values.map((v, i) => {
+    const x = (i / (values.length - 1)) * 100;
+    const y = 30 - ((v - min) / (max - min)) * 20;
+    return `${x},${y}`;
+  });
+
+  return `M0,30 L${points.join(" L")} L100,30 Z`;
+}
+
+document.getElementById("chart-path").setAttribute("d", buildPath(dataui));
+
+// item rerata
+const waitCtx = document.getElementById("waitChart");
+new Chart(waitCtx, {
+  type: "bar",
+  data: {
+    labels: ["< 6 Bulan", "6–18 Bulan", "> 18 Bulan"],
+    datasets: [
+      {
+        label: "Jumlah Lulusan",
+        data: [0, 0, 0],
+        backgroundColor: ["#6366f1", "#22c55e", "#f59e0b"],
+        borderRadius: 8,
+      },
+    ],
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } },
+  },
+});
+
+const matchCtx = document.getElementById("matchChart");
+new Chart(matchCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Tinggi", "Sedang", "Rendah"],
+    datasets: [
+      {
+        data: [10, 10, 10],
+        backgroundColor: ["#3b82f6", "#f59e0b", "#10b981"],
+      },
+    ],
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    cutout: "70%",
+  },
+});
