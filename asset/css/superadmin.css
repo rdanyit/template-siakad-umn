@@ -649,3 +649,186 @@ canvas {
   width: 300px !important;
   height: 250px !important;
 }
+
+.tabs-container {
+  width: 100% !important;
+  max-width: 1440px !important;
+}
+
+.tabs {
+  width: 100% !important;
+  max-width: 1400px !important;
+}
+
+form {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 12px;
+}
+
+.form-input,
+.form-pilih {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 450px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-default);
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-text {
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  width: 90%;
+  height: 250px;
+  padding: 10px;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-text:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.iconimg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.nb {
+  font-size: 10px;
+  color: var(--danger-text);
+  font-weight: bold;
+}
+
+.icontbl {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cekbox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+}
+
+.item-pt {
+  width: 100%;
+  max-width: 1420px;
+  margin-bottom: 20px;
+}
+
+.head-pt {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.judul-head-pt {
+  padding: 5px 50px 5px 20px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+
+.judul-head-pt::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid var(--background);
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  rotate: 270deg;
+}
+
+.body-pt {
+  width: 100%;
+  max-width: 1440px;
+  margin: 10px 0;
+}
+
+.sub-judul {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.isi-sub-judul {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.listp {
+  display: flex;
+  gap: 10px;
+}
+
+p {
+  line-height: 1 !important;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.judul-ltf {
+  border-bottom: 1px solid var(--primary);
+}
+
+.form-group iframe {
+  width: 90%;
+  max-width: 450px;
+  height: 400px;
+}
+
+.form-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}

@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Tambah Data Perguruan Tinggi</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/superadmin.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Portal Super Admin</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">SIAKAD</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Aplikasi</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item">
+            <a href="../dashboard.html" class="list-icon-menu">
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Portal</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../backend/pmb/dashboard-pmb.html"
+                >Penerimaan Mahasiswa Baru</a
+              >
+              <a href="../backend/akademik/dashboard-akademik.html">Akademik</a>
+              <a href="../backend/elearning/dashboard-elearning.html"
+                >E-Learning</a
+              >
+              <a href="../backend/cbt/dashboard-cbt.html"
+                >Computer Based Test</a
+              >
+              <a href="../backend/pddikti/dashboard-pddikti.html">PDDIKTI</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Sistem</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/aplikasi.html">Aplikasi</a>
+              <a href="../superadmin/menu.html">Menu</a>
+              <a href="../superadmin/submenu.html">Sub Menu</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Pengguna</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/role-akses.html">Role & Hak Akses</a>
+              <a href="../superadmin/reset-psw.html">Reset Password</a>
+              <a href="../superadmin/log-aktivitas.html"
+                >Log Aktivitas Pengguna</a
+              >
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown aktif">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Akademik</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/perguruan-tinggi.html">Perguruan Tinggi</a>
+              <a href="../superadmin/fakultas.html">Fakultas</a>
+              <a href="../superadmin/program-studi.html">Program Studi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Sarana</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Ruang Kuliah</a>
+              <a href="#">Gedung</a>
+              <a href="#">Laboratorium</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Wilayah</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Wilayah</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Keamanan dan Sistem</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Pengaturan Role</a>
+              <a href="#">Audit Log</a>
+              <a href="#">Backup & Restore</a>
+              <a href="#">Integrasi Sistem</a>
+              <a href="#">Api & Webhook</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Pengaturan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Halaman Depan</a>
+              <a href="#">Halaman User</a>
+              <a href="#">Logo dan Warna</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <div class="head-main">
+          <div class="title-head">
+            <span class="nama-menu-aktif">Tambah Data Perguruan Tinggi</span>
+          </div>
+        </div>
+
+        <div class="body-main">
+          <div class="tabs-container">
+            <div class="tabs">
+              <button class="tab active" data-tab="tab1">Biodata</button>
+              <button class="tab" data-tab="tab2">Pejabat</button>
+              <button class="tab" data-tab="tab3">Akreditasi</button>
+              <button class="tab" data-tab="tab4">Visi & Misi</button>
+              <button class="tab" data-tab="tab5">Kontak</button>
+              <div class="indicator"></div>
+            </div>
+
+            <div class="tab-content active" id="tab1">
+              <form action="#" method="post">
+                <div class="form-flex">
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="kode">Kode Unit</label>
+                      <input
+                        type="text"
+                        name="kode"
+                        id="kode"
+                        class="form-input"
+                        placeholder="Kode Unit"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_unit">Nama Unit</label>
+                      <input
+                        type="text"
+                        name="nama_unit"
+                        id="nama_unit"
+                        class="form-input"
+                        placeholder="Nama Unit"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_en">Nama Unit (EN)</label>
+                      <input
+                        type="text"
+                        name="nama_en"
+                        id="nama_en"
+                        class="form-input"
+                        placeholder="Nama Unit (EN)"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_singkat">Nama Singkat</label>
+                      <input
+                        type="text"
+                        name="nama_singkat"
+                        id="nama_singkat"
+                        class="form-input"
+                        placeholder="Nama Singkat"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="jenis">Jenis Perguruan Tinggi</label>
+                      <select name="jenis" id="jenis" class="form-pilih">
+                        <option value="">Pilih Jenis PT</option>
+                        <option value="">Akademi</option>
+                        <option value="">Institut</option>
+                        <option value="">Universitas</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="lembaga_naungan">Lembaga Naungan</label>
+                      <input
+                        type="text"
+                        name="lembaga_naungan"
+                        id="lembaga_naungan"
+                        class="form-input"
+                        placeholder="Lembaga Naungan"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="unit">Unit/Satuan Kerja</label>
+                      <input
+                        type="text"
+                        name="unit"
+                        id="unit"
+                        class="form-input"
+                        placeholder="Unit/Satuan Kerja"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="periode_berdiri">Periode Berdiri</label>
+                      <input
+                        type="text"
+                        name="periode_berdiri"
+                        id="periode_berdiri"
+                        class="form-input"
+                        placeholder="Periode Berdiri"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="sk">No. SK Pendirian</label>
+                      <input
+                        type="text"
+                        name="sk"
+                        id="sk"
+                        class="form-input"
+                        placeholder="No. SK Pendirian"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="tgl_sk">Tanggal SK Pendirian</label>
+                      <input
+                        type="date"
+                        name="tgl_sk"
+                        id="tgl_sk"
+                        class="form-input"
+                        placeholder="Tanggal SK Pendirian"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-tambah">Tambah Data</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-content" id="tab2">
+              <form action="#" method="post">
+                <div class="form-flex">
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="nama_rektor">Rektor</label>
+                      <input
+                        type="text"
+                        name="nama_rektor"
+                        id="nama_rektor"
+                        class="form-input"
+                        placeholder="Rektor"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_wk1">Wakil Rektor 1</label>
+                      <input
+                        type="text"
+                        name="nama_wk1"
+                        id="nama_wk1"
+                        class="form-input"
+                        placeholder="Wakil Rektor 1"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_wk2">Wakil Rektor 2</label>
+                      <input
+                        type="text"
+                        name="nama_wk2"
+                        id="nama_wk2"
+                        class="form-input"
+                        placeholder="Wakil Rektor 2"
+                      />
+                    </div>
+                  </div>
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="nama_wk3">Wakil Rektor 3</label>
+                      <input
+                        type="text"
+                        name="nama_wk3"
+                        id="nama_wk3"
+                        class="form-input"
+                        placeholder="Wakil Rektor 3"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nama_wk4">Wakil Rektor 4</label>
+                      <input
+                        type="text"
+                        name="nama_wk4"
+                        id="nama_wk4"
+                        class="form-input"
+                        placeholder="Wakil Rektor 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-tambah">Tambah Data</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-content" id="tab3">
+              <form action="#" method="post">
+                <div class="form-flex">
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="lembaga_akreditasi">Lembaga Akreditasi</label>
+                      <input
+                        type="text"
+                        name="lembaga_akreditasi"
+                        id="lembaga_akreditasi"
+                        class="form-input"
+                        placeholder="Lembaga Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="peringkat_akreditasi"
+                        >Peringkat Akreditasi</label
+                      >
+                      <input
+                        type="text"
+                        name="peringkat_akreditasi"
+                        id="peringkat_akreditasi"
+                        class="form-input"
+                        placeholder="Peringkat Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="nilai_akreditasi">Nilai Akreditasi</label>
+                      <input
+                        type="text"
+                        name="nilai_akreditasi"
+                        id="nilai_akreditasi"
+                        class="form-input"
+                        placeholder="Nilai Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="no_sk">No. SK Akreditasi</label>
+                      <input
+                        type="text"
+                        name="no_sk"
+                        id="no_sk"
+                        class="form-input"
+                        placeholder="No. SK Akreditasi"
+                      />
+                    </div>
+                  </div>
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="tgl_sk">Tanggal SK Akreditasi</label>
+                      <input
+                        type="date"
+                        name="tgl_sk"
+                        id="tgl_sk"
+                        class="form-input"
+                        placeholder="Tanggal SK Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="tgl_berlaku"
+                        >Tanggal Berlaku Akreditasi</label
+                      >
+                      <input
+                        type="date"
+                        name="tgl_berlaku"
+                        id="tgl_berlaku"
+                        class="form-input"
+                        placeholder="Tanggal Berlaku Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="tgl_berakhir"
+                        >Tanggal Berakhir Akreditasi</label
+                      >
+                      <input
+                        type="date"
+                        name="tgl_berakhir"
+                        id="tgl_berakhir"
+                        class="form-input"
+                        placeholder="Tanggal Berakhir Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="file_sertif"
+                        >File Sertifikat Akreditasi</label
+                      >
+                      <input
+                        type="file"
+                        name="file_sertif"
+                        id="file_sertif"
+                        class="form-input"
+                        placeholder="File Sertifikat Akreditasi"
+                      />
+                    </div>
+                    <div class="form-group"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-tambah">Tambah Data</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-content" id="tab4">
+              <form action="#" method="post">
+                <div class="form-flex">
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="visi">Visi</label>
+                      <textarea
+                        name="visi"
+                        id="visi"
+                        class="form-text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="misi">Misi</label>
+                      <textarea
+                        name="misi"
+                        id="misi"
+                        class="form-text"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-tambah">Tambah Data</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-content" id="tab5">
+              <form action="#" method="post">
+                <div class="form-flex">
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="alamat">Alamat</label>
+                      <textarea
+                        name="alamat"
+                        id="alamat"
+                        class="form-text"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="item-flex">
+                    <div class="form-group">
+                      <label for="telepon">Telepon</label>
+                      <input
+                        type="text"
+                        name="telepon"
+                        id="telepon"
+                        class="form-input"
+                        placeholder="Telepon"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-input"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="web">Alamat Website</label>
+                      <input
+                        type="text"
+                        name="web"
+                        id="web"
+                        class="form-input"
+                        placeholder="Alamat Website"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-tambah">Tambah Data</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"
+      ></script>
+      <script src="../../asset/js/form-group-pdf.js"></script>
+      <script src="../../asset/js/pilih-menu.js"></script>
+      <script src="../../asset/js/cari-sa.js"></script>
+      <script src="../../asset/js/tab.js"></script>
+      <script src="../../asset/js/superadmin.js"></script>
+      <script src="../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>

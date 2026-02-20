@@ -197,6 +197,21 @@ li {
   white-space: nowrap;
 }
 
+.btn-edit {
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--warning-text);
+  color: var(--background);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: var(--warning-border);
+  color: var(--text);
+}
+
 .btn-filter {
   padding: 8px 18px;
   border: 0;
@@ -257,17 +272,21 @@ li {
 }
 
 .fw-15 {
-  width: 220px;
+  width: 216px;
 }
 
 .fw-25 {
-  width: 380px;
+  width: 360px;
+}
+
+.fw-30 {
+  width: 432px;
 }
 
 .fw-50 {
-  width: 740px;
+  width: 720px;
 }
 
 .fw-70 {
-  width: 1100px;
+  width: 1008px;
 }

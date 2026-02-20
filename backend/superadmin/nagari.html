@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../asset/logo/logo.png"
+      type="image/x-icon"
+    />
+    <title>UMN | Nagari</title>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="../../asset/icon/fontawesome/css/all.min.css"
+    />
+    <script src="../../asset/icon/fontawesome/js/all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../../asset/js/jquery.js"></script>
+
+    <!-- Spreadsheet -->
+    <script src="https://bossanova.uk/jspreadsheet/v5/jspreadsheet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://bossanova.uk/jspreadsheet/v5/jspreadsheet.css"
+      type="text/css"
+    />
+    <script src="https://jsuites.net/v5/jsuites.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://jsuites.net/v5/jsuites.css"
+      type="text/css"
+    />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link rel="stylesheet" href="../../asset/css/superadmin.css" />
+    <link rel="stylesheet" href="../../asset/css/back.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <div class="topbar">
+        <img
+          src="../../asset/media/background-2.jpg"
+          alt="background"
+          class="topbar-bg"
+        />
+        <div class="logo-bar">
+          <div class="item-logo">
+            <img src="../../asset/logo/logo.png" alt="logo" class="img-logo" />
+            <div class="desk-logo">
+              <span class="nama-halaman">Portal Super Admin</span>
+              <span class="nama-univ"
+                >Universitas Mohammad Natsir Bukittinggi</span
+              >
+            </div>
+          </div>
+          <div class="icon-menu">
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <img
+                  src="../../asset/media/bendera.jpg"
+                  alt="bendera"
+                  class="bendera-icon"
+                />
+                <span class="nama-bahasa">ID</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Indonesia</a>
+                <a href="#">English</a>
+              </div>
+            </div>
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-brands fa-readme"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+
+            <div class="menu-dropdown">
+              <a href="#" class="list-icon-menu">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="deskripsi-user">
+                  <span class="role-user">SAdmin</span>
+                  <span class="nama-sistem">SIAKAD</span>
+                </div>
+              </a>
+
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Aplikasi</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="menu-bar">
+          <div class="menubar-item">
+            <a href="../dashboard.html" class="list-icon-menu">
+              <span class="nama-menu">Dashboard</span>
+            </a>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Portal</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../backend/pmb/dashboard-pmb.html"
+                >Penerimaan Mahasiswa Baru</a
+              >
+              <a href="../backend/akademik/dashboard-akademik.html">Akademik</a>
+              <a href="../backend/elearning/dashboard-elearning.html"
+                >E-Learning</a
+              >
+              <a href="../backend/cbt/dashboard-cbt.html"
+                >Computer Based Test</a
+              >
+              <a href="../backend/pddikti/dashboard-pddikti.html">PDDIKTI</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Sistem</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/aplikasi.html">Aplikasi</a>
+              <a href="../superadmin/menu.html">Menu</a>
+              <a href="../superadmin/submenu.html">Sub Menu</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Pengguna</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/role-akses.html">Role & Hak Akses</a>
+              <a href="../superadmin/reset-psw.html">Reset Password</a>
+              <a href="../superadmin/log-aktivitas.html"
+                >Log Aktivitas Pengguna</a
+              >
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Akademik</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/perguruan-tinggi.html">Perguruan Tinggi</a>
+              <a href="../superadmin/fakultas.html">Fakultas</a>
+              <a href="../superadmin/program-studi.html">Program Studi</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Sarana</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/ruang-kuliah.html">Ruang Kuliah</a>
+              <a href="../superadmin/gedung-kuliah.html">Gedung</a>
+              <a href="../superadmin/labor.html">Laboratorium</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown aktif">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Manajemen Wilayah</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="../superadmin/negara.html">Negara</a>
+              <a href="../superadmin/provinsi.html">Provinsi</a>
+              <a href="../superadmin/kab-kota.html">Kabupaten / Kota</a>
+              <a href="../superadmin/kecamatan.html">Kecamatan</a>
+              <a href="../superadmin/nagari.html">Nagari</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Keamanan dan Sistem</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Pengaturan Role</a>
+              <a href="#">Audit Log</a>
+              <a href="#">Backup & Restore</a>
+              <a href="#">Integrasi Sistem</a>
+              <a href="#">Api & Webhook</a>
+            </div>
+          </div>
+          <div class="menubar-item has-dropdown">
+            <a href="#" class="list-icon-menu">
+              <span class="nama-menu">Pengaturan</span>
+            </a>
+
+            <div class="dropdown-menubar">
+              <a href="#">Halaman Depan</a>
+              <a href="#">Halaman User</a>
+              <a href="#">Logo dan Warna</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <div class="head-main">
+          <div class="title-head">
+            <span class="nama-menu-aktif">Nagari</span>
+          </div>
+        </div>
+
+        <div class="body-main">
+          <div class="item-body">
+            <div class="fw-30">
+              <div class="card-flex">
+                <div class="head-card">
+                  <div class="judul-card">Form Tambah Data</div>
+                </div>
+                <div class="body-card">
+                  <form action="#" method="post">
+                    <div class="form-group">
+                      <label for="negara">Negara</label>
+                      <select name="negara" id="negara" class="form-pilih">
+                        <option value="">Pilih Negara</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="provinsi">Provinsi</label>
+                      <select name="provinsi" id="provinsi" class="form-pilih">
+                        <option value="">Pilih Provinsi</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="kab-kota">Kabupaten / Kota</label>
+                      <select name="kab-kota" id="kab-kota" class="form-pilih">
+                        <option value="">Pilih Kabupaten / Kota</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="kecamatan">Kecamatan</label>
+                      <select
+                        name="kecamatan"
+                        id="kecamatan"
+                        class="form-pilih"
+                      >
+                        <option value="">Pilih Kecamatan</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="nama">Nama Nagari</label>
+                      <div id="hot-wrapper">
+                        <div id="nagari"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn-tambah">
+                        Tambah Data
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="fw-70">
+              <div class="card-flex">
+                <div class="body-card">
+                  <div class="tabel-wrapper">
+                    <div class="head-tabel-wrap">
+                      <div class="toolbar">
+                        <input
+                          type="text"
+                          id="search"
+                          placeholder="Cari data..."
+                        />
+                      </div>
+                    </div>
+                    <div class="body-tabel-wrap">
+                      <table id="tabelData">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Nama Gedung</th>
+                            <th>Nama Laboratorium</th>
+                            <th>Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="copyright">
+          &copy; <span id="tahunCopy"></span> Universitas Mohammad Natsir
+          Bukittinggi. All rights reserved.
+        </p>
+      </div>
+
+      <!-- JS -->
+      <script src="../../asset/js/js-table.js"></script>
+      <script src="../../asset/js/superadmin.js"></script>
+      <script src="../../asset/js/back.js"></script>
+    </div>
+  </body>
+</html>
